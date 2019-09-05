@@ -1,0 +1,173 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "div_clk",
+					"strict" : false
+				},
+				{
+					"name" : "reloj",
+					"strict" : false
+				},
+				{
+					"name" : "dir_mem[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dir_mem[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dir_mem[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dir_mem[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dir_mem[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dir_mem[0]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[7]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[5]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[4]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[3]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[2]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[1]",
+					"strict" : false
+				},
+				{
+					"name" : "mem[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_estado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_estado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_salidas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_salidas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_salidas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_salidas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas_reg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas_reg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas_reg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salidas_reg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "boton",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "S[1]",
+					"strict" : false
+				},
+				{
+					"name" : "S[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Sep  2 18:05:39 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Practica3
+Top-level Entity Name : Practica3
+Family : Cyclone IV E
+Total logic elements : 76
+    Total combinational functions : 73
+    Dedicated logic registers : 40
+Total registers : 40
+Total pins : 41
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

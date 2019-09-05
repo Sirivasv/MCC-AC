@@ -1,0 +1,165 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/simulation/qsim
+vhard_block
+Z1 !s110 1566338078
+!i10b 1
+!s100 =0n]KOO5@PUVjL<RP;CR;1
+I90T^KezUlUo8@RhLVm@gh1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1566338077
+Z4 8Practica1.vo
+Z5 FPractica1.vo
+L0 1669
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1566338078.000000
+Z8 !s107 Practica1.vo|
+Z9 !s90 -work|work|Practica1.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vPractica1
+R1
+!i10b 1
+!s100 _WN<F2YK191HIE>z8e==o3
+IR4]4`ain94[PhS5IS@EV?3
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@practica1
+Epractica1
+Z12 w1566337839
+Z13 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z14 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z15 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z16 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z17 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z18 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z19 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z20 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z21 8Practica1.vho
+Z22 FPractica1.vho
+l0
+L79
+V]e`>1dXm5hi^V^XQ6:RG`3
+!s100 4_dR]aDZmz8zV870UR>2Q0
+Z23 OV;C;10.5b;63
+32
+!s110 1566337839
+!i10b 1
+Z24 !s108 1566337839.000000
+Z25 !s90 -work|work|Practica1.vho|
+Z26 !s107 Practica1.vho|
+!i113 1
+R10
+Z27 tExplicit 1 CvgOpt 0
+Astructure
+R13
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+DEx4 work 9 practica1 0 22 ]e`>1dXm5hi^V^XQ6:RG`3
+l210
+L99
+VV55LPRk`=f;9f9TJGA]c50
+!s100 JbMg0mAi5IkAWZm;HD7gV1
+R23
+32
+Z28 !s110 1566337840
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R10
+R27
+Epractica1_vhd_vec_tst
+Z29 w1566337838
+R18
+R19
+R0
+Z30 8output_files/Waveform.vwf.vht
+Z31 Foutput_files/Waveform.vwf.vht
+l0
+L31
+V6l<>5TTcC@=lfYjz66n@H3
+!s100 n[h_IaDHOVo5c2zZZ5mR70
+R23
+32
+R28
+!i10b 1
+Z32 !s108 1566337840.000000
+Z33 !s90 -work|work|output_files/Waveform.vwf.vht|
+Z34 !s107 output_files/Waveform.vwf.vht|
+!i113 1
+R10
+R27
+Apractica1_arch
+R18
+R19
+DEx4 work 21 practica1_vhd_vec_tst 0 22 6l<>5TTcC@=lfYjz66n@H3
+l52
+L33
+V`gUz6H[G=LD=G_]?b_8K01
+!s100 G4?0FEYV`mABQL:A`?18@0
+R23
+32
+R28
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R10
+R27
+vPractica1_vlg_vec_tst
+R1
+!i10b 1
+!s100 Bd1>YOZF2H@bTji2e8lRh3
+IGZQ2nVT1EjO9cg0EmnX>T2
+R2
+R0
+w1566338076
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@practica1_vlg_vec_tst
