@@ -49,15 +49,17 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name BDF_FILE /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/Practica1.bdf
-set_global_assignment -name VHDL_FILE divider.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name VECTOR_WAVEFORM_FILE Practica1.vwf
 set_location_assignment PIN_J15 -to reset
 set_location_assignment PIN_R8 -to clk
 set_location_assignment PIN_A15 -to A
 set_location_assignment PIN_A13 -to B
 set_location_assignment PIN_B13 -to C
 set_location_assignment PIN_A11 -to D
+set_global_assignment -name VHDL_FILE divider.vhd
+set_global_assignment -name BDF_FILE Practica1.bdf
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

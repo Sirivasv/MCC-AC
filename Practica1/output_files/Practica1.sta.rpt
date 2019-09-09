@@ -1,5 +1,5 @@
 Timing Analyzer report for Practica1
-Wed Aug 28 12:18:24 2019
+Thu Sep  5 01:12:44 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -101,15 +101,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.9%      ;
+;     Processor 2            ;   0.6%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -296,9 +298,9 @@ No paths to report.
 ; Slack ; From Node     ; To Node       ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
 ; 0.318 ; 74193:inst|26 ; 74193:inst|26 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.038     ; 0.659      ;
-; 0.318 ; 74193:inst|24 ; 74193:inst|24 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.038     ; 0.659      ;
 ; 0.318 ; 74193:inst|23 ; 74193:inst|23 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.038     ; 0.659      ;
 ; 0.318 ; 74193:inst|25 ; 74193:inst|25 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.038     ; 0.659      ;
+; 0.318 ; 74193:inst|24 ; 74193:inst|24 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.038     ; 0.659      ;
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
 
 
@@ -594,10 +596,10 @@ No paths to report.
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
 ; Slack ; From Node     ; To Node       ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
-; 0.398 ; 74193:inst|25 ; 74193:inst|25 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.034     ; 0.583      ;
 ; 0.398 ; 74193:inst|26 ; 74193:inst|26 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.034     ; 0.583      ;
-; 0.398 ; 74193:inst|24 ; 74193:inst|24 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.034     ; 0.583      ;
 ; 0.398 ; 74193:inst|23 ; 74193:inst|23 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.034     ; 0.583      ;
+; 0.398 ; 74193:inst|24 ; 74193:inst|24 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.034     ; 0.583      ;
+; 0.398 ; 74193:inst|25 ; 74193:inst|25 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 1.000        ; -0.034     ; 0.583      ;
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
 
 
@@ -606,10 +608,10 @@ No paths to report.
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
 ; Slack ; From Node     ; To Node       ; Launch Clock             ; Latch Clock              ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
-; 0.341 ; 74193:inst|26 ; 74193:inst|26 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.034      ; 0.519      ;
 ; 0.341 ; 74193:inst|25 ; 74193:inst|25 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.034      ; 0.519      ;
-; 0.341 ; 74193:inst|24 ; 74193:inst|24 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.034      ; 0.519      ;
 ; 0.341 ; 74193:inst|23 ; 74193:inst|23 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.034      ; 0.519      ;
+; 0.341 ; 74193:inst|26 ; 74193:inst|26 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.034      ; 0.519      ;
+; 0.341 ; 74193:inst|24 ; 74193:inst|24 ; divider:inst1|cuenta[25] ; divider:inst1|cuenta[25] ; 0.000        ; 0.034      ; 0.519      ;
 +-------+---------------+---------------+--------------------------+--------------------------+--------------+------------+------------+
 
 
@@ -1206,10 +1208,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Aug 28 12:18:23 2019
+    Info: Processing started: Thu Sep  5 01:12:43 2019
 Info: Command: quartus_sta Practica1 -c Practica1
 Info: qsta_default_script.tcl version: #1
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Practica1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1287,9 +1289,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 821 megabytes
-    Info: Processing ended: Wed Aug 28 12:18:24 2019
+    Info: Peak virtual memory: 858 megabytes
+    Info: Processing ended: Thu Sep  5 01:12:44 2019
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

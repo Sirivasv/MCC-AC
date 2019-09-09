@@ -1,5 +1,5 @@
 Flow report for Practica3
-Mon Sep  2 18:05:53 2019
+Thu Sep  5 01:06:10 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Sep  2 18:05:53 2019       ;
+; Flow Status                        ; Successful - Thu Sep  5 01:06:10 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica3                                   ;
 ; Top-level Entity Name              ; Practica3                                   ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/02/2019 18:05:23 ;
+; Start date & time ; 09/05/2019 01:05:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Practica3           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 66619481377087.156746552307948         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 273378264773279.156766354009039        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -97,26 +97,26 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 955 MB              ; 00:00:37                           ;
-; Fitter               ; 00:00:06     ; 1.0                     ; 1281 MB             ; 00:00:08                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 815 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 824 MB              ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1052 MB             ; 00:00:01                           ;
-; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:49                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 962 MB              ; 00:00:28                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 1277 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 821 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 828 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1055 MB             ; 00:00:01                           ;
+; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Fitter               ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Assembler            ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Timing Analyzer      ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++-----------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                               ;
++----------------------+-------------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname        ; OS Name        ; OS Version ; Processor type ;
++----------------------+-------------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Fitter               ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Assembler            ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Timing Analyzer      ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
++----------------------+-------------------------+----------------+------------+----------------+
 
 
 ------------

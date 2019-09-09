@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica2
-Mon Aug 26 23:02:10 2019
+Thu Sep  5 01:19:54 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 26 23:02:10 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep  5 01:19:54 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica2                                   ;
 ; Top-level Entity Name              ; Practica2                                   ;
@@ -68,6 +68,7 @@ refer to the applicable agreement for further details.
 ; Device                                                           ; EP4CE22F17C6       ;                    ;
 ; Top-level entity name                                            ; Practica2          ; Practica2          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -151,28 +152,28 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
-; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/sensa_boton.vhd         ;         ;
-; Practica2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/Practica2.bdf           ;         ;
-; algoritmo_carta_asm.vhd          ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/algoritmo_carta_asm.vhd ;         ;
-; divider.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/divider.vhd             ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica2/sensa_boton.vhd         ;         ;
+; Practica2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/Documents/MCC/MCC-AC/Practica2/Practica2.bdf           ;         ;
+; algoritmo_carta_asm.vhd          ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica2/algoritmo_carta_asm.vhd ;         ;
+; divider.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica2/divider.vhd             ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------+
@@ -282,25 +283,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Aug 26 23:01:54 2019
+    Info: Processing started: Thu Sep  5 01:19:43 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica2 -c Practica2
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file sensa_boton.vhd
-    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/sensa_boton.vhd Line: 14
-    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/sensa_boton.vhd Line: 7
+    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/sensa_boton.vhd Line: 14
+    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/sensa_boton.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file Practica2.bdf
     Info (12023): Found entity 1: Practica2
 Info (12021): Found 2 design units, including 1 entities, in source file algoritmo_carta_asm.vhd
-    Info (12022): Found design unit 1: carta_asm_2-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/algoritmo_carta_asm.vhd Line: 17
-    Info (12023): Found entity 1: carta_asm_2 File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/algoritmo_carta_asm.vhd Line: 6
+    Info (12022): Found design unit 1: carta_asm_2-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/algoritmo_carta_asm.vhd Line: 17
+    Info (12023): Found entity 1: carta_asm_2 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/algoritmo_carta_asm.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/divider.vhd Line: 11
-    Info (12023): Found entity 1: divider File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/divider.vhd Line: 6
+    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/divider.vhd Line: 11
+    Info (12023): Found entity 1: divider File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/divider.vhd Line: 6
 Info (12127): Elaborating entity "Practica2" for the top level hierarchy
 Info (12128): Elaborating entity "carta_asm_2" for hierarchy "carta_asm_2:inst"
 Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst2"
-Warning (10492): VHDL Process Statement warning at sensa_boton.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/sensa_boton.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at sensa_boton.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/sensa_boton.vhd Line: 18
 Info (12128): Elaborating entity "divider" for hierarchy "divider:inst1"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -309,10 +309,10 @@ Info (21057): Implemented 35 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 22 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 964 megabytes
-    Info: Processing ended: Mon Aug 26 23:02:10 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 1000 megabytes
+    Info: Processing ended: Thu Sep  5 01:19:54 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:27
 
 

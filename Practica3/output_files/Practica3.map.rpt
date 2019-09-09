@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica3
-Mon Sep  2 18:05:39 2019
+Thu Sep  5 01:05:53 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep  2 18:05:39 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep  5 01:05:53 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica3                                   ;
 ; Top-level Entity Name              ; Practica3                                   ;
@@ -153,7 +153,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -165,20 +165,20 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
-; Practica3.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/Practica3.bdf     ;         ;
-; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/sensa_boton.vhd   ;         ;
-; divider.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/divider.vhd       ;         ;
-; conector4x2a6.vhd                ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/conector4x2a6.vhd ;         ;
-; register6.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/register6.vhd     ;         ;
-; memoria.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd       ;         ;
-; conector8a4x4.vhd                ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/conector8a4x4.vhd ;         ;
-; register4.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/register4.vhd     ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
+; Practica3.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/Practica3.bdf     ;         ;
+; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/sensa_boton.vhd   ;         ;
+; divider.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/divider.vhd       ;         ;
+; conector4x2a6.vhd                ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/conector4x2a6.vhd ;         ;
+; register6.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/register6.vhd     ;         ;
+; memoria.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd       ;         ;
+; conector8a4x4.vhd                ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/conector8a4x4.vhd ;         ;
+; register4.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica3/register4.vhd     ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -298,7 +298,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -308,49 +308,49 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Sep  2 18:05:22 2019
+    Info: Processing started: Thu Sep  5 01:05:39 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica3 -c Practica3
 Info (20032): Parallel compilation is enabled and will use up to 2 processors
 Info (12021): Found 1 design units, including 1 entities, in source file Practica3.bdf
     Info (12023): Found entity 1: Practica3
 Info (12021): Found 2 design units, including 1 entities, in source file sensa_boton.vhd
-    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/sensa_boton.vhd Line: 14
-    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/sensa_boton.vhd Line: 7
+    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/sensa_boton.vhd Line: 14
+    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/sensa_boton.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/divider.vhd Line: 11
-    Info (12023): Found entity 1: divider File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/divider.vhd Line: 6
+    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/divider.vhd Line: 11
+    Info (12023): Found entity 1: divider File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/divider.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file conector4x2a6.vhd
-    Info (12022): Found design unit 1: conector4x2a6-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/conector4x2a6.vhd Line: 14
-    Info (12023): Found entity 1: conector4x2a6 File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/conector4x2a6.vhd Line: 6
+    Info (12022): Found design unit 1: conector4x2a6-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/conector4x2a6.vhd Line: 14
+    Info (12023): Found entity 1: conector4x2a6 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/conector4x2a6.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file register6.vhd
-    Info (12022): Found design unit 1: register6-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/register6.vhd Line: 15
-    Info (12023): Found entity 1: register6 File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/register6.vhd Line: 6
+    Info (12022): Found design unit 1: register6-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/register6.vhd Line: 15
+    Info (12023): Found entity 1: register6 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/register6.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file memoria.vhd
-    Info (12022): Found design unit 1: memoria-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 13
-    Info (12023): Found entity 1: memoria File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 6
+    Info (12022): Found design unit 1: memoria-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 13
+    Info (12023): Found entity 1: memoria File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file conector8a4x4.vhd
-    Info (12022): Found design unit 1: conector8a4x4-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/conector8a4x4.vhd Line: 14
-    Info (12023): Found entity 1: conector8a4x4 File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/conector8a4x4.vhd Line: 6
+    Info (12022): Found design unit 1: conector8a4x4-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/conector8a4x4.vhd Line: 14
+    Info (12023): Found entity 1: conector8a4x4 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/conector8a4x4.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file register4.vhd
-    Info (12022): Found design unit 1: register4-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/register4.vhd Line: 15
-    Info (12023): Found entity 1: register4 File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/register4.vhd Line: 6
+    Info (12022): Found design unit 1: register4-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/register4.vhd Line: 15
+    Info (12023): Found entity 1: register4 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/register4.vhd Line: 6
 Info (12127): Elaborating entity "Practica3" for the top level hierarchy
 Info (12128): Elaborating entity "divider" for hierarchy "divider:inst1"
 Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst"
-Warning (10492): VHDL Process Statement warning at sensa_boton.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/sensa_boton.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at sensa_boton.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/sensa_boton.vhd Line: 18
 Info (12128): Elaborating entity "register6" for hierarchy "register6:inst3"
 Info (12128): Elaborating entity "conector4x2a6" for hierarchy "conector4x2a6:inst2"
 Info (12128): Elaborating entity "conector8a4x4" for hierarchy "conector8a4x4:inst6"
 Info (12128): Elaborating entity "memoria" for hierarchy "memoria:inst5"
-Warning (10631): VHDL Process Statement warning at memoria.vhd(15): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[0]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[1]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[2]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[3]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[4]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[5]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[6]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
-Info (10041): Inferred latch for "output[7]" at memoria.vhd(15) File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica3/memoria.vhd Line: 15
+Warning (10631): VHDL Process Statement warning at memoria.vhd(15): inferring latch(es) for signal or variable "output", which holds its previous value in one or more paths through the process File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[0]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[1]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[2]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[3]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[4]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[5]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[6]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
+Info (10041): Inferred latch for "output[7]" at memoria.vhd(15) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica3/memoria.vhd Line: 15
 Info (12128): Elaborating entity "register4" for hierarchy "register4:inst7"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -360,9 +360,9 @@ Info (21057): Implemented 125 device resources after synthesis - the final resou
     Info (21059): Implemented 36 output pins
     Info (21061): Implemented 84 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 965 megabytes
-    Info: Processing ended: Mon Sep  2 18:05:39 2019
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 968 megabytes
+    Info: Processing ended: Thu Sep  5 01:05:53 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 

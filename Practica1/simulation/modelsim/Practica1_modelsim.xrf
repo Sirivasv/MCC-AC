@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/Practica1.bdf
-source_file = 1, /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/divider.vhd
-source_file = 1, /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/Practica1.vwf
+source_file = 1, /home/sirivasv/Documents/MCC/MCC-AC/Practica1/divider.vhd
+source_file = 1, /home/sirivasv/Documents/MCC/MCC-AC/Practica1/Practica1.bdf
+source_file = 1, /home/sirivasv/Documents/MCC/MCC-AC/Practica1/Waveform.vwf
 source_file = 1, /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd

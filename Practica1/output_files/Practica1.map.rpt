@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica1
-Wed Aug 28 12:18:13 2019
+Thu Sep  5 01:12:36 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 28 12:18:13 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Sep  5 01:12:36 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica1                                   ;
 ; Top-level Entity Name              ; Practica1                                   ;
@@ -151,15 +151,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -168,8 +169,8 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ; Library ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
-; Practica1.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/Practica1.bdf            ;         ;
-; divider.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/divider.vhd              ;         ;
+; divider.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica1/divider.vhd                      ;         ;
+; Practica1.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/Documents/MCC/MCC-AC/Practica1/Practica1.bdf                    ;         ;
 ; 74193.bdf                        ; yes             ; Megafunction                       ; /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/others/maxplus2/74193.bdf ;         ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
 
@@ -271,14 +272,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Aug 28 12:17:57 2019
+    Info: Processing started: Thu Sep  5 01:12:26 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica1 -c Practica1
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
+    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica1/divider.vhd Line: 9
+    Info (12023): Found entity 1: divider File: /home/sirivasv/Documents/MCC/MCC-AC/Practica1/divider.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file Practica1.bdf
     Info (12023): Found entity 1: Practica1
-Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/divider.vhd Line: 9
-    Info (12023): Found entity 1: divider File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica1/divider.vhd Line: 5
 Info (12127): Elaborating entity "Practica1" for the top level hierarchy
 Info (12128): Elaborating entity "74193" for hierarchy "74193:inst"
 Info (12130): Elaborated megafunction instantiation "74193:inst"
@@ -291,9 +292,9 @@ Info (21057): Implemented 52 device resources after synthesis - the final resour
     Info (21059): Implemented 4 output pins
     Info (21061): Implemented 46 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 959 megabytes
-    Info: Processing ended: Wed Aug 28 12:18:13 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+    Info: Peak virtual memory: 1015 megabytes
+    Info: Processing ended: Thu Sep  5 01:12:36 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:29
 
 

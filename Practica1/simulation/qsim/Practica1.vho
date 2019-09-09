@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "08/20/2019 16:50:39"
+-- DATE "09/05/2019 01:15:06"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
@@ -198,7 +198,6 @@ SIGNAL \inst|21~combout\ : std_logic;
 SIGNAL \inst|23~0_combout\ : std_logic;
 SIGNAL \inst|23~q\ : std_logic;
 SIGNAL \inst1|cuenta\ : std_logic_vector(27 DOWNTO 0);
-SIGNAL \ALT_INV_reset~input_o\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -220,7 +219,6 @@ ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
 \clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clk~input_o\);
-\ALT_INV_reset~input_o\ <= NOT \reset~input_o\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
@@ -1410,7 +1408,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \inst1|cuenta\(25),
 	d => \inst|26~0_combout\,
-	clrn => \ALT_INV_reset~input_o\,
+	clrn => \reset~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \inst|26~q\);
@@ -1454,7 +1452,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \inst|5~combout\,
 	d => \inst|25~0_combout\,
-	clrn => \ALT_INV_reset~input_o\,
+	clrn => \reset~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \inst|25~q\);
@@ -1499,7 +1497,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \inst|51~combout\,
 	d => \inst|24~0_combout\,
-	clrn => \ALT_INV_reset~input_o\,
+	clrn => \reset~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \inst|24~q\);
@@ -1545,7 +1543,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \inst|21~combout\,
 	d => \inst|23~0_combout\,
-	clrn => \ALT_INV_reset~input_o\,
+	clrn => \reset~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \inst|23~q\);

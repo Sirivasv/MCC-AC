@@ -1,5 +1,5 @@
 Fitter report for Practica2
-Mon Aug 26 23:02:17 2019
+Thu Sep  5 01:19:58 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Mon Aug 26 23:02:17 2019       ;
+; Fitter Status                      ; Successful - Thu Sep  5 01:19:58 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica2                                   ;
 ; Top-level Entity Name              ; Practica2                                   ;
@@ -89,6 +89,7 @@ refer to the applicable agreement for further details.
 ; Option                                                             ; Setting                               ; Default Value                         ;
 +--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
 ; Device                                                             ; EP4CE22F17C6                          ;                                       ;
+; Maximum processors allowed for parallel compilation                ; All                                   ;                                       ;
 ; Nominal Core Supply Voltage                                        ; 1.2V                                  ;                                       ;
 ; Minimum Core Junction Temperature                                  ; 0                                     ;                                       ;
 ; Maximum Core Junction Temperature                                  ; 85                                    ;                                       ;
@@ -148,15 +149,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processors 3-4         ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -198,7 +200,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/output_files/Practica2.pin.
+The pin-out file can be found in /home/sirivasv/Documents/MCC/MCC-AC/Practica2/output_files/Practica2.pin.
 
 
 +---------------------------------------------------------------------+
@@ -988,8 +990,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device EP4CE22F17C6 for design "Practica2"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1013,7 +1014,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node reloj~input (placed in PIN R8 (CLK15, DIFFCLK_6p))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G18
-Info (176353): Automatically promoted node sensa_boton:inst2|reloj  File: /home/sirivasv/intelFPGA_lite/18.1/Projects/Practica2/sensa_boton.vhd Line: 10
+Info (176353): Automatically promoted node sensa_boton:inst2|reloj  File: /home/sirivasv/Documents/MCC/MCC-AC/Practica2/sensa_boton.vhd Line: 10
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1030,17 +1031,17 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1278 megabytes
-    Info: Processing ended: Mon Aug 26 23:02:17 2019
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info: Quartus Prime Fitter was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1555 megabytes
+    Info: Processing ended: Thu Sep  5 01:19:58 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 
