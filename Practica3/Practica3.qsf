@@ -99,22 +99,22 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
-set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name VHDL_FILE register6.vhd
 set_global_assignment -name VHDL_FILE memoria.vhd
 set_global_assignment -name VHDL_FILE conector8a4x4.vhd
 set_global_assignment -name VHDL_FILE register4.vhd
 set_location_assignment PIN_E1 -to boton
 set_location_assignment PIN_R8 -to clk
-set_location_assignment PIN_A11 -to salidas_reg[0]
-set_location_assignment PIN_A15 -to salidas_reg[3]
-set_location_assignment PIN_A13 -to salidas_reg[2]
-set_location_assignment PIN_B13 -to salidas_reg[1]
-set_location_assignment PIN_L3 -to estado[3]
-set_location_assignment PIN_B1 -to estado[2]
-set_location_assignment PIN_F3 -to estado[1]
-set_location_assignment PIN_D1 -to estado[0]
 set_location_assignment PIN_J15 -to reset
 set_location_assignment PIN_M1 -to S[0]
 set_location_assignment PIN_T8 -to S[1]
+set_location_assignment PIN_F3 -to dir_mem[3]
+set_location_assignment PIN_D1 -to dir_mem[2]
+set_location_assignment PIN_A15 -to salidas[3]
+set_location_assignment PIN_A13 -to salidas[2]
+set_location_assignment PIN_B13 -to salidas[1]
+set_location_assignment PIN_A11 -to salidas[0]
+set_location_assignment PIN_L3 -to dir_mem[5]
+set_location_assignment PIN_B1 -to dir_mem[4]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
