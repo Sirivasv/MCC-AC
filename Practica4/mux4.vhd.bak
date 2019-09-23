@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+entity mux4 is
+port(
+  X   : in  std_logic;
+  Y   : in  std_logic;
+  INT : in  std_logic;
+  sel : in  std_logic;
+  b   : out std_logic;
+end mux4;
+architecture rtl of mux4 is
+  -- declarative part: empty
+begin
+  with sel select
+    b <= a1 when "00",
+       a2 when "01",
+       a3 when "10",
+       a4 when others;
+end rtl;

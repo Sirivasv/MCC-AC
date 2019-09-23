@@ -1,5 +1,5 @@
 Fitter report for Practica3
-Tue Sep 10 20:20:50 2019
+Tue Sep 17 20:10:07 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Sep 10 20:20:50 2019       ;
+; Fitter Status                      ; Successful - Tue Sep 17 20:10:07 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica3                                   ;
 ; Top-level Entity Name              ; Practica3                                   ;
@@ -158,8 +158,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.5%      ;
-;     Processors 3-4         ;   0.5%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processors 3-4         ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -1235,9 +1235,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/sirivasv/Documents/MCC/MCC-AC/Practica3/output_files/Practica3.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1541 megabytes
-    Info: Processing ended: Tue Sep 10 20:20:50 2019
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 1556 megabytes
+    Info: Processing ended: Tue Sep 17 20:10:07 2019
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:06
 
 
