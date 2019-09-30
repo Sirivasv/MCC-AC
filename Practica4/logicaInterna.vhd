@@ -18,38 +18,38 @@ begin
 	process(II, CC)
 	begin
 		if (II="00") then 
-			sel <= '1';
+			sel <= '0';
 			PL_SIG <= '1';
 			MAP_SIG <= '1';
 			VECT_SIG <= '1';
 		elsif (II="01") then
 			if (CC='0') then 
-				sel <= '0';
+				sel <= '1';
 				PL_SIG <= '0';
 				MAP_SIG <= '1';
 				VECT_SIG <= '1';
 			else 
-				sel <= '1';
-				PL_SIG <= '1';
+				sel <= '0';
+				PL_SIG <= '0';
 				MAP_SIG <= '1';
 				VECT_SIG <= '1';
 			end if;
 		elsif (II="10") then
-			sel <= '0';
+			sel <= '1';
 			PL_SIG <= '1';
 			MAP_SIG <= '0';
 			VECT_SIG <= '1';
 		elsif (II="11") then
 			if (CC='0') then 
-				sel <= '0';
+				sel <= '1';
 				PL_SIG <= '1';
 				MAP_SIG <= '1';
 				VECT_SIG <= '0';
 			else 
-				sel <= '1';
+				sel <= '0';
 				PL_SIG <= '1';
 				MAP_SIG <= '1';
-				VECT_SIG <= '1';
+				VECT_SIG <= '0';
 			end if;
 		end if;
 	end process;

@@ -20,7 +20,7 @@ begin
 		if reset='0' then 
 			Q <=s0;
 		elsif rising_edge (clk) then
-			Q <= B"0011";
+			Q <= B"1101";
 		end if;
 	end process;
 end Behavioral;

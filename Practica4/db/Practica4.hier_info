@@ -47,10 +47,8 @@ b[3] <= b.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Practica4|logicaInterna:inst19
-CC => PL_SIG.DATAB
 CC => sel.DATAA
 CC => sel.DATAB
-CC => VECT_SIG$latch.DATAIN
 II[0] => Equal0.IN3
 II[0] => Equal1.IN3
 II[0] => Equal2.IN3

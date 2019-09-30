@@ -16,6 +16,6 @@ architecture Behavioral of mux2x4 is
 	
 begin
 	with sel select b <= 
-		E_INC when '1',
+		E_INC when '0',
 		D when others;
 end Behavioral;
