@@ -1,0 +1,128 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity memoria is
+	Port (
+		data_in : in STD_LOGIC_VECTOR (3 downto 0);
+		liga : out STD_LOGIC_VECTOR (3 downto 0);
+		instr : out STD_LOGIC_VECTOR (1 downto 0);
+		prueba : out STD_LOGIC_VECTOR (1 downto 0);
+		vf : out STD_LOGIC;
+		salidas : out STD_LOGIC_VECTOR (3 downto 0)
+	);
+end memoria;
+
+architecture Behavioral of memoria is
+begin
+	process(edo_pre)
+	begin
+		-- Estado 0
+		if(edo_pre="0000") then 
+			liga <= "0000";
+			instr <= "00"; -- Instruccion C
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "1100";
+		-- Estado 1
+		elsif(edo_pre="0001") then 
+			liga <= "0000";
+			instr <= "00"; -- Instruccion C
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "0110";
+		-- Estado 2
+		elsif(edo_pre="0010") then 
+			liga <= "0000";
+			instr <= "10"; -- Instruccion ST
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "0001";
+		-- Estado 3
+		elsif(edo_pre="0011") then 
+			liga <= "0011";
+			instr <= "01"; -- Instruccion SCC
+			prueba <= "01";
+			vf <= '0';
+			salidas <= "0010";
+		-- Estado 4
+		elsif(edo_pre="0100") then 
+			liga <= "0000";
+			instr <= "11"; -- Instruccion SCI
+			prueba <= "11";
+			vf <= '1';
+			salidas <= "1000";
+		-- Estado 5
+		elsif(edo_pre="0101") then 
+			liga <= "0001";
+			instr <= "01"; -- Instruccion SCC
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "1100";
+		-- Estado 6
+		elsif(edo_pre="0110") then 
+			liga <= "0000";
+			instr <= "00"; -- Instruccion C
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "0011";
+		-- Estado 7
+		elsif(edo_pre="0111") then 
+			liga <= "0000";
+			instr <= "01"; -- Instruccion SCC
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "0001";
+		-- Estado 8
+		elsif(edo_pre="1000") then 
+			liga <= "0000";
+			instr <= "00"; -- Instruccion C
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "1000";
+		-- Estado 9
+		elsif(edo_pre="1001") then 
+			liga <= "0000";
+			instr <= "11"; -- Instruccion SCI
+			prueba <= "11";
+			vf <= '1';
+			salidas <= "0000";
+		-- Estado 10
+		elsif(edo_pre="1010") then 
+			liga <= "0001";
+			instr <= "01"; -- Instruccion SCC
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "1100";
+		-- Estado 11
+		elsif(edo_pre="1011") then 
+			liga <= "0000";
+			instr <= "00"; -- Instruccion C
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "0101";
+		-- Estado 12
+		elsif(edo_pre="1100") then 
+			liga <= "0000";
+			instr <= "01"; -- Instruccion SCC
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "0001";
+		-- Estado 13
+		elsif(edo_pre="1101") then 
+			liga <= "1101";
+			instr <= "01"; -- Instruccion SCC
+			prueba <= "10";
+			vf <= '1';
+			salidas <= "0010";
+		-- Estado 14
+		elsif(edo_pre="1110") then 
+			liga <= "1001";
+			instr <= "01"; -- Instruccion SCC
+			prueba <= "00";
+			vf <= '0';
+			salidas <= "0000";
+		end if;
+	end process;
+end Behavioral;

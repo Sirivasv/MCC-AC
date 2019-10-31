@@ -1,0 +1,28 @@
+|Practica6
+salida <= register1:inst.Q
+boton_estado => sensa_boton:inst1.boton
+reloj => sensa_boton:inst1.clk
+reset => register1:inst.reset
+load_value => register1:inst.load_signal
+value_to_load => register1:inst.D
+debug <= register1:inst.sal_d
+
+
+|Practica6|register1:inst
+clk => Q~reg0.CLK
+reset => Q~reg0.ACLR
+load_signal => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sal_d <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Practica6|sensa_boton:inst1
+boton => esiguiente.DATAIN
+boton => reloj.DATAB
+clk => esiguiente.CLK
+clk => reloj~reg0.CLK
+reloj <= reloj~reg0.DB_MAX_OUTPUT_PORT_TYPE
+epresente <= esiguiente.DB_MAX_OUTPUT_PORT_TYPE
+
+
