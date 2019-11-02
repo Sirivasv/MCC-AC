@@ -66,4 +66,6 @@ set_location_assignment PIN_A11 -to salida
 set_location_assignment PIN_T8 -to value_to_load
 set_location_assignment PIN_B13 -to debug
 set_location_assignment PIN_R8 -to reloj
+set_global_assignment -name VHDL_FILE micro68HC11.vhd
+set_global_assignment -name VHDL_FILE memoria.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
