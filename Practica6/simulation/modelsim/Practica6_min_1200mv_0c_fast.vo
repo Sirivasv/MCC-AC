@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "10/30/2019 20:13:01"
+// DATE "11/02/2019 00:56:48"
 
 // 
 // Device: Altera EP4CE22F17C6 Package FBGA256
@@ -29,29 +29,39 @@
 `timescale 1 ps/ 1 ps
 
 module Practica6 (
-	salida,
+	out_leds,
+	out_sel_1,
+	out_sel_2,
 	boton_estado,
 	reloj,
 	reset,
-	load_value,
-	value_to_load,
-	debug);
-output 	salida;
+	INT_I,
+	INT_X);
+output 	[7:0] out_leds;
+input 	out_sel_1;
+input 	out_sel_2;
 input 	boton_estado;
 input 	reloj;
 input 	reset;
-input 	load_value;
-input 	value_to_load;
-output 	debug;
+input 	INT_I;
+input 	INT_X;
 
 // Design Ports Information
-// salida	=>  Location: PIN_A11,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// debug	=>  Location: PIN_B13,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// value_to_load	=>  Location: PIN_T8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// load_value	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// reset	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[7]	=>  Location: PIN_P14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[6]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[5]	=>  Location: PIN_A11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[4]	=>  Location: PIN_D9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[3]	=>  Location: PIN_A2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[2]	=>  Location: PIN_T6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[1]	=>  Location: PIN_G2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_leds[0]	=>  Location: PIN_A3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_sel_1	=>  Location: PIN_E16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// out_sel_2	=>  Location: PIN_E15,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // boton_estado	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // reloj	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INT_I	=>  Location: PIN_M10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// INT_X	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -69,19 +79,21 @@ tri1 devoe;
 initial $sdf_annotate("Practica6_min_1200mv_0c_v_fast.sdo");
 // synopsys translate_on
 
-wire \salida~output_o ;
-wire \debug~output_o ;
-wire \reloj~input_o ;
-wire \reloj~inputclkctrl_outclk ;
+wire \out_sel_1~input_o ;
+wire \out_sel_2~input_o ;
 wire \boton_estado~input_o ;
-wire \inst1|esiguiente~q ;
-wire \inst1|reloj~0_combout ;
-wire \inst1|reloj~q ;
-wire \load_value~input_o ;
-wire \value_to_load~input_o ;
-wire \inst|Q~0_combout ;
+wire \reloj~input_o ;
 wire \reset~input_o ;
-wire \inst|Q~q ;
+wire \INT_I~input_o ;
+wire \INT_X~input_o ;
+wire \out_leds[7]~output_o ;
+wire \out_leds[6]~output_o ;
+wire \out_leds[5]~output_o ;
+wire \out_leds[4]~output_o ;
+wire \out_leds[3]~output_o ;
+wire \out_leds[2]~output_o ;
+wire \out_leds[1]~output_o ;
+wire \out_leds[0]~output_o ;
 
 
 hard_block auto_generated_inst(
@@ -89,53 +101,128 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: IOOBUF_X40_Y34_N2
-cycloneive_io_obuf \salida~output (
-	.i(\inst|Q~q ),
-	.oe(vcc),
-	.seriesterminationcontrol(16'b0000000000000000),
-	.devoe(devoe),
-	.o(\salida~output_o ),
-	.obar());
-// synopsys translate_off
-defparam \salida~output .bus_hold = "false";
-defparam \salida~output .open_drain_output = "false";
-// synopsys translate_on
-
-// Location: IOOBUF_X49_Y34_N9
-cycloneive_io_obuf \debug~output (
+// Location: IOOBUF_X49_Y0_N9
+cycloneive_io_obuf \out_leds[7]~output (
 	.i(gnd),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
-	.o(\debug~output_o ),
+	.o(\out_leds[7]~output_o ),
 	.obar());
 // synopsys translate_off
-defparam \debug~output .bus_hold = "false";
-defparam \debug~output .open_drain_output = "false";
+defparam \out_leds[7]~output .bus_hold = "false";
+defparam \out_leds[7]~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X27_Y0_N22
-cycloneive_io_ibuf \reloj~input (
-	.i(reloj),
+// Location: IOOBUF_X49_Y34_N2
+cycloneive_io_obuf \out_leds[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_leds[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_leds[6]~output .bus_hold = "false";
+defparam \out_leds[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y34_N2
+cycloneive_io_obuf \out_leds[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_leds[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_leds[5]~output .bus_hold = "false";
+defparam \out_leds[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y34_N9
+cycloneive_io_obuf \out_leds[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_leds[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_leds[4]~output .bus_hold = "false";
+defparam \out_leds[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y34_N9
+cycloneive_io_obuf \out_leds[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_leds[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_leds[3]~output .bus_hold = "false";
+defparam \out_leds[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N2
+cycloneive_io_obuf \out_leds[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_leds[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_leds[2]~output .bus_hold = "false";
+defparam \out_leds[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y23_N16
+cycloneive_io_obuf \out_leds[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_leds[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_leds[1]~output .bus_hold = "false";
+defparam \out_leds[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X7_Y34_N16
+cycloneive_io_obuf \out_leds[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\out_leds[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \out_leds[0]~output .bus_hold = "false";
+defparam \out_leds[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X53_Y17_N8
+cycloneive_io_ibuf \out_sel_1~input (
+	.i(out_sel_1),
 	.ibar(gnd),
-	.o(\reloj~input_o ));
+	.o(\out_sel_1~input_o ));
 // synopsys translate_off
-defparam \reloj~input .bus_hold = "false";
-defparam \reloj~input .simulate_z_as = "z";
+defparam \out_sel_1~input .bus_hold = "false";
+defparam \out_sel_1~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: CLKCTRL_G18
-cycloneive_clkctrl \reloj~inputclkctrl (
-	.ena(vcc),
-	.inclk({vcc,vcc,vcc,\reloj~input_o }),
-	.clkselect(2'b00),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.outclk(\reloj~inputclkctrl_outclk ));
+// Location: IOIBUF_X53_Y17_N1
+cycloneive_io_ibuf \out_sel_2~input (
+	.i(out_sel_2),
+	.ibar(gnd),
+	.o(\out_sel_2~input_o ));
 // synopsys translate_off
-defparam \reloj~inputclkctrl .clock_type = "global clock";
-defparam \reloj~inputclkctrl .ena_register_mode = "none";
+defparam \out_sel_2~input .bus_hold = "false";
+defparam \out_sel_2~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X0_Y16_N8
@@ -148,96 +235,14 @@ defparam \boton_estado~input .bus_hold = "false";
 defparam \boton_estado~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X26_Y16_N19
-dffeas \inst1|esiguiente (
-	.clk(\reloj~inputclkctrl_outclk ),
-	.d(gnd),
-	.asdata(\boton_estado~input_o ),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(vcc),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst1|esiguiente~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst1|esiguiente .is_wysiwyg = "true";
-defparam \inst1|esiguiente .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X26_Y16_N4
-cycloneive_lcell_comb \inst1|reloj~0 (
-// Equation(s):
-// \inst1|reloj~0_combout  = (!\boton_estado~input_o  & \inst1|esiguiente~q )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\boton_estado~input_o ),
-	.datad(\inst1|esiguiente~q ),
-	.cin(gnd),
-	.combout(\inst1|reloj~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \inst1|reloj~0 .lut_mask = 16'h0F00;
-defparam \inst1|reloj~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X26_Y16_N5
-dffeas \inst1|reloj (
-	.clk(\reloj~inputclkctrl_outclk ),
-	.d(\inst1|reloj~0_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst1|reloj~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \inst1|reloj .is_wysiwyg = "true";
-defparam \inst1|reloj .power_up = "low";
-// synopsys translate_on
-
-// Location: IOIBUF_X0_Y16_N22
-cycloneive_io_ibuf \load_value~input (
-	.i(load_value),
+// Location: IOIBUF_X27_Y0_N22
+cycloneive_io_ibuf \reloj~input (
+	.i(reloj),
 	.ibar(gnd),
-	.o(\load_value~input_o ));
+	.o(\reloj~input_o ));
 // synopsys translate_off
-defparam \load_value~input .bus_hold = "false";
-defparam \load_value~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X27_Y0_N15
-cycloneive_io_ibuf \value_to_load~input (
-	.i(value_to_load),
-	.ibar(gnd),
-	.o(\value_to_load~input_o ));
-// synopsys translate_off
-defparam \value_to_load~input .bus_hold = "false";
-defparam \value_to_load~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X26_Y16_N20
-cycloneive_lcell_comb \inst|Q~0 (
-// Equation(s):
-// \inst|Q~0_combout  = (\load_value~input_o  & ((\value_to_load~input_o ))) # (!\load_value~input_o  & (\inst|Q~q ))
-
-	.dataa(\load_value~input_o ),
-	.datab(gnd),
-	.datac(\inst|Q~q ),
-	.datad(\value_to_load~input_o ),
-	.cin(gnd),
-	.combout(\inst|Q~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \inst|Q~0 .lut_mask = 16'hFA50;
-defparam \inst|Q~0 .sum_lutc_input = "datac";
+defparam \reloj~input .bus_hold = "false";
+defparam \reloj~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X53_Y14_N1
@@ -250,28 +255,41 @@ defparam \reset~input .bus_hold = "false";
 defparam \reset~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X26_Y16_N21
-dffeas \inst|Q (
-	.clk(\inst1|reloj~q ),
-	.d(\inst|Q~0_combout ),
-	.asdata(vcc),
-	.clrn(\reset~input_o ),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\inst|Q~q ),
-	.prn(vcc));
+// Location: IOIBUF_X43_Y0_N22
+cycloneive_io_ibuf \INT_I~input (
+	.i(INT_I),
+	.ibar(gnd),
+	.o(\INT_I~input_o ));
 // synopsys translate_off
-defparam \inst|Q .is_wysiwyg = "true";
-defparam \inst|Q .power_up = "low";
+defparam \INT_I~input .bus_hold = "false";
+defparam \INT_I~input .simulate_z_as = "z";
 // synopsys translate_on
 
-assign salida = \salida~output_o ;
+// Location: IOIBUF_X34_Y34_N8
+cycloneive_io_ibuf \INT_X~input (
+	.i(INT_X),
+	.ibar(gnd),
+	.o(\INT_X~input_o ));
+// synopsys translate_off
+defparam \INT_X~input .bus_hold = "false";
+defparam \INT_X~input .simulate_z_as = "z";
+// synopsys translate_on
 
-assign debug = \debug~output_o ;
+assign out_leds[7] = \out_leds[7]~output_o ;
+
+assign out_leds[6] = \out_leds[6]~output_o ;
+
+assign out_leds[5] = \out_leds[5]~output_o ;
+
+assign out_leds[4] = \out_leds[4]~output_o ;
+
+assign out_leds[3] = \out_leds[3]~output_o ;
+
+assign out_leds[2] = \out_leds[2]~output_o ;
+
+assign out_leds[1] = \out_leds[1]~output_o ;
+
+assign out_leds[0] = \out_leds[0]~output_o ;
 
 endmodule
 

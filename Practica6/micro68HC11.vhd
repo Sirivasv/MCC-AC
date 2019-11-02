@@ -26,7 +26,7 @@ end micro68HC11;
 architecture Behavioral of micro68HC11 is
 signal e_presente: unsigned(11 downto 0) := X"000";
 signal e_siguiente: unsigned(11 downto 0);
-signal PC: unsigned (15 downto 0):= X"0014";
+signal PC: unsigned (15 downto 0):= X"0044";
 signal estados: STD_LOGIC_VECTOR (7 downto 0):= X"FF";
 signal A: unsigned (7 downto 0);
 signal B: unsigned (7 downto 0);
@@ -40,7 +40,7 @@ signal AuxH: unsigned (7 downto 0);
 signal AuxL: unsigned (7 downto 0);
 signal Aux: unsigned (15 downto 0);
 signal PCH: unsigned (7 downto 0) := X"00";
-signal PCL: unsigned (7 downto 0) := X"14";
+signal PCL: unsigned (7 downto 0) := X"44";
 signal SPH: unsigned (7 downto 0) := X"FF"; -- Definir en qué lugar poner el stack...
 signal SPL: unsigned (7 downto 0) := X"FF"; -- de qué tamaño es la memoria y ponerlo
  -- en la última dirección
@@ -60,7 +60,7 @@ process(clk, reset,e_presente,e_siguiente)
 begin
 if (reset = '0') then
 	e_siguiente <= X"000";
-	PC <= X"0014";
+	PC <= X"0044";
 	IRQ <= '0';
 	XIRQ <= '0';
 	indY <= '0';

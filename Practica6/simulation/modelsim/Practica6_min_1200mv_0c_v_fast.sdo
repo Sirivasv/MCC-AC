@@ -29,144 +29,21 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "Practica6")
-  (DATE "10/30/2019 20:13:01")
+  (DATE "11/02/2019 00:56:48")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 
+	// No Timing Cells with timing info are found in the compiled design. A dummy dff Timing Cell is created.
   (CELL
-    (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE salida\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (840:840:840) (974:974:974))
-        (IOPATH i o (1593:1593:1593) (1596:1596:1596))
-      )
-    )
+    (CELLTYPE "dff")
+    (INSTANCE * )
   )
+	// No Timing Cells with timing info are found in the compiled design. A dummy dff Timing Cell is created.
   (CELL
-    (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE reloj\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (238:238:238) (617:617:617))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneive_clkctrl")
-    (INSTANCE reloj\~inputclkctrl)
-    (DELAY
-      (ABSOLUTE
-        (PORT inclk[0] (91:91:91) (78:78:78))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE boton_estado\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (238:238:238) (618:618:618))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "dffeas")
-    (INSTANCE inst1\|esiguiente)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (908:908:908) (912:912:912))
-        (PORT asdata (836:836:836) (777:777:777))
-        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
-      )
-    )
-    (TIMINGCHECK
-      (HOLD asdata (posedge clk) (84:84:84))
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE inst1\|reloj\~0)
-    (DELAY
-      (ABSOLUTE
-        (PORT datac (661:661:661) (603:603:603))
-        (PORT datad (119:119:119) (156:156:156))
-        (IOPATH datac combout (119:119:119) (125:125:125))
-        (IOPATH datad combout (68:68:68) (63:63:63))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "dffeas")
-    (INSTANCE inst1\|reloj)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (908:908:908) (912:912:912))
-        (PORT d (37:37:37) (50:50:50))
-        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
-      )
-    )
-    (TIMINGCHECK
-      (HOLD d (posedge clk) (84:84:84))
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE load_value\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (238:238:238) (618:618:618))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE value_to_load\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (238:238:238) (617:617:617))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE inst\|Q\~0)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (568:568:568) (502:502:502))
-        (PORT datad (618:618:618) (523:523:523))
-        (IOPATH dataa combout (165:165:165) (173:173:173))
-        (IOPATH datac combout (190:190:190) (195:195:195))
-        (IOPATH datad combout (68:68:68) (63:63:63))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE reset\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (238:238:238) (618:618:618))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "dffeas")
-    (INSTANCE inst\|Q)
-    (DELAY
-      (ABSOLUTE
-        (PORT clk (432:432:432) (470:470:470))
-        (PORT d (37:37:37) (50:50:50))
-        (PORT clrn (2656:2656:2656) (2366:2366:2366))
-        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
-        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
-      )
-    )
-    (TIMINGCHECK
-      (HOLD d (posedge clk) (84:84:84))
-    )
+    (CELLTYPE "dff")
+    (INSTANCE * )
   )
 )

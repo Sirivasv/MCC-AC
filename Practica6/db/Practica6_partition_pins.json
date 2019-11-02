@@ -2,32 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "salida",
-					"strict" : false
-				},
-				{
-					"name" : "value_to_load",
-					"strict" : false
-				},
-				{
-					"name" : "load_value",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "boton_estado",
-					"strict" : false
-				},
-				{
-					"name" : "reloj",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }
