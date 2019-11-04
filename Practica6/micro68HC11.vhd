@@ -55,6 +55,8 @@ constant ZERO : unsigned (7 downto 0) := "00000000" ;
 signal D: unsigned (15 downto 0);
 signal varRW: STD_LOGIC := '1';
 signal indY: STD_LOGIC := '0';
+signal temp:  unsigned(8 downto 0);
+signal tempA:  unsigned(8 downto 0);
 begin
 process(clk, reset,e_presente,e_siguiente)
 begin
@@ -67,6 +69,7 @@ if (reset = '0') then
 else
 	if (rising_edge(clk)) then
 		case e_presente is
+		-- FETCH
 			when X"000" =>
 				Dir <= PC;
 				e_siguiente <= X"001";
@@ -75,6 +78,7 @@ else
 				e_siguiente <= e_presente + 1;
 			when X"002" =>
 				e_siguiente <= (Data_in & ZERO(3 downto 0));
+				
 ---------------------------------------------------------------------------------------------------------------------
 			when X"860" => -- LDAA IMM
 				Dir <= PC;
@@ -133,6 +137,75 @@ else
 						e_siguiente <= X"001";
 					end if;
 				end if;
+------------------------------------------------------------------------------------
+			-- LDX IMM
+			when X"CE0" => -- LDX
+				Dir <= PC;
+				PC <= PC + 1;
+				e_siguiente <= e_presente + 1;
+			when X"CE1" => -- LDX
+				Dir <= PC;
+				e_siguiente <= e_presente + 1;
+			when X"CE2" => -- LDX
+				XH <= Data_in;
+				PC <= PC + 1;
+				e_siguiente <= e_presente + 1;
+			when X"CE3" =>
+				XL <= Data_in;
+				-- Actualiza N
+				estados(3) <= XH(7);
+				-- Actualiza Z
+				if ((Data_in = ZERO) and (XH = ZERO)) then
+					estados(2) <= '1';
+				else
+					estados(2) <= '0';
+				end if;
+				-- Actualiza V
+				estados(1) <= '0';
+				if (XIRQ = '1') then
+					e_siguiente <= microX;
+				else
+					if (IRQ = '1') then
+						e_siguiente <= microI;
+					else
+						Dir <= PC;
+						e_siguiente <= X"001";
+					end if;
+				end if;
+-------------------------------------------------------------------------
+			-- ABA
+			when X"1B0" =>
+				temp <= '0' & A + B;
+				A <= temp (7 downto 0);
+				-- Actualiza C
+				estados(0) <= temp(8)
+				
+				-- Actualiza H
+				if (A())
+				estados(0) <= A(7) & B(7);
+				e_siguiente <= e_siguiente + 1;
+			when X"1B1" =>
+				-- Actualiza N
+				estados(3) <= A(7);
+				-- Actualiza Z
+				if (A = ZERO) then
+					estados(2) <= '1';
+				else
+					estados(2) <= '0';
+				end if;
+				-- Actualiza V
+				estados(1) <= '0';
+				if (XIRQ = '1') then
+					e_siguiente <= microX;
+				else
+					if (IRQ = '1') then
+						e_siguiente <= microI;
+					else
+						Dir <= PC;
+						e_siguiente <= X"001";
+					end if;
+				end if;
+
 ---------------------------------------------------------------------------------------------------------------------
 			-- Código de la instruccion de acceso relativo BNE
 			when X"260" =>

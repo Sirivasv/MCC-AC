@@ -133,18 +133,25 @@ if (reset = '0') then
 	Dir_0030 <= X"04";
 
 	-- Program Instructions
+	
 	Dir_0044 <= X"86";
 	Dir_0045 <= X"FF";
+	
 	Dir_0046 <= X"C6";
 	Dir_0047 <= X"01";
+	
 	Dir_0048 <= X"CE";
 	Dir_0049 <= X"00";
 	Dir_004A <= X"10";
+	
 	Dir_004B <= X"1B";
+	
 	Dir_004C <= X"26";
 	Dir_004D <= X"04";
+	
 	Dir_004E <= X"A7";
 	Dir_004F <= X"00";
+	
 	Dir_0050 <= X"20";
 	Dir_0051 <= X"02";
 	Dir_0052 <= X"E7";
