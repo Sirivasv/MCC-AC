@@ -7,7 +7,7 @@ Port (
 	clk: in STD_LOGIC;
 	reset: in STD_LOGIC;
 	Dir_in: in unsigned(15 downto 0); -- Bis de direcciones de 16 bits
-	AS: in STD_LOGIC;
+	nRW: in STD_LOGIC;
 	Data_out: out unsigned(7 downto 0); -- Bus de datos de 8 bits
 	Data_in: in unsigned(7 downto 0); -- Bus de datos de 8 bits
 	Dir_0010_out: out unsigned(7 downto 0); -- Bus de datos de 8 bits 
@@ -154,17 +154,24 @@ if (reset = '0') then
 	
 	Dir_0050 <= X"20";
 	Dir_0051 <= X"02";
+	
 	Dir_0052 <= X"E7";
 	Dir_0053 <= X"00";
+	
 	Dir_0054 <= X"86";
 	Dir_0055 <= X"07";
+	
 	Dir_0056 <= X"C6";
 	Dir_0057 <= X"02";
+	
 	Dir_0058 <= X"3D";
+	
 	Dir_0059 <= X"A7";
 	Dir_005A <= X"01";
+	
 	Dir_005B <= X"E7";
 	Dir_005C <= X"02";
+	
 	Dir_005D <= X"20";
 	Dir_005E <= X"FD";
 
@@ -233,7 +240,7 @@ if (reset = '0') then
 	Dir_00FF <= X"00";
 else
 	if (rising_edge(clk)) then
-		if (AS = '0') then
+		if (nRW = '1') then
 			case Dir_in is
 			-- LDAA #$FF
 			when X"0044" =>
