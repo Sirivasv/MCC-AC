@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Nov  5 09:36:24 2019
+Fitter Status : Successful - Tue Nov  5 09:51:40 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Practica6
 Top-level Entity Name : Practica6
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 1,620 / 22,320 ( 7 % )
-    Total combinational functions : 1,453 / 22,320 ( 7 % )
+Total logic elements : 1,600 / 22,320 ( 7 % )
+    Total combinational functions : 1,431 / 22,320 ( 6 % )
     Dedicated logic registers : 794 / 22,320 ( 4 % )
 Total registers : 794
 Total pins : 16 / 154 ( 10 % )

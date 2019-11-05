@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica6
-Tue Nov  5 09:36:13 2019
+Tue Nov  5 09:51:30 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,13 +48,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov  5 09:36:13 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 09:51:30 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica6                                   ;
 ; Top-level Entity Name              ; Practica6                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,022                                       ;
-;     Total combinational functions  ; 1,453                                       ;
+; Total logic elements               ; 2,000                                       ;
+;     Total combinational functions  ; 1,431                                       ;
 ;     Dedicated logic registers      ; 810                                         ;
 ; Total registers                    ; 810                                         ;
 ; Total pins                         ; 16                                          ;
@@ -195,16 +195,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Estimated Total logic elements              ; 2,022                   ;
+; Estimated Total logic elements              ; 2,000                   ;
 ;                                             ;                         ;
-; Total combinational functions               ; 1453                    ;
+; Total combinational functions               ; 1431                    ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 966                     ;
-;     -- 3 input functions                    ; 203                     ;
-;     -- <=2 input functions                  ; 284                     ;
+;     -- 4 input functions                    ; 944                     ;
+;     -- 3 input functions                    ; 201                     ;
+;     -- <=2 input functions                  ; 286                     ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 1350                    ;
+;     -- normal mode                          ; 1328                    ;
 ;     -- arithmetic mode                      ; 103                     ;
 ;                                             ;                         ;
 ; Total registers                             ; 810                     ;
@@ -217,7 +217,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                         ;
 ; Maximum fan-out node                        ; sensa_boton:inst1|reloj ;
 ; Maximum fan-out                             ; 808                     ;
-; Total fan-out                               ; 8117                    ;
+; Total fan-out                               ; 8027                    ;
 ; Average fan-out                             ; 3.53                    ;
 +---------------------------------------------+-------------------------+
 
@@ -227,9 +227,9 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Entity Name ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
-; |Practica6                         ; 1453 (0)            ; 810 (0)                   ; 0           ; 1            ; 1       ; 0         ; 16   ; 0            ; |Practica6                                                         ; Practica6   ; work         ;
+; |Practica6                         ; 1431 (0)            ; 810 (0)                   ; 0           ; 1            ; 1       ; 0         ; 16   ; 0            ; |Practica6                                                         ; Practica6   ; work         ;
 ;    |memoria:inst2|                 ; 743 (743)           ; 640 (640)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica6|memoria:inst2                                           ; memoria     ; work         ;
-;    |micro68HC11:inst|              ; 669 (669)           ; 168 (168)                 ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Practica6|micro68HC11:inst                                        ; micro68HC11 ; work         ;
+;    |micro68HC11:inst|              ; 647 (647)           ; 168 (168)                 ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Practica6|micro68HC11:inst                                        ; micro68HC11 ; work         ;
 ;       |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Practica6|micro68HC11:inst|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
 ;          |mult_aat:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Practica6|micro68HC11:inst|lpm_mult:Mult0|mult_aat:auto_generated ; mult_aat    ; work         ;
 ;    |mux3x1:inst5|                  ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica6|mux3x1:inst5                                            ; mux3x1      ; work         ;
@@ -286,14 +286,8 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +-------------------------------------------+---------+
 ; Inverted Register                         ; Fan out ;
 +-------------------------------------------+---------+
-; micro68HC11:inst|AP[7]                    ; 4       ;
-; micro68HC11:inst|AP[6]                    ; 4       ;
-; micro68HC11:inst|AP[5]                    ; 4       ;
-; micro68HC11:inst|AP[4]                    ; 4       ;
-; micro68HC11:inst|AP[3]                    ; 4       ;
-; micro68HC11:inst|AP[2]                    ; 4       ;
-; micro68HC11:inst|AP[1]                    ; 4       ;
-; micro68HC11:inst|AP[0]                    ; 4       ;
+; micro68HC11:inst|AP[1]                    ; 3       ;
+; micro68HC11:inst|AP[5]                    ; 3       ;
 ; micro68HC11:inst|AP[15]                   ; 3       ;
 ; micro68HC11:inst|AP[14]                   ; 3       ;
 ; micro68HC11:inst|AP[13]                   ; 3       ;
@@ -302,18 +296,16 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; micro68HC11:inst|AP[10]                   ; 3       ;
 ; micro68HC11:inst|AP[9]                    ; 3       ;
 ; micro68HC11:inst|AP[8]                    ; 3       ;
+; micro68HC11:inst|AP[7]                    ; 3       ;
+; micro68HC11:inst|AP[6]                    ; 3       ;
+; micro68HC11:inst|AP[4]                    ; 3       ;
+; micro68HC11:inst|AP[3]                    ; 3       ;
+; micro68HC11:inst|AP[2]                    ; 3       ;
+; micro68HC11:inst|AP[0]                    ; 3       ;
 ; micro68HC11:inst|PC[6]                    ; 7       ;
 ; micro68HC11:inst|PC[2]                    ; 7       ;
 ; micro68HC11:inst|estados[2]               ; 4       ;
-; micro68HC11:inst|SPL[7]                   ; 1       ;
 ; micro68HC11:inst|nRW                      ; 88      ;
-; micro68HC11:inst|SPL[6]                   ; 1       ;
-; micro68HC11:inst|SPL[5]                   ; 1       ;
-; micro68HC11:inst|SPL[4]                   ; 1       ;
-; micro68HC11:inst|SPL[3]                   ; 1       ;
-; micro68HC11:inst|SPL[2]                   ; 1       ;
-; micro68HC11:inst|SPL[1]                   ; 1       ;
-; micro68HC11:inst|SPL[0]                   ; 1       ;
 ; memoria:inst2|Dir_004E[7]                 ; 1       ;
 ; memoria:inst2|Dir_007F[7]                 ; 1       ;
 ; memoria:inst2|Dir_0073[7]                 ; 1       ;
@@ -386,6 +378,14 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; memoria:inst2|Dir_0048[3]                 ; 1       ;
 ; memoria:inst2|Dir_0045[3]                 ; 1       ;
 ; memoria:inst2|Dir_0060[3]                 ; 1       ;
+; memoria:inst2|Dir_004E[2]                 ; 1       ;
+; memoria:inst2|Dir_004C[2]                 ; 1       ;
+; memoria:inst2|Dir_007F[2]                 ; 1       ;
+; memoria:inst2|Dir_0073[2]                 ; 1       ;
+; memoria:inst2|Dir_005E[2]                 ; 1       ;
+; memoria:inst2|Dir_005B[2]                 ; 1       ;
+; memoria:inst2|Dir_0052[2]                 ; 1       ;
+; memoria:inst2|Dir_004D[2]                 ; 1       ;
 ; Total number of inverted registers = 179* ;         ;
 +-------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
@@ -397,15 +397,15 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |Practica6|micro68HC11:inst|Data_out[0] ;
-; 19:1               ; 10 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|PC[7]       ;
+; 19:1               ; 10 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|PC[12]      ;
 ; 20:1               ; 2 bits    ; 26 LEs        ; 8 LEs                ; 18 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|PC[3]       ;
 ; 20:1               ; 2 bits    ; 26 LEs        ; 6 LEs                ; 20 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|PC[4]       ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|Dir[7]      ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|Dir[10]     ;
 ; 80:1               ; 8 bits    ; 424 LEs       ; 424 LEs              ; 0 LEs                  ; Yes        ; |Practica6|memoria:inst2|Data_out[0]    ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Practica6|micro68HC11:inst|B[0]        ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Practica6|micro68HC11:inst|A[0]        ;
-; 29:1               ; 16 bits   ; 304 LEs       ; 32 LEs               ; 272 LEs                ; Yes        ; |Practica6|micro68HC11:inst|AP[15]      ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Practica6|mux3x1:inst5|Mux7            ;
+; 29:1               ; 16 bits   ; 304 LEs       ; 32 LEs               ; 272 LEs                ; Yes        ; |Practica6|micro68HC11:inst|AP[10]      ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Practica6|mux3x1:inst5|Mux0            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
@@ -476,22 +476,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 710                         ;
 ;     ENA CLR SLD       ; 16                          ;
 ;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 1453                        ;
+; cycloneiii_lcell_comb ; 1431                        ;
 ;     arith             ; 103                         ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 55                          ;
 ;         3 data inputs ; 47                          ;
-;     normal            ; 1350                        ;
+;     normal            ; 1328                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 146                         ;
-;         2 data inputs ; 80                          ;
-;         3 data inputs ; 156                         ;
-;         4 data inputs ; 966                         ;
+;         2 data inputs ; 82                          ;
+;         3 data inputs ; 154                         ;
+;         4 data inputs ; 944                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 5.69                        ;
+; Average LUT depth     ; 5.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -510,7 +510,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov  5 09:36:00 2019
+    Info: Processing started: Tue Nov  5 09:51:17 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica6 -c Practica6
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -557,14 +557,14 @@ Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(49): used ex
 Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(50): used explicit default value for signal "IntRI" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 50
 Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(51): used explicit default value for signal "IntRX" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 51
 Warning (10036): Verilog HDL or VHDL warning at micro68HC11.vhd(58): object "indY" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 58
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(776): signal "nIRQ" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 776
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(783): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 783
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(784): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 784
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(786): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 786
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(787): signal "XL" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 787
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(788): signal "XH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 788
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(789): signal "AP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 789
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(790): signal "estados" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 790
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(786): signal "nIRQ" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 786
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(793): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 793
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(794): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 794
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(796): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 796
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(797): signal "XL" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 797
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(798): signal "XH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 798
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(799): signal "AP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 799
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(800): signal "estados" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 800
 Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst1"
 Warning (10492): VHDL Process Statement warning at sensa_boton.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/sensa_boton.vhd Line: 18
 Info (12128): Elaborating entity "memoria" for hierarchy "memoria:inst2"
@@ -608,15 +608,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "INT_X"
-Info (21057): Implemented 2039 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2017 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 2022 logic cells
+    Info (21061): Implemented 2000 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 1039 megabytes
-    Info: Processing ended: Tue Nov  5 09:36:13 2019
+    Info: Peak virtual memory: 1050 megabytes
+    Info: Processing ended: Tue Nov  5 09:51:30 2019
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:26
 
 

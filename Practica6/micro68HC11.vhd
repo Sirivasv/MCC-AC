@@ -460,81 +460,92 @@ else
 				end if;
 ---------------------------------------------------
 			-- INTERRUPCIONES microX
-			when X"332" =>
-				XIRQ <= '0';
+         when X"332" =>
 				AP <= SPH & SPL;
 				e_siguiente <= e_presente + 1;
-         when X"333" =>
+			when X"333" =>
 				XIRQ <= '0';
 				Dir <= AP;
+				Data_out <= PC(7 downto 0);
 				nRW <= '0';
 				e_siguiente <= e_presente + 1;
 			when X"334" =>
 				XIRQ <= '0';
 				AP <= AP - 1;
-				Data_out <= PC(7 downto 0);
 				e_siguiente <= e_presente + 1;
 			when X"335" =>
+				XIRQ <= '0';
 				Dir <= AP;
+				nRW <= '0';
+				Data_out <= PC(15 downto 8);
 				e_siguiente <= e_presente + 1;
 			when X"336" =>
 				AP <= AP - 1;
-				Data_out <= PC(15 downto 8);
 				e_siguiente <= e_presente + 1;
 			when X"337" =>
 				Dir <= AP;
 				PC <= IntRX;
+				nRW <= '0';
+				Data_out <= YL;
 				e_siguiente <= e_presente + 1;
 			when X"338" =>
 				AP <= AP - 1;
-				Data_out <= YL;
+				
 				e_siguiente <= e_presente + 1;
 			when X"339" =>
 				Dir <= AP;
+				nRW <= '0';
+				Data_out <= YH;
 				e_siguiente <= e_presente + 1;
 			when X"33A" =>
 				AP <= AP - 1;
-				Data_out <= YH;
+				
 				e_siguiente <= e_presente + 1;
 			when X"33B" =>
 				Dir <= AP;
+				nRW <= '0';
+				Data_out <= XL;	
 				e_siguiente <= e_presente + 1;
 			when X"33C" =>
 				AP <= AP - 1;
-				Data_out <= XL;
 				e_siguiente <= e_presente + 1;
 			when X"33D" =>
 				Dir <= AP;
+				nRW <= '0';
+				Data_out <= XH;
 				e_siguiente <= e_presente + 1;
 			when X"33E" =>
 				AP <= AP - 1;
-				Data_out <= XH;
 				e_siguiente <= e_presente + 1;
 			when X"33F" =>
 				Dir <= AP;
+				nRW <= '0';
+				Data_out <= A;
 				e_siguiente <= e_presente + 1;
 			when X"340" =>
 				AP <= AP - 1;
-				Data_out <= A;
 				e_siguiente <= e_presente + 1;
 			when X"341" =>
 				Dir <= AP;
+				nRW <= '0';
+				Data_out <= B;
 				e_siguiente <= e_presente + 1;
 			when X"342" =>
 				AP <= AP - 1;
-				Data_out <= B;
 				e_siguiente <= e_presente + 1;
 			when X"343" =>
 				Dir <= AP;
+				nRW <= '0';
+				Data_out <= unsigned(estados);
+				
 				e_siguiente <= e_presente + 1;
 			when X"344" =>
 				AP <= AP - 1;
-				Data_out <= unsigned(estados);
+				nRW <= '1';
 				e_siguiente <= e_presente + 1;
 			when X"345" =>
-				SPH <= AP(15 downto 8);
+            SPH <= AP(15 downto 8);
             SPL <= AP(7 downto 0);
-				nRW <= '1';
 				Dir <= PC;
 				e_siguiente <= X"001";
 ---------------------------------------------------
@@ -583,8 +594,7 @@ else
 			when X"44B" =>
 				Dir <= AP;
 				nRW <= '0';
-				Data_out <= XL;
-				
+				Data_out <= XL;	
 				e_siguiente <= e_presente + 1;
 			when X"44C" =>
 				AP <= AP - 1;
@@ -777,7 +787,7 @@ else
 		IRQ <= '1';
 	end if;
 	--if (nXIRQ = '1') then
-		--XIRQ <= '1';
+	--	XIRQ <= '1';
 	--end if;
 	-- debug vals
 	A_out<=A;
