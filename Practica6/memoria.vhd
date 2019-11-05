@@ -652,10 +652,10 @@ else
 end if;
 -- TESTING SIGNALS
 Dir_0010_out <= Dir_0010; 
--- Dir_0011_out <= Dir_0011;
--- Dir_0012_out <= Dir_0012;
-Dir_0011_out <= Dir_FFFE;
-Dir_0012_out <= Dir_FFFF;
+Dir_0011_out <= Dir_0011;
+Dir_0012_out <= Dir_0012;
+-- Dir_0011_out <= Dir_FFFE;
+-- Dir_0012_out <= Dir_FFFF;
 
 
 end process;

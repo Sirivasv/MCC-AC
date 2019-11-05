@@ -1,5 +1,5 @@
 Flow report for Practica6
-Tue Nov  5 09:51:46 2019
+Tue Nov  5 09:55:51 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov  5 09:51:46 2019       ;
+; Flow Status                        ; Successful - Tue Nov  5 09:55:51 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica6                                   ;
 ; Top-level Entity Name              ; Practica6                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,600 / 22,320 ( 7 % )                      ;
-;     Total combinational functions  ; 1,431 / 22,320 ( 6 % )                      ;
-;     Dedicated logic registers      ; 794 / 22,320 ( 4 % )                        ;
-; Total registers                    ; 794                                         ;
+; Total logic elements               ; 1,598 / 22,320 ( 7 % )                      ;
+;     Total combinational functions  ; 1,423 / 22,320 ( 6 % )                      ;
+;     Dedicated logic registers      ; 810 / 22,320 ( 4 % )                        ;
+; Total registers                    ; 810                                         ;
 ; Total pins                         ; 16 / 154 ( 10 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/05/2019 09:51:18 ;
+; Start date & time ; 11/05/2019 09:55:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Practica6           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 167300354960189.157296907823411        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 167300354960189.157296932224528        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -94,12 +94,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 1005 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:10     ; 1.1                     ; 1570 MB             ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 995 MB              ; 00:00:27                           ;
+; Fitter               ; 00:00:10     ; 1.1                     ; 1587 MB             ; 00:00:17                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 825 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 885 MB              ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1075 MB             ; 00:00:02                           ;
-; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:46                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.3                     ; 885 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1075 MB             ; 00:00:01                           ;
+; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
