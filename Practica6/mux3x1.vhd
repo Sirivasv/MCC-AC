@@ -8,8 +8,8 @@ entity mux3x1 is
 		Dir_0010_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits 
 		Dir_0011_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits 
 		Dir_0012_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits
+		e_presente_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits
 		PC_Low_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits
-		X_High_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits
 		X_Low_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits
 		A_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits
 		B_out: in unsigned(7 downto 0); -- Bus de datos de 8 bits
@@ -34,9 +34,9 @@ begin
       when "010" =>
         O_Dir <= Dir_0012_out;
 		when "011" =>
-        O_Dir <= PC_Low_out;
+        O_Dir <= e_presente_out;
 		when "100" =>
-        O_Dir <= X_High_out;
+        O_Dir <= PC_Low_out;
 		when "101" =>
         O_Dir <= X_Low_out;
       when "110" =>

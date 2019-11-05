@@ -401,6 +401,72 @@ else
 			when X"0081" =>
 			 Data_out <= Dir_0081;
 			
+			-- PILA
+			when X"FFD0" =>
+				 Data_out <= Dir_FFD0;
+			when X"FFD1" =>
+				 Data_out <= Dir_FFD1;
+			when X"FFD2" =>
+				 Data_out <= Dir_FFD2;
+			when X"FFD3" =>
+				 Data_out <= Dir_FFD3;
+			when X"FFD4" =>
+				 Data_out <= Dir_FFD4;
+			when X"FFD5" =>
+				 Data_out <= Dir_FFD5;
+			when X"FFD6" =>
+				 Data_out <= Dir_FFD6;
+			when X"FFD7" =>
+				 Data_out <= Dir_FFD7;
+			when X"FFD8" =>
+				 Data_out <= Dir_FFD8;
+			when X"FFD9" =>
+				 Data_out <= Dir_FFD9;
+			when X"FFDA" =>
+				 Data_out <= Dir_FFDA;
+			when X"FFDB" =>
+				 Data_out <= Dir_FFDB;
+			when X"FFDC" =>
+				 Data_out <= Dir_FFDC;
+			when X"FFDD" =>
+				 Data_out <= Dir_FFDD;
+			when X"FFDE" =>
+				 Data_out <= Dir_FFDE;
+			when X"FFDF" =>
+				 Data_out <= Dir_FFDF;
+			when X"FFF0" =>
+				 Data_out <= Dir_FFF0;
+			when X"FFF1" =>
+				 Data_out <= Dir_FFF1;
+			when X"FFF2" =>
+				 Data_out <= Dir_FFF2;
+			when X"FFF3" =>
+				 Data_out <= Dir_FFF3;
+			when X"FFF4" =>
+				 Data_out <= Dir_FFF4;
+			when X"FFF5" =>
+				 Data_out <= Dir_FFF5;
+			when X"FFF6" =>
+				 Data_out <= Dir_FFF6;
+			when X"FFF7" =>
+				 Data_out <= Dir_FFF7;
+			when X"FFF8" =>
+				 Data_out <= Dir_FFF8;
+			when X"FFF9" =>
+				 Data_out <= Dir_FFF9;
+			when X"FFFA" =>
+				 Data_out <= Dir_FFFA;
+			when X"FFFB" =>
+				 Data_out <= Dir_FFFB;
+			when X"FFFC" =>
+				 Data_out <= Dir_FFFC;
+			when X"FFFD" =>
+				 Data_out <= Dir_FFFD;
+			when X"FFFE" =>
+				 Data_out <= Dir_FFFE;
+			when X"FFFF" =>
+				 Data_out <= Dir_FFFF;
+			
 			when others =>
 				Data_out <= X"00";
 			end case;
@@ -586,8 +652,10 @@ else
 end if;
 -- TESTING SIGNALS
 Dir_0010_out <= Dir_0010; 
-Dir_0011_out <= Dir_0011;
-Dir_0012_out <= Dir_0012;
+-- Dir_0011_out <= Dir_0011;
+-- Dir_0012_out <= Dir_0012;
+Dir_0011_out <= Dir_FFFE;
+Dir_0012_out <= Dir_FFFF;
 
 
 end process;
