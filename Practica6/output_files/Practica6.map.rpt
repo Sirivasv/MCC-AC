@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica6
-Sat Nov  2 00:56:34 2019
+Tue Nov  5 01:00:08 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,12 +13,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for Inferred Entity Instance: micro68HC11:inst|lpm_mult:Mult0
+ 14. lpm_mult Parameter Settings by Entity Instance
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -44,19 +48,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov  2 00:56:34 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 01:00:08 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Practica6                                   ;
 ; Top-level Entity Name              ; Practica6                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 15                                          ;
+; Total logic elements               ; 1,522                                       ;
+;     Total combinational functions  ; 1,193                                       ;
+;     Dedicated logic registers      ; 570                                         ;
+; Total registers                    ; 570                                         ;
+; Total pins                         ; 16                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 1                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
@@ -152,143 +156,114 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
-; Practica6.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/Practica6.bdf   ;         ;
-; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/sensa_boton.vhd ;         ;
-; register1.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/register1.vhd   ;         ;
-; micro68HC11.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd ;         ;
-; memoria.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd     ;         ;
-; mux3x1.vhd                       ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux3x1.vhd      ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; Practica6.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/Documents/MCC/MCC-AC/Practica6/Practica6.bdf                        ;         ;
+; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica6/sensa_boton.vhd                      ;         ;
+; micro68HC11.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd                      ;         ;
+; memoria.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd                          ;         ;
+; mux3x1.vhd                       ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd                           ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                       ; /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                       ; /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
+; multcore.inc                     ; yes             ; Megafunction                       ; /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/megafunctions/multcore.inc    ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/megafunctions/bypassff.inc    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altshift.inc    ;         ;
+; db/mult_aat.tdf                  ; yes             ; Auto-Generated Megafunction        ; /home/sirivasv/Documents/MCC/MCC-AC/Practica6/db/mult_aat.tdf                      ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-;                                             ;                    ;
-; Total combinational functions               ; 0                  ;
-; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 0                  ;
-;     -- 3 input functions                    ; 0                  ;
-;     -- <=2 input functions                  ; 0                  ;
-;                                             ;                    ;
-; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 0                  ;
-;     -- arithmetic mode                      ; 0                  ;
-;                                             ;                    ;
-; Total registers                             ; 0                  ;
-;     -- Dedicated logic registers            ; 0                  ;
-;     -- I/O registers                        ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 15                 ;
-;                                             ;                    ;
-; Embedded Multiplier 9-bit elements          ; 0                  ;
-;                                             ;                    ;
-; Maximum fan-out node                        ; out_leds[7]~output ;
-; Maximum fan-out                             ; 1                  ;
-; Total fan-out                               ; 15                 ;
-; Average fan-out                             ; 0.50               ;
-+---------------------------------------------+--------------------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 1,522                   ;
+;                                             ;                         ;
+; Total combinational functions               ; 1193                    ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 739                     ;
+;     -- 3 input functions                    ; 177                     ;
+;     -- <=2 input functions                  ; 277                     ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 1090                    ;
+;     -- arithmetic mode                      ; 103                     ;
+;                                             ;                         ;
+; Total registers                             ; 570                     ;
+;     -- Dedicated logic registers            ; 570                     ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 16                      ;
+;                                             ;                         ;
+; Embedded Multiplier 9-bit elements          ; 1                       ;
+;                                             ;                         ;
+; Maximum fan-out node                        ; sensa_boton:inst1|reloj ;
+; Maximum fan-out                             ; 568                     ;
+; Total fan-out                               ; 6093                    ;
+; Average fan-out                             ; 3.39                    ;
++---------------------------------------------+-------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |Practica6                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |Practica6          ; Practica6   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                             ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Entity Name ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
+; |Practica6                         ; 1193 (0)            ; 570 (0)                   ; 0           ; 1            ; 1       ; 0         ; 16   ; 0            ; |Practica6                                                         ; Practica6   ; work         ;
+;    |memoria:inst2|                 ; 501 (501)           ; 400 (400)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica6|memoria:inst2                                           ; memoria     ; work         ;
+;    |micro68HC11:inst|              ; 651 (651)           ; 168 (168)                 ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Practica6|micro68HC11:inst                                        ; micro68HC11 ; work         ;
+;       |lpm_mult:Mult0|             ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Practica6|micro68HC11:inst|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
+;          |mult_aat:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |Practica6|micro68HC11:inst|lpm_mult:Mult0|mult_aat:auto_generated ; mult_aat    ; work         ;
+;    |mux3x1:inst5|                  ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica6|mux3x1:inst5                                            ; mux3x1      ; work         ;
+;    |sensa_boton:inst1|             ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Practica6|sensa_boton:inst1                                       ; sensa_boton ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+-------------------------------------------+---------------------------------------------+
-; Register name                             ; Reason for Removal                          ;
-+-------------------------------------------+---------------------------------------------+
-; micro68HC11:inst|e_siguiente[2,3]         ; Stuck at GND due to stuck port data_in      ;
-; memoria:inst2|Data_out[0..7]              ; Stuck at GND due to stuck port clock_enable ;
-; micro68HC11:inst|e_siguiente[4,7,8]       ; Stuck at GND due to stuck port data_in      ;
-; memoria:inst2|Dir_0044[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0045[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0046[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0047[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0048[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0049[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_004A[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_004B[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_004C[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_004D[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_004E[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_004F[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0050[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0051[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0052[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0053[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0054[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0055[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0056[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0057[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0058[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_0059[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_005A[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_005B[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_005C[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_005D[0..7]              ; Lost fanout                                 ;
-; memoria:inst2|Dir_005E[0..7]              ; Lost fanout                                 ;
-; micro68HC11:inst|e_siguiente[5]           ; Merged with micro68HC11:inst|e_siguiente[6] ;
-; micro68HC11:inst|estados[2]               ; Lost fanout                                 ;
-; memoria:inst2|Dir_0010[0..7]              ; Stuck at GND due to stuck port data_in      ;
-; memoria:inst2|Dir_0011[0..7]              ; Stuck at GND due to stuck port data_in      ;
-; memoria:inst2|Dir_0012[0..7]              ; Stuck at GND due to stuck port data_in      ;
-; micro68HC11:inst|e_siguiente[0,1,6,9..11] ; Lost fanout                                 ;
-; micro68HC11:inst|PC[1..15]                ; Lost fanout                                 ;
-; micro68HC11:inst|Dir[0..15]               ; Lost fanout                                 ;
-; micro68HC11:inst|PC[0]                    ; Lost fanout                                 ;
-; sensa_boton:inst1|esiguiente              ; Lost fanout                                 ;
-; sensa_boton:inst1|reloj                   ; Lost fanout                                 ;
-; Total Number of Removed Registers = 295   ;                                             ;
-+-------------------------------------------+---------------------------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 1           ;
+; Simple Multipliers (18-bit)           ; 0           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 1           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                      ;
-+---------------------------------+--------------------------------+-------------------------------------------------------------------------------+
-; Register name                   ; Reason for Removal             ; Registers Removed due to This Register                                        ;
-+---------------------------------+--------------------------------+-------------------------------------------------------------------------------+
-; micro68HC11:inst|e_siguiente[3] ; Stuck at GND                   ; micro68HC11:inst|PC[15], micro68HC11:inst|PC[14], micro68HC11:inst|PC[13],    ;
-;                                 ; due to stuck port data_in      ; micro68HC11:inst|PC[12], micro68HC11:inst|PC[11], micro68HC11:inst|PC[10],    ;
-;                                 ;                                ; micro68HC11:inst|PC[9], micro68HC11:inst|PC[8], micro68HC11:inst|PC[7],       ;
-;                                 ;                                ; micro68HC11:inst|PC[6], micro68HC11:inst|PC[5], micro68HC11:inst|PC[4],       ;
-;                                 ;                                ; micro68HC11:inst|PC[3], micro68HC11:inst|PC[2], micro68HC11:inst|PC[1],       ;
-;                                 ;                                ; micro68HC11:inst|PC[0], sensa_boton:inst1|reloj                               ;
-; memoria:inst2|Dir_0010[7]       ; Stuck at GND                   ; micro68HC11:inst|Dir[15], micro68HC11:inst|Dir[14], micro68HC11:inst|Dir[13], ;
-;                                 ; due to stuck port data_in      ; micro68HC11:inst|Dir[12], micro68HC11:inst|Dir[11], micro68HC11:inst|Dir[10], ;
-;                                 ;                                ; micro68HC11:inst|Dir[9], micro68HC11:inst|Dir[8], micro68HC11:inst|Dir[7]     ;
-; memoria:inst2|Data_out[4]       ; Stuck at GND                   ; micro68HC11:inst|e_siguiente[8]                                               ;
-;                                 ; due to stuck port clock_enable ;                                                                               ;
-; memoria:inst2|Data_out[3]       ; Stuck at GND                   ; micro68HC11:inst|e_siguiente[7]                                               ;
-;                                 ; due to stuck port clock_enable ;                                                                               ;
-; memoria:inst2|Data_out[0]       ; Stuck at GND                   ; micro68HC11:inst|e_siguiente[4]                                               ;
-;                                 ; due to stuck port clock_enable ;                                                                               ;
-+---------------------------------+--------------------------------+-------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; micro68HC11:inst|XIRQ                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -296,14 +271,197 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 570   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 469   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 552   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Inverted Register Statistics                        ;
++-------------------------------------------+---------+
+; Inverted Register                         ; Fan out ;
++-------------------------------------------+---------+
+; micro68HC11:inst|PC[6]                    ; 7       ;
+; micro68HC11:inst|PC[2]                    ; 7       ;
+; micro68HC11:inst|nRW                      ; 56      ;
+; micro68HC11:inst|estados[2]               ; 4       ;
+; memoria:inst2|Dir_007C[7]                 ; 1       ;
+; memoria:inst2|Dir_0079[7]                 ; 1       ;
+; memoria:inst2|Dir_0073[7]                 ; 1       ;
+; memoria:inst2|Dir_0059[7]                 ; 1       ;
+; memoria:inst2|Dir_0056[7]                 ; 1       ;
+; memoria:inst2|Dir_0054[7]                 ; 1       ;
+; memoria:inst2|Dir_0052[7]                 ; 1       ;
+; memoria:inst2|Dir_004E[7]                 ; 1       ;
+; memoria:inst2|Dir_0048[7]                 ; 1       ;
+; memoria:inst2|Dir_007F[7]                 ; 1       ;
+; memoria:inst2|Dir_0076[7]                 ; 1       ;
+; memoria:inst2|Dir_005B[7]                 ; 1       ;
+; memoria:inst2|Dir_0070[7]                 ; 1       ;
+; memoria:inst2|Dir_0060[7]                 ; 1       ;
+; memoria:inst2|Dir_0046[7]                 ; 1       ;
+; memoria:inst2|Dir_0044[7]                 ; 1       ;
+; memoria:inst2|Dir_0045[7]                 ; 1       ;
+; micro68HC11:inst|estados[7]               ; 1       ;
+; micro68HC11:inst|AP[1]                    ; 3       ;
+; micro68HC11:inst|AP[15]                   ; 3       ;
+; micro68HC11:inst|AP[14]                   ; 3       ;
+; micro68HC11:inst|AP[13]                   ; 3       ;
+; micro68HC11:inst|AP[12]                   ; 3       ;
+; micro68HC11:inst|AP[11]                   ; 3       ;
+; micro68HC11:inst|AP[10]                   ; 3       ;
+; micro68HC11:inst|AP[9]                    ; 3       ;
+; micro68HC11:inst|AP[8]                    ; 3       ;
+; micro68HC11:inst|AP[5]                    ; 3       ;
+; micro68HC11:inst|AP[3]                    ; 3       ;
+; micro68HC11:inst|AP[6]                    ; 3       ;
+; micro68HC11:inst|AP[2]                    ; 3       ;
+; micro68HC11:inst|AP[4]                    ; 3       ;
+; micro68HC11:inst|AP[7]                    ; 3       ;
+; micro68HC11:inst|AP[0]                    ; 3       ;
+; memoria:inst2|Dir_0079[6]                 ; 1       ;
+; memoria:inst2|Dir_007C[6]                 ; 1       ;
+; memoria:inst2|Dir_005E[6]                 ; 1       ;
+; memoria:inst2|Dir_005D[6]                 ; 1       ;
+; memoria:inst2|Dir_0056[6]                 ; 1       ;
+; memoria:inst2|Dir_0052[6]                 ; 1       ;
+; memoria:inst2|Dir_0048[6]                 ; 1       ;
+; memoria:inst2|Dir_007F[6]                 ; 1       ;
+; memoria:inst2|Dir_005B[6]                 ; 1       ;
+; memoria:inst2|Dir_0070[6]                 ; 1       ;
+; memoria:inst2|Dir_0060[6]                 ; 1       ;
+; memoria:inst2|Dir_0046[6]                 ; 1       ;
+; memoria:inst2|Dir_0045[6]                 ; 1       ;
+; memoria:inst2|Dir_007E[5]                 ; 1       ;
+; memoria:inst2|Dir_007C[5]                 ; 1       ;
+; memoria:inst2|Dir_0078[5]                 ; 1       ;
+; memoria:inst2|Dir_0073[5]                 ; 1       ;
+; memoria:inst2|Dir_0059[5]                 ; 1       ;
+; memoria:inst2|Dir_0058[5]                 ; 1       ;
+; memoria:inst2|Dir_0052[5]                 ; 1       ;
+; memoria:inst2|Dir_0050[5]                 ; 1       ;
+; memoria:inst2|Dir_004E[5]                 ; 1       ;
+; memoria:inst2|Dir_007F[5]                 ; 1       ;
+; memoria:inst2|Dir_007B[5]                 ; 1       ;
+; memoria:inst2|Dir_0076[5]                 ; 1       ;
+; memoria:inst2|Dir_0075[5]                 ; 1       ;
+; memoria:inst2|Dir_005B[5]                 ; 1       ;
+; memoria:inst2|Dir_0072[5]                 ; 1       ;
+; memoria:inst2|Dir_0081[5]                 ; 1       ;
+; memoria:inst2|Dir_004C[5]                 ; 1       ;
+; memoria:inst2|Dir_0045[5]                 ; 1       ;
+; memoria:inst2|Dir_0060[5]                 ; 1       ;
+; memoria:inst2|Dir_007C[4]                 ; 1       ;
+; memoria:inst2|Dir_0078[4]                 ; 1       ;
+; memoria:inst2|Dir_0073[4]                 ; 1       ;
+; memoria:inst2|Dir_005E[4]                 ; 1       ;
+; memoria:inst2|Dir_0058[4]                 ; 1       ;
+; memoria:inst2|Dir_004A[4]                 ; 1       ;
+; memoria:inst2|Dir_007B[4]                 ; 1       ;
+; memoria:inst2|Dir_0075[4]                 ; 1       ;
+; memoria:inst2|Dir_004B[4]                 ; 1       ;
+; memoria:inst2|Dir_0081[4]                 ; 1       ;
+; memoria:inst2|Dir_0060[4]                 ; 1       ;
+; memoria:inst2|Dir_0045[4]                 ; 1       ;
+; memoria:inst2|Dir_0079[3]                 ; 1       ;
+; memoria:inst2|Dir_0078[3]                 ; 1       ;
+; memoria:inst2|Dir_005E[3]                 ; 1       ;
+; memoria:inst2|Dir_005D[3]                 ; 1       ;
+; memoria:inst2|Dir_0058[3]                 ; 1       ;
+; memoria:inst2|Dir_0048[3]                 ; 1       ;
+; memoria:inst2|Dir_0070[3]                 ; 1       ;
+; memoria:inst2|Dir_004B[3]                 ; 1       ;
+; memoria:inst2|Dir_0081[3]                 ; 1       ;
+; memoria:inst2|Dir_0060[3]                 ; 1       ;
+; memoria:inst2|Dir_0045[3]                 ; 1       ;
+; memoria:inst2|Dir_007C[2]                 ; 1       ;
+; memoria:inst2|Dir_0079[2]                 ; 1       ;
+; memoria:inst2|Dir_0073[2]                 ; 1       ;
+; memoria:inst2|Dir_005E[2]                 ; 1       ;
+; memoria:inst2|Dir_005D[2]                 ; 1       ;
+; memoria:inst2|Dir_0059[2]                 ; 1       ;
+; memoria:inst2|Dir_0058[2]                 ; 1       ;
+; Total number of inverted registers = 179* ;         ;
++-------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |Practica6|micro68HC11:inst|Data_out[0] ;
+; 19:1               ; 10 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|PC[9]       ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 8 LEs                ; 18 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|PC[3]       ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 6 LEs                ; 20 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|PC[5]       ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |Practica6|micro68HC11:inst|Dir[11]     ;
+; 48:1               ; 8 bits    ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; Yes        ; |Practica6|memoria:inst2|Data_out[6]    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Practica6|micro68HC11:inst|B[0]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Practica6|micro68HC11:inst|A[0]        ;
+; 29:1               ; 16 bits   ; 304 LEs       ; 32 LEs               ; 272 LEs                ; Yes        ; |Practica6|micro68HC11:inst|AP[5]       ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Practica6|mux3x1:inst5|Mux0            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: micro68HC11:inst|lpm_mult:Mult0    ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 8            ; Untyped             ;
+; LPM_WIDTHB                                     ; 8            ; Untyped             ;
+; LPM_WIDTHP                                     ; 16           ; Untyped             ;
+; LPM_WIDTHR                                     ; 16           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_aat     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                          ;
++---------------------------------------+---------------------------------+
+; Name                                  ; Value                           ;
++---------------------------------------+---------------------------------+
+; Number of entity instances            ; 1                               ;
+; Entity Instance                       ; micro68HC11:inst|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 8                               ;
+;     -- LPM_WIDTHB                     ; 8                               ;
+;     -- LPM_WIDTHP                     ; 16                              ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                              ;
+;     -- USE_EAB                        ; OFF                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                              ;
++---------------------------------------+---------------------------------+
 
 
 +-----------------------------------------------------+
@@ -311,13 +469,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 15                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 16                          ;
+; cycloneiii_ff         ; 570                         ;
+;     CLR               ; 15                          ;
+;     ENA               ; 98                          ;
+;     ENA CLR           ; 454                         ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 1193                        ;
+;     arith             ; 103                         ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 47                          ;
+;     normal            ; 1090                        ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 146                         ;
+;         2 data inputs ; 73                          ;
+;         3 data inputs ; 130                         ;
+;         4 data inputs ; 739                         ;
+; cycloneiii_mac_mult   ; 1                           ;
+; cycloneiii_mac_out    ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 5.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -326,7 +498,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -336,147 +508,141 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov  2 00:56:15 2019
+    Info: Processing started: Tue Nov  5 00:59:55 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica6 -c Practica6
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file Practica6.bdf
     Info (12023): Found entity 1: Practica6
 Info (12021): Found 2 design units, including 1 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/divider.vhd Line: 11
-    Info (12023): Found entity 1: divider File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/divider.vhd Line: 6
+    Info (12022): Found design unit 1: divider-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/divider.vhd Line: 11
+    Info (12023): Found entity 1: divider File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/divider.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mux2x4.vhd
-    Info (12022): Found design unit 1: mux2x4-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux2x4.vhd Line: 15
-    Info (12023): Found entity 1: mux2x4 File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux2x4.vhd Line: 6
+    Info (12022): Found design unit 1: mux2x4-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux2x4.vhd Line: 15
+    Info (12023): Found entity 1: mux2x4 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux2x4.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file register4.vhd
-    Info (12022): Found design unit 1: register4-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/register4.vhd Line: 15
-    Info (12023): Found entity 1: register4 File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/register4.vhd Line: 6
+    Info (12022): Found design unit 1: register4-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/register4.vhd Line: 15
+    Info (12023): Found entity 1: register4 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/register4.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file sensa_boton.vhd
-    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/sensa_boton.vhd Line: 14
-    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/sensa_boton.vhd Line: 7
+    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/sensa_boton.vhd Line: 14
+    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/sensa_boton.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file register1.vhd
-    Info (12022): Found design unit 1: register1-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/register1.vhd Line: 15
-    Info (12023): Found entity 1: register1 File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/register1.vhd Line: 6
+    Info (12022): Found design unit 1: register1-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/register1.vhd Line: 15
+    Info (12023): Found entity 1: register1 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/register1.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file micro68HC11.vhd
-    Info (12022): Found design unit 1: micro68HC11-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 26
-    Info (12023): Found entity 1: micro68HC11 File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 5
+    Info (12022): Found design unit 1: micro68HC11-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 25
+    Info (12023): Found entity 1: micro68HC11 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoria.vhd
-    Info (12022): Found design unit 1: memoria-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 19
-    Info (12023): Found entity 1: memoria File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 5
+    Info (12022): Found design unit 1: memoria-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 19
+    Info (12023): Found entity 1: memoria File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux3x1.vhd
-    Info (12022): Found design unit 1: mux3x1-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux3x1.vhd Line: 17
-    Info (12023): Found entity 1: mux3x1 File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux3x1.vhd Line: 6
+    Info (12022): Found design unit 1: mux3x1-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 23
+    Info (12023): Found entity 1: mux3x1 File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 6
 Info (12127): Elaborating entity "Practica6" for the top level hierarchy
 Info (12128): Elaborating entity "mux3x1" for hierarchy "mux3x1:inst5"
-Warning (10492): VHDL Process Statement warning at mux3x1.vhd(25): signal "Dir_0010_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux3x1.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mux3x1.vhd(27): signal "Dir_0011_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux3x1.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at mux3x1.vhd(29): signal "Dir_0012_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux3x1.vhd Line: 29
-Warning (10492): VHDL Process Statement warning at mux3x1.vhd(31): signal "Dir_0010_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/mux3x1.vhd Line: 31
-Info (12128): Elaborating entity "memoria" for hierarchy "memoria:inst2"
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(26): object "Dir_0020" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 26
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(27): object "Dir_0030" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 27
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(60): object "Dir_0060" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 60
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(61): object "Dir_0061" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 61
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(62): object "Dir_0062" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 62
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(64): object "Dir_0063" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 64
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(65): object "Dir_0064" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 65
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(66): object "Dir_0065" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 66
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(68): object "Dir_0066" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 68
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(69): object "Dir_0067" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 69
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(71): object "Dir_0068" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 71
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(75): object "Dir_0069" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 75
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(76): object "Dir_006A" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 76
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(77): object "Dir_006B" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(79): object "Dir_006C" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 79
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(80): object "Dir_006D" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 80
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(81): object "Dir_006E" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 81
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(83): object "Dir_006F" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 83
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(84): object "Dir_0070" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 84
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(86): object "Dir_0071" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 86
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(89): object "Dir_00D0" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 89
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(90): object "Dir_00D1" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 90
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(91): object "Dir_00D2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 91
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(92): object "Dir_00D3" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 92
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(93): object "Dir_00D4" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 93
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(94): object "Dir_00D5" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 94
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(95): object "Dir_00D6" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 95
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(96): object "Dir_00D7" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 96
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(97): object "Dir_00D8" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 97
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(98): object "Dir_00D9" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 98
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(99): object "Dir_00DA" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 99
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(100): object "Dir_00DB" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 100
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(101): object "Dir_00DC" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 101
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(102): object "Dir_00DD" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 102
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(103): object "Dir_00DE" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 103
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(104): object "Dir_00DF" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 104
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(105): object "Dir_00F0" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 105
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(106): object "Dir_00F1" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 106
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(107): object "Dir_00F2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 107
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(108): object "Dir_00F3" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 108
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(109): object "Dir_00F4" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 109
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(110): object "Dir_00F5" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 110
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(111): object "Dir_00F6" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 111
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(112): object "Dir_00F7" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 112
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(113): object "Dir_00F8" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 113
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(114): object "Dir_00F9" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 114
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(115): object "Dir_00FA" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 115
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(116): object "Dir_00FB" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 116
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(117): object "Dir_00FC" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 117
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(118): object "Dir_00FD" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 118
-Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(119): object "Dir_00FE" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 119
-Warning (10492): VHDL Process Statement warning at memoria.vhd(489): signal "Dir_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 489
-Warning (10492): VHDL Process Statement warning at memoria.vhd(490): signal "Dir_0011" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 490
-Warning (10492): VHDL Process Statement warning at memoria.vhd(491): signal "Dir_0012" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/memoria.vhd Line: 491
-Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst1"
-Warning (10492): VHDL Process Statement warning at sensa_boton.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/sensa_boton.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(31): signal "Dir_0010_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(33): signal "Dir_0011_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 33
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(35): signal "Dir_0012_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 35
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(37): signal "PC_Low_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(39): signal "X_High_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 39
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(41): signal "X_Low_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 41
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(43): signal "A_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 43
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(45): signal "B_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at mux3x1.vhd(47): signal "Dir_0010_out" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/mux3x1.vhd Line: 47
 Info (12128): Elaborating entity "micro68HC11" for hierarchy "micro68HC11:inst"
-Warning (10541): VHDL Signal Declaration warning at micro68HC11.vhd(12): used implicit default value for signal "Data_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 12
-Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(14): used explicit default value for signal "nRW" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at micro68HC11.vhd(35): used implicit default value for signal "XH" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 35
-Warning (10541): VHDL Signal Declaration warning at micro68HC11.vhd(36): used implicit default value for signal "XL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 36
-Warning (10541): VHDL Signal Declaration warning at micro68HC11.vhd(38): used implicit default value for signal "YL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 38
-Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(47): used explicit default value for signal "microI" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 47
-Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(48): used explicit default value for signal "microX" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 48
-Warning (10036): Verilog HDL or VHDL warning at micro68HC11.vhd(57): object "indY" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(177): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 177
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(178): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 178
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(180): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 180
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(181): signal "XL" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(182): signal "XH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 182
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(183): signal "YL" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 183
-Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(184): signal "estados" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 184
-Warning (10631): VHDL Process Statement warning at micro68HC11.vhd(59): inferring latch(es) for signal or variable "IRQ", which holds its previous value in one or more paths through the process File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 59
-Warning (10631): VHDL Process Statement warning at micro68HC11.vhd(59): inferring latch(es) for signal or variable "XIRQ", which holds its previous value in one or more paths through the process File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 59
-Info (10041): Inferred latch for "XIRQ" at micro68HC11.vhd(59) File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 59
-Info (10041): Inferred latch for "IRQ" at micro68HC11.vhd(59) File: /home/sirivasv/Documents/BACKUP/MCC-AC/Practica6/micro68HC11.vhd Line: 59
-Info (12128): Elaborating entity "register1" for hierarchy "register1:REGISTER_INT_I"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out_leds[7]" is stuck at GND
-    Warning (13410): Pin "out_leds[6]" is stuck at GND
-    Warning (13410): Pin "out_leds[5]" is stuck at GND
-    Warning (13410): Pin "out_leds[4]" is stuck at GND
-    Warning (13410): Pin "out_leds[3]" is stuck at GND
-    Warning (13410): Pin "out_leds[2]" is stuck at GND
-    Warning (13410): Pin "out_leds[1]" is stuck at GND
-    Warning (13410): Pin "out_leds[0]" is stuck at GND
-Info (17049): 257 registers lost all their fanouts during netlist optimizations.
+Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(47): used explicit default value for signal "microI" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 47
+Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(48): used explicit default value for signal "microX" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(49): used explicit default value for signal "IntRI" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 49
+Warning (10540): VHDL Signal Declaration warning at micro68HC11.vhd(50): used explicit default value for signal "IntRX" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 50
+Warning (10036): Verilog HDL or VHDL warning at micro68HC11.vhd(57): object "indY" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(753): signal "nIRQ" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 753
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(760): signal "A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 760
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(761): signal "B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 761
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(763): signal "PC" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 763
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(764): signal "XL" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 764
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(765): signal "XH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 765
+Warning (10492): VHDL Process Statement warning at micro68HC11.vhd(766): signal "estados" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 766
+Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst1"
+Warning (10492): VHDL Process Statement warning at sensa_boton.vhd(18): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/sensa_boton.vhd Line: 18
+Info (12128): Elaborating entity "memoria" for hierarchy "memoria:inst2"
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(26): object "Dir_0020" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 26
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(27): object "Dir_0030" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 27
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(107): object "Dir_FFD0" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 107
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(108): object "Dir_FFD1" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 108
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(109): object "Dir_FFD2" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 109
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(110): object "Dir_FFD3" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 110
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(111): object "Dir_FFD4" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 111
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(112): object "Dir_FFD5" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 112
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(113): object "Dir_FFD6" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 113
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(114): object "Dir_FFD7" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 114
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(115): object "Dir_FFD8" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 115
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(116): object "Dir_FFD9" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 116
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(117): object "Dir_FFDA" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 117
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(118): object "Dir_FFDB" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 118
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(119): object "Dir_FFDC" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 119
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(120): object "Dir_FFDD" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 120
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(121): object "Dir_FFDE" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 121
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(122): object "Dir_FFDF" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 122
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(123): object "Dir_FFF0" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 123
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(124): object "Dir_FFF1" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 124
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(125): object "Dir_FFF2" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 125
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(126): object "Dir_FFF3" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 126
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(127): object "Dir_FFF4" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 127
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(128): object "Dir_FFF5" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 128
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(129): object "Dir_FFF6" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 129
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(130): object "Dir_FFF7" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 130
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(131): object "Dir_FFF8" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 131
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(132): object "Dir_FFF9" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 132
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(133): object "Dir_FFFA" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 133
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(134): object "Dir_FFFB" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 134
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(135): object "Dir_FFFC" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 135
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(136): object "Dir_FFFD" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 136
+Warning (10036): Verilog HDL or VHDL warning at memoria.vhd(137): object "Dir_FFFE" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at memoria.vhd(588): signal "Dir_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 588
+Warning (10492): VHDL Process Statement warning at memoria.vhd(589): signal "Dir_0011" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 589
+Warning (10492): VHDL Process Statement warning at memoria.vhd(590): signal "Dir_0012" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 590
+Warning (10631): VHDL Process Statement warning at memoria.vhd(140): inferring latch(es) for signal or variable "Dir_005F", which holds its previous value in one or more paths through the process File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[0]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[1]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[2]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[3]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[4]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[5]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[6]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (10041): Inferred latch for "Dir_005F[7]" at memoria.vhd(140) File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/memoria.vhd Line: 140
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "micro68HC11:inst|Mult0" File: /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 658
+Info (12130): Elaborated megafunction instantiation "micro68HC11:inst|lpm_mult:Mult0" File: /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 658
+Info (12133): Instantiated megafunction "micro68HC11:inst|lpm_mult:Mult0" with the following parameter: File: /home/sirivasv/intelFPGA_lite/18.1/quartus/libraries/vhdl/synopsys/ieee/syn_arit.vhd Line: 658
+    Info (12134): Parameter "LPM_WIDTHA" = "8"
+    Info (12134): Parameter "LPM_WIDTHB" = "8"
+    Info (12134): Parameter "LPM_WIDTHP" = "16"
+    Info (12134): Parameter "LPM_WIDTHR" = "16"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_aat.tdf
+    Info (12023): Found entity 1: mult_aat File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/db/mult_aat.tdf Line: 28
+Info (13000): Registers with preset signals will power-up high File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 82
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "micro68HC11:inst|IRQ" is converted into an equivalent circuit using register "micro68HC11:inst|IRQ~_emulated" and latch "micro68HC11:inst|IRQ~1" File: /home/sirivasv/Documents/MCC/MCC-AC/Practica6/micro68HC11.vhd Line: 51
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "out_sel_1"
-    Warning (15610): No output dependent on input pin "out_sel_2"
-    Warning (15610): No output dependent on input pin "boton_estado"
-    Warning (15610): No output dependent on input pin "reloj"
-    Warning (15610): No output dependent on input pin "reset"
-    Warning (15610): No output dependent on input pin "INT_I"
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "INT_X"
-Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 1539 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
     Info (21059): Implemented 8 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 94 warnings
-    Info: Peak virtual memory: 958 megabytes
-    Info: Processing ended: Sat Nov  2 00:56:34 2019
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:44
+    Info (21061): Implemented 1522 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
+    Info: Peak virtual memory: 1043 megabytes
+    Info: Processing ended: Tue Nov  5 01:00:08 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 

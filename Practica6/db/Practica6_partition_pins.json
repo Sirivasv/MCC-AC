@@ -2,7 +2,68 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "out_leds[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_sel_1",
+					"strict" : false
+				},
+				{
+					"name" : "out_sel_2",
+					"strict" : false
+				},
+				{
+					"name" : "out_sel_3",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "boton_estado",
+					"strict" : false
+				},
+				{
+					"name" : "reloj",
+					"strict" : false
+				},
+				{
+					"name" : "INT_I",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
