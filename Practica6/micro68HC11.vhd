@@ -66,6 +66,7 @@ process(clk, reset,e_presente,e_siguiente)
 begin
 if (reset = '0') then
 	e_siguiente <= X"000";
+	e_presente <= X"000";
 	A_out <= X"00";
 	A <= X"00";
 	B_out <= X"00";
