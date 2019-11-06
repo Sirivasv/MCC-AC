@@ -264,6 +264,21 @@ else
 	if (rising_edge(clk)) then
 		if (nRW = '1') then
 			case Dir_in is
+			-- Testing Signals
+			when X"0010" =>
+				Data_out <= Dir_0010;
+			when X"0011" =>
+				Data_out <= Dir_0011;
+			when X"0012" =>
+				Data_out <= Dir_0012;
+
+			-- Directions for interruptions Operations
+			when X"0020" =>
+				Data_out <= Dir_0020;
+			when X"0030" =>
+				Data_out <= Dir_0030;
+				
+			-- Program Instructions
 			-- LDAA #$FF
 			when X"0044" =>
 				Data_out <= Dir_0044;
