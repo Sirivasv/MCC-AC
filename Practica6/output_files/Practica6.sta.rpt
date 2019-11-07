@@ -1,5 +1,5 @@
 Timing Analyzer report for Practica6
-Wed Nov  6 10:49:37 2019
+Wed Nov  6 15:15:34 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -104,14 +104,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.28        ;
+; Average used               ; 1.26        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  11.8%      ;
-;     Processor 3            ;  10.2%      ;
-;     Processor 4            ;   5.9%      ;
+;     Processor 2            ;  11.1%      ;
+;     Processor 3            ;   9.2%      ;
+;     Processor 4            ;   6.1%      ;
 +----------------------------+-------------+
 
 
@@ -814,8 +814,8 @@ No paths to report.
 ; -3.141 ; micro68HC11:inst|e_siguiente[10] ; micro68HC11:inst|AP[12]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.072      ;
 ; -3.141 ; micro68HC11:inst|e_siguiente[10] ; micro68HC11:inst|AP[14]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.072      ;
 ; -3.141 ; micro68HC11:inst|e_siguiente[10] ; micro68HC11:inst|AP[15]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.072      ;
-; -3.139 ; micro68HC11:inst|e_siguiente[7]  ; micro68HC11:inst|Dir[7]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; 0.136      ; 4.262      ;
 ; -3.139 ; micro68HC11:inst|Dir[11]         ; memoria:inst2|Data_out[0]    ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.235     ; 3.891      ;
+; -3.139 ; micro68HC11:inst|e_siguiente[7]  ; micro68HC11:inst|Dir[7]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; 0.136      ; 4.262      ;
 ; -3.138 ; micro68HC11:inst|e_siguiente[9]  ; micro68HC11:inst|AP[1]       ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.055     ; 4.070      ;
 ; -3.138 ; micro68HC11:inst|e_siguiente[9]  ; micro68HC11:inst|AP[0]       ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.055     ; 4.070      ;
 ; -3.138 ; micro68HC11:inst|e_siguiente[9]  ; micro68HC11:inst|AP[11]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.055     ; 4.070      ;
@@ -852,6 +852,7 @@ No paths to report.
 ; -3.121 ; micro68HC11:inst|e_siguiente[10] ; micro68HC11:inst|PC[11]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.052      ;
 ; -3.121 ; micro68HC11:inst|e_siguiente[10] ; micro68HC11:inst|PC[15]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.052      ;
 ; -3.121 ; micro68HC11:inst|e_siguiente[10] ; micro68HC11:inst|PC[3]       ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.052      ;
+; -3.104 ; micro68HC11:inst|e_siguiente[11] ; micro68HC11:inst|Dir[8]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.042     ; 4.049      ;
 ; -3.104 ; micro68HC11:inst|e_siguiente[2]  ; micro68HC11:inst|PC[1]       ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.035      ;
 ; -3.104 ; micro68HC11:inst|e_siguiente[2]  ; micro68HC11:inst|PC[7]       ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.035      ;
 ; -3.104 ; micro68HC11:inst|e_siguiente[2]  ; micro68HC11:inst|PC[8]       ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.035      ;
@@ -860,10 +861,9 @@ No paths to report.
 ; -3.104 ; micro68HC11:inst|e_siguiente[2]  ; micro68HC11:inst|PC[11]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.035      ;
 ; -3.104 ; micro68HC11:inst|e_siguiente[2]  ; micro68HC11:inst|PC[15]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.035      ;
 ; -3.104 ; micro68HC11:inst|e_siguiente[2]  ; micro68HC11:inst|PC[3]       ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.056     ; 4.035      ;
-; -3.104 ; micro68HC11:inst|e_siguiente[11] ; micro68HC11:inst|Dir[8]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.042     ; 4.049      ;
 ; -3.102 ; micro68HC11:inst|e_siguiente[8]  ; micro68HC11:inst|Dir[2]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.042     ; 4.047      ;
 ; -3.096 ; micro68HC11:inst|e_siguiente[8]  ; micro68HC11:inst|Dir[1]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.042     ; 4.041      ;
-; -3.095 ; micro68HC11:inst|e_siguiente[2]  ; micro68HC11:inst|Dir[2]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.055     ; 4.027      ;
+; -3.095 ; micro68HC11:inst|e_siguiente[8]  ; micro68HC11:inst|Dir[9]      ; sensa_boton:inst1|reloj ; sensa_boton:inst1|reloj ; 1.000        ; -0.042     ; 4.040      ;
 +--------+----------------------------------+------------------------------+-------------------------+-------------------------+--------------+------------+------------+
 
 
@@ -1228,7 +1228,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov  6 10:49:36 2019
+    Info: Processing started: Wed Nov  6 15:15:31 2019
 Info: Command: quartus_sta Practica6 -c Practica6
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1311,9 +1311,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 888 megabytes
-    Info: Processing ended: Wed Nov  6 10:49:37 2019
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 887 megabytes
+    Info: Processing ended: Wed Nov  6 15:15:34 2019
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
