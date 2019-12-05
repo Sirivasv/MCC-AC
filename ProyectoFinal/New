@@ -1,0 +1,39 @@
+sw $0, #$0000 -- Resultado Resta MinX
+sw $1, #$0000 -- Resultado Resta MinY
+sw $2, #$0000 -- Resultado Resta MaxX
+sw $3, #$0000 -- Resultado Resta MaxY
+sw $4, #$0011 -- (2n + 9) -- 17
+sw $5, #$0000 -- i
+sw $6, #$0003 -- minX
+sw $7, #$0007 -- minY
+sw $8, #$0003 -- maxX
+sw $9, #$0007 -- maxY
+sw $10, #$0003 -- X1
+sw $11, #$0007 -- Y1
+sw $12, #$0005 -- X2
+sw $13, #$0004 -- Y2
+sw $14, #$0005 -- X3
+sw $15, #$0007 -- Y3
+sw $16, #$0000 -- X4
+sw $17, #$0005 -- Y4
+checkMinX: sub $0, 0($5), $6
+                  BLT upd_minX
+                  BRA checkMaxX
+upd_minX: sw $6, 0($5)
+checkMaxX: sub $1, 0($5), $8 
+                   add $5, #1, $5
+		   BGT upd_maxX
+		   BRA checkMinY
+upd_maxX: sw $8, 0($5)
+checkMinY: sub $2, 0($5), $7
+                  BLT upd_minY
+                  BRA checkMaxY
+upd_minY: sw $7, 0($5)
+checkMaxY: sub $3, 0($5), $9 
+                   BGT upd_maxY
+		   BRA checkCont
+upd_maxY: sw $8, 0($5)
+checkCont: sub $0, $5, $4
+			BEQ FIN
+			BRA checkMinX
+FIN: BRA FIN

@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity registro_acoplo_1_fetch is
+	Port (
+		clk : in STD_LOGIC;
+        reset : in STD_LOGIC;
+        PC : in std_logic_vector (15 downto 0);
+		Instr : in std_logic_vector (63 downto 0);
+        
+		  EnaDeten : in STD_LOGIC;
+        Instr_out : out std_logic_vector (63 downto 0);
+		PC_out : out std_logic_vector (15 downto 0)
+
+	);
+end registro_acoplo_1_fetch;
+
+architecture Behavioral of registro_acoplo_1_fetch is
+    constant s16 : std_logic_vector(15 downto 0) := X"0000";
+    constant s64 : std_logic_vector(63 downto 0) := X"0000000000000000";
+begin
+	process (clk,reset,EnaDeten)
+	begin
+		if reset='0' then 
+            Instr_out <= s64;
+            PC_out <= s16;
+		elsif rising_edge (clk) then
+			if EnaDeten='1' then
+				Instr_out <= s64;
+                PC_out <= s16;
+			else
+                Instr_out <= Instr;
+                PC_out <= PC;
+			end if;
+		end if;
+	end process;
+end Behavioral;
