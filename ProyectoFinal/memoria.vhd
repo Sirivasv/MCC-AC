@@ -14,58 +14,58 @@ architecture Behavioral of memoria is
 
 -- STARTING NOP
 signal Dir_0000: unsigned (63 downto 0) := X"0000000000000000";
--- sw $0, #$0000 -- Resultado resta contador
+-- swr $0, #$0000 -- Resultado resta contador
 signal Dir_0001: unsigned (63 downto 0) := X"0001000000000000";
--- sw $1, #$0010 -- (2n + 7) -- 15
-signal Dir_0002: unsigned (63 downto 0) := X"0001000100100000";
--- sw $2, #$0000 -- i
+-- swr $1, #$0010 -- (2n - 1) -- 7
+signal Dir_0002: unsigned (63 downto 0) := X"0001000100070000";
+-- swr $2, #$0000 -- i
 signal Dir_0003: unsigned (63 downto 0) := X"0001000200000000";
--- sw $3, #$0001 -- i + 1
-signal Dir_0004: unsigned (63 downto 0) := X"0001000300000000";
--- sw $4, #$0003 -- minX
+-- swr $3, #$0001 -- i + 1
+signal Dir_0004: unsigned (63 downto 0) := X"0001000300010000";
+-- swr $4, #$0003 -- minX
 signal Dir_0005: unsigned (63 downto 0) := X"0001000400030000";
--- sw $5, #$0007 -- minY
+-- swr $5, #$0007 -- minY
 signal Dir_0006: unsigned (63 downto 0) := X"0001000500070000";
--- sw $6, #$0003 -- maxX
+-- swr $6, #$0003 -- maxX
 signal Dir_0007: unsigned (63 downto 0) := X"0001000600030000";
--- sw $7, #$0007 -- maxY
+-- swr $7, #$0007 -- maxY
 signal Dir_0008: unsigned (63 downto 0) := X"0001000700070000";
--- sw $8, #$0003 -- X1
-signal Dir_0009: unsigned (63 downto 0) := X"0001000800030000";
--- sw $9, #$0007 -- Y1
-signal Dir_000A: unsigned (63 downto 0) := X"0001000900070000";
--- sw $10, #$0005 -- X2
-signal Dir_000B: unsigned (63 downto 0) := X"0001000A00050000";
--- sw $11, #$0004 -- Y2
-signal Dir_000C: unsigned (63 downto 0) := X"0001000B00040000";
--- sw $12, #$0005 -- X3
-signal Dir_000D: unsigned (63 downto 0) := X"0001000C00050000";
--- sw $13, #$0007 -- Y3
-signal Dir_000E: unsigned (63 downto 0) := X"0001000D00070000";
--- sw $14, #$0000 -- X4
-signal Dir_000F: unsigned (63 downto 0) := X"0001000E00000000";
--- sw $15, #$0005 -- Y4
-signal Dir_0010: unsigned (63 downto 0) := X"0001000F00050000";
+-- sw $0, #$0003 -- X1
+signal Dir_0009: unsigned (63 downto 0) := X"0002000000030000";
+-- sw $1, #$0007 -- Y1
+signal Dir_000A: unsigned (63 downto 0) := X"0002000100070000";
+-- sw $2, #$0005 -- X2
+signal Dir_000B: unsigned (63 downto 0) := X"0002000200050000";
+-- sw $3, #$0004 -- Y2
+signal Dir_000C: unsigned (63 downto 0) := X"0002000300040000";
+-- sw $4, #$0005 -- X3
+signal Dir_000D: unsigned (63 downto 0) := X"0002000400050000";
+-- sw $5, #$0007 -- Y3
+signal Dir_000E: unsigned (63 downto 0) := X"0002000500070000";
+-- sw $6, #$0000 -- X4
+signal Dir_000F: unsigned (63 downto 0) := X"0002000600000000";
+-- sw $7, #$0005 -- Y4
+signal Dir_0010: unsigned (63 downto 0) := X"0002000700050000";
 -- checkVals: str_if_neg_sub $4, 0($2), $4 
-signal Dir_0011: unsigned (63 downto 0) := X"0002000300010003";
+signal Dir_0011: unsigned (63 downto 0) := X"0004000400020004";
 -- str_if_neg_sub $6, $6, 0($2) 
-signal Dir_0012: unsigned (63 downto 0) := X"0003000400020004";
+signal Dir_0012: unsigned (63 downto 0) := X"0005000600060002";
 -- add $2, #1, $2
-signal Dir_0013: unsigned (63 downto 0) := X"0004000600060002";
+signal Dir_0013: unsigned (63 downto 0) := X"0003000200010002";
 -- str_if_neg_sub $5, 0($3), $5
-signal Dir_0014: unsigned (63 downto 0) := X"0002000200010002";
+signal Dir_0014: unsigned (63 downto 0) := X"0004000500030005";
 -- str_if_neg_sub $7, $7, 0($3)
-signal Dir_0015: unsigned (63 downto 0) := X"0003000500030005";
+signal Dir_0015: unsigned (63 downto 0) := X"0005000700070003";
 -- add $3, #1, $3
-signal Dir_0016: unsigned (63 downto 0) := X"0004000700070003";
+signal Dir_0016: unsigned (63 downto 0) := X"0003000300010003";
 -- sub $0, $1, $3
-signal Dir_0017: unsigned (63 downto 0) := X"0005000000010003";
+signal Dir_0017: unsigned (63 downto 0) := X"0006000000010003";
 -- BEQ FIN
-signal Dir_0018: unsigned (63 downto 0) := X"0006001900000000";
+signal Dir_0018: unsigned (63 downto 0) := X"0007001A00000000";
 -- BRA checkVals
-signal Dir_0019: unsigned (63 downto 0) := X"0007001000000000";
+signal Dir_0019: unsigned (63 downto 0) := X"0008001100000000";
 -- FIN: BRA FIN
-signal Dir_001A: unsigned (63 downto 0) := X"0008001900000000";
+signal Dir_001A: unsigned (63 downto 0) := X"0008001A00000000";
 
 begin
 process(Dir_in)
