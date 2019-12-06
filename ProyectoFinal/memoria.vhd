@@ -126,6 +126,8 @@ process(Dir_in)
                 Data_out <= Dir_0019;
             when X"001A" => 
                 Data_out <= Dir_001A;
+				when others =>
+					Data_out <= X"0000000000000000";
 
         end case;
     end process;

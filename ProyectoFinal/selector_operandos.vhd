@@ -1,0 +1,57 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity selector_operandos is
+Port (
+	Data_op_reg_1: in unsigned(7 downto 0);
+	Data_op_reg_2: in unsigned(7 downto 0);
+	
+	Op_Sel_1: in unsigned(1 downto 0);
+	Op_Sel_2: in unsigned(1 downto 0);
+	
+	Data_mem_reg_1: in unsigned(7 downto 0);
+	Data_mem_reg_2: in unsigned(7 downto 0);
+
+	Data_op_1_out: out unsigned(7 downto 0);
+	Data_op_2_out: out unsigned(7 downto 0)
+	
+);
+end selector_operandos;
+
+architecture Behavioral of selector_operandos is
+begin
+process(Op_Sel_1, Op_Sel_2)
+    begin
+		
+		-- Operator 1
+		case Op_Sel_1 is
+            when "00" => 
+				Data_op_1_out <= Data_op_reg_1;
+			when "01" => 
+				Data_op_1_out <= Data_op_reg_2;
+			when "10" => 
+				Data_op_1_out <= Data_mem_reg_1;
+			when "11" => 
+				Data_op_1_out <= Data_mem_reg_2;
+            when others =>
+				Data_op_1_out <= X"00";
+		end case;
+
+		-- Operator 2
+		case Op_Sel_2 is
+            when "00" => 
+				Data_op_2_out <= Data_op_reg_1;
+			when "01" => 
+				Data_op_2_out <= Data_op_reg_2;
+			when "10" => 
+				Data_op_2_out <= Data_mem_reg_1;
+			when "11" => 
+				Data_op_2_out <= Data_mem_reg_2;
+            when others =>
+				Data_op_2_out <= X"00";
+		end case;
+		
+    end process;
+end Behavioral;

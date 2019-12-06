@@ -7,8 +7,8 @@ entity contador_programa is
 	Port (
 		clk : in STD_LOGIC;
 		reset : in STD_LOGIC;
-		BranchDir : in std_logic_vector (15 downto 0);
 		EnaWr : in std_logic;
+		BranchDir : in std_logic_vector (15 downto 0);
 		PC_out : out std_logic_vector (15 downto 0)
 	);
 end contador_programa;

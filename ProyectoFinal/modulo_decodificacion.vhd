@@ -10,8 +10,8 @@ entity modulo_decodificacion is
 		Instr: in unsigned(63 downto 0);
 		PC: in unsigned(15 downto 0);
 		EnaW: in std_logic;
-		RegWSel: in unsigned(15 downto 0);
       DatoW: in unsigned(7 downto 0);
+		RegWSel: in unsigned(15 downto 0);
       OpCode_out: out unsigned(15 downto 0);
       DirW_out: out unsigned(15 downto 0);
 		Dato_op_1: out unsigned(7 downto 0);
@@ -19,7 +19,12 @@ entity modulo_decodificacion is
 		Op_Sel_out_1: out unsigned(1 downto 0);
       Op_Sel_out_2: out unsigned(1 downto 0);
 		Dir_Mem_op_1: out unsigned(15 downto 0);
-		Dir_Mem_op_2: out unsigned(15 downto 0)
+		Dir_Mem_op_2: out unsigned(15 downto 0);
+		-- DEBUG OUTPUTS
+		Debug_Reg_0004: out unsigned(7 downto 0);
+		Debug_Reg_0005: out unsigned(7 downto 0);
+		Debug_Reg_0006: out unsigned(7 downto 0);
+		Debug_Reg_0007: out unsigned(7 downto 0)
         -- Op_Sel_out1 and Op_Sel_out2 TABLE
         -- 00 Dato_op_1
         -- 01 Dato_op_2
@@ -270,6 +275,10 @@ begin
 							 DirW_out <= DirW;
 							 
 				end case;
+				Debug_Reg_0004 <= Reg_0004;
+				Debug_Reg_0005 <= Reg_0005;
+				Debug_Reg_0006 <= Reg_0006;
+				Debug_Reg_0007 <= Reg_0007;
 		end if;
 	end process;
 end Behavioral;

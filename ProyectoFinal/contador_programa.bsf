@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "BranchDir[15..0]" (rect 0 0 63 12)(font "Arial" ))
-		(text "BranchDir[15..0]" (rect 21 59 84 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
+		(text "EnaWr" (rect 0 0 30 12)(font "Arial" ))
+		(text "EnaWr" (rect 21 59 51 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "EnaWr" (rect 0 0 30 12)(font "Arial" ))
-		(text "EnaWr" (rect 21 75 51 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 1))
+		(text "BranchDir[15..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "BranchDir[15..0]" (rect 21 75 84 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
 		(pt 216 32)
