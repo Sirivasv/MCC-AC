@@ -2,7 +2,116 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "SALIDA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SALIDA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Value[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Stage[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Stage[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Stage[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Sel_Stage[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "boton",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProyectoFinal
-Fri Dec  6 11:48:05 2019
+Fri Dec  6 14:32:32 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,10 +13,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +45,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec  6 11:48:05 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec  6 14:32:32 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProyectoFinal                               ;
 ; Top-level Entity Name              ; ProyectoFinal                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 7                                           ;
+; Total logic elements               ; 897                                         ;
+;     Total combinational functions  ; 678                                         ;
+;     Dedicated logic registers      ; 383                                         ;
+; Total registers                    ; 383                                         ;
+; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -154,10 +157,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -179,48 +183,278 @@ refer to the applicable agreement for further details.
 ; WB_Logic.vhd                     ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/WB_Logic.vhd                     ;         ;
 ; modulo_exec.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_exec.vhd                  ;         ;
 ; registro_acoplo_3_exec.vhd       ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd       ;         ;
+; masterMux.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd                    ;         ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 7     ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; boton ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 7     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimated Total logic elements              ; 897                    ;
+;                                             ;                        ;
+; Total combinational functions               ; 678                    ;
+; Logic element usage by number of LUT inputs ;                        ;
+;     -- 4 input functions                    ; 476                    ;
+;     -- 3 input functions                    ; 88                     ;
+;     -- <=2 input functions                  ; 114                    ;
+;                                             ;                        ;
+; Logic elements by mode                      ;                        ;
+;     -- normal mode                          ; 649                    ;
+;     -- arithmetic mode                      ; 29                     ;
+;                                             ;                        ;
+; Total registers                             ; 383                    ;
+;     -- Dedicated logic registers            ; 383                    ;
+;     -- I/O registers                        ; 0                      ;
+;                                             ;                        ;
+; I/O pins                                    ; 29                     ;
+;                                             ;                        ;
+; Embedded Multiplier 9-bit elements          ; 0                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; sensa_boton:inst|reloj ;
+; Maximum fan-out                             ; 381                    ;
+; Total fan-out                               ; 3745                   ;
+; Average fan-out                             ; 3.35                   ;
++---------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; |ProyectoFinal             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |ProyectoFinal      ; ProyectoFinal ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name                  ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
+; |ProyectoFinal                              ; 678 (1)             ; 383 (0)                   ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |ProyectoFinal                                        ; ProyectoFinal                ; work         ;
+;    |WB_Logic:inst7|                         ; 19 (19)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|WB_Logic:inst7                         ; WB_Logic                     ; work         ;
+;    |contador_programa:contador_de_programa| ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|contador_programa:contador_de_programa ; contador_programa            ; work         ;
+;    |masterMux:inst11|                       ; 214 (214)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|masterMux:inst11                       ; masterMux                    ; work         ;
+;    |memoria:MEMORIA_PROGRAMA|               ; 70 (70)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria:MEMORIA_PROGRAMA               ; memoria                      ; work         ;
+;    |memoria_datos:inst1|                    ; 89 (89)             ; 80 (80)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria_datos:inst1                    ; memoria_datos                ; work         ;
+;    |modulo_decodificacion:inst4|            ; 111 (111)           ; 130 (130)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_decodificacion:inst4            ; modulo_decodificacion        ; work         ;
+;    |modulo_exec:inst8|                      ; 57 (57)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_exec:inst8                      ; modulo_exec                  ; work         ;
+;    |registro_acoplo_1_fetch:inst3|          ; 32 (32)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_1_fetch:inst3          ; registro_acoplo_1_fetch      ; work         ;
+;    |registro_acoplo_2_decodifica:inst6|     ; 25 (25)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_2_decodifica:inst6     ; registro_acoplo_2_decodifica ; work         ;
+;    |registro_acoplo_3_exec:inst9|           ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_3_exec:inst9           ; registro_acoplo_3_exec       ; work         ;
+;    |registro_intermedio_decode:inst2|       ; 0 (0)               ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_intermedio_decode:inst2       ; registro_intermedio_decode   ; work         ;
+;    |selector_operandos:inst5|               ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|selector_operandos:inst5               ; selector_operandos           ; work         ;
+;    |sensa_boton:inst|                       ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|sensa_boton:inst                       ; sensa_boton                  ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                           ;
++---------------------------------------------------------------------+----------------------------------------+
+; Register name                                                       ; Reason for Removal                     ;
++---------------------------------------------------------------------+----------------------------------------+
+; registro_acoplo_1_fetch:inst3|Instr_out[3..15,19..31,37..47,52..63] ; Stuck at GND due to stuck port data_in ;
+; modulo_decodificacion:inst4|OpCode_out[4..15]                       ; Stuck at GND due to stuck port data_in ;
+; modulo_decodificacion:inst4|Dir_Mem_op_1[3..15]                     ; Stuck at GND due to stuck port data_in ;
+; modulo_decodificacion:inst4|Dir_Mem_op_2[3..15]                     ; Stuck at GND due to stuck port data_in ;
+; modulo_decodificacion:inst4|Op_Sel_out_1[0]                         ; Stuck at GND due to stuck port data_in ;
+; modulo_decodificacion:inst4|DirW_out[5..15]                         ; Stuck at GND due to stuck port data_in ;
+; modulo_exec:inst8|Resultado[8..15]                                  ; Stuck at GND due to stuck port data_in ;
+; modulo_exec:inst8|Flags[2..7]                                       ; Stuck at GND due to stuck port data_in ;
+; registro_acoplo_3_exec:inst9|Resultado_out[8..15]                   ; Stuck at GND due to stuck port data_in ;
+; registro_acoplo_3_exec:inst9|Flags_out[2..7]                        ; Stuck at GND due to stuck port data_in ;
+; registro_intermedio_decode:inst2|OpCode_out[4..15]                  ; Stuck at GND due to stuck port data_in ;
+; registro_intermedio_decode:inst2|DirW_out[5..15]                    ; Stuck at GND due to stuck port data_in ;
+; registro_intermedio_decode:inst2|Op_sel_1_out[0]                    ; Stuck at GND due to stuck port data_in ;
+; registro_acoplo_2_decodifica:inst6|OpCode_out[4..15]                ; Stuck at GND due to stuck port data_in ;
+; registro_acoplo_2_decodifica:inst6|DirW_out[5..15]                  ; Stuck at GND due to stuck port data_in ;
+; modulo_exec:inst8|OpCode_out[4..15]                                 ; Stuck at GND due to stuck port data_in ;
+; modulo_exec:inst8|DirW_out[5..15]                                   ; Stuck at GND due to stuck port data_in ;
+; registro_acoplo_3_exec:inst9|OpCode_out[4..15]                      ; Stuck at GND due to stuck port data_in ;
+; registro_acoplo_3_exec:inst9|DirW_out[5..15]                        ; Stuck at GND due to stuck port data_in ;
+; WB_Logic:inst7|DirW_out[5..15]                                      ; Stuck at GND due to stuck port data_in ;
+; memoria_datos:inst1|Dir_0008[0..7]                                  ; Lost fanout                            ;
+; WB_Logic:inst7|PC_EnaW                                              ; Merged with WB_Logic:inst7|EnaDeten    ;
+; Total Number of Removed Registers = 240                             ;                                        ;
++---------------------------------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                    ;
++---------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name                               ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++---------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; registro_acoplo_1_fetch:inst3|Instr_out[63] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[15],                                          ;
+;                                             ; due to stuck port data_in ; modulo_decodificacion:inst4|DirW_out[15], modulo_decodificacion:inst4|DirW_out[14],  ;
+;                                             ;                           ; modulo_decodificacion:inst4|DirW_out[13], modulo_decodificacion:inst4|DirW_out[12],  ;
+;                                             ;                           ; modulo_decodificacion:inst4|DirW_out[11], modulo_decodificacion:inst4|DirW_out[10],  ;
+;                                             ;                           ; modulo_decodificacion:inst4|DirW_out[9], modulo_decodificacion:inst4|DirW_out[8],    ;
+;                                             ;                           ; modulo_decodificacion:inst4|DirW_out[7], modulo_decodificacion:inst4|DirW_out[6],    ;
+;                                             ;                           ; modulo_decodificacion:inst4|DirW_out[5],                                             ;
+;                                             ;                           ; registro_intermedio_decode:inst2|OpCode_out[15],                                     ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[15],                                       ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[14],                                       ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[13],                                       ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[12],                                       ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[11],                                       ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[10],                                       ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[9],                                        ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[8],                                        ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[7],                                        ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[6],                                        ;
+;                                             ;                           ; registro_intermedio_decode:inst2|DirW_out[5],                                        ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[15],                                   ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[15],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[14],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[13],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[12],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[11],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[10],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[9],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[8],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[7],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[6],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|DirW_out[5], modulo_exec:inst8|OpCode_out[15],    ;
+;                                             ;                           ; modulo_exec:inst8|DirW_out[15], modulo_exec:inst8|DirW_out[14],                      ;
+;                                             ;                           ; modulo_exec:inst8|DirW_out[13], modulo_exec:inst8|DirW_out[12],                      ;
+;                                             ;                           ; modulo_exec:inst8|DirW_out[11], modulo_exec:inst8|DirW_out[10],                      ;
+;                                             ;                           ; modulo_exec:inst8|DirW_out[9], modulo_exec:inst8|DirW_out[8],                        ;
+;                                             ;                           ; modulo_exec:inst8|DirW_out[7], modulo_exec:inst8|DirW_out[6],                        ;
+;                                             ;                           ; modulo_exec:inst8|DirW_out[5], registro_acoplo_3_exec:inst9|OpCode_out[15],          ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[15],                                           ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[14],                                           ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[13],                                           ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[12],                                           ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[11],                                           ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[10],                                           ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[9], registro_acoplo_3_exec:inst9|DirW_out[8],  ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[7], registro_acoplo_3_exec:inst9|DirW_out[6],  ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|DirW_out[5], WB_Logic:inst7|DirW_out[15],               ;
+;                                             ;                           ; WB_Logic:inst7|DirW_out[14], WB_Logic:inst7|DirW_out[13],                            ;
+;                                             ;                           ; WB_Logic:inst7|DirW_out[12], WB_Logic:inst7|DirW_out[11],                            ;
+;                                             ;                           ; WB_Logic:inst7|DirW_out[10], WB_Logic:inst7|DirW_out[9], WB_Logic:inst7|DirW_out[8], ;
+;                                             ;                           ; WB_Logic:inst7|DirW_out[7], WB_Logic:inst7|DirW_out[6], WB_Logic:inst7|DirW_out[5]   ;
+; registro_acoplo_1_fetch:inst3|Instr_out[62] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[14],                                          ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[14],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[14],                                   ;
+;                                             ;                           ; modulo_exec:inst8|OpCode_out[14], registro_acoplo_3_exec:inst9|OpCode_out[14]        ;
+; registro_acoplo_1_fetch:inst3|Instr_out[52] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[4],                                           ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[4],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[4], modulo_exec:inst8|OpCode_out[4],   ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|OpCode_out[4]                                           ;
+; registro_acoplo_1_fetch:inst3|Instr_out[53] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[5],                                           ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[5],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[5], modulo_exec:inst8|OpCode_out[5],   ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|OpCode_out[5]                                           ;
+; registro_acoplo_1_fetch:inst3|Instr_out[54] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[6],                                           ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[6],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[6], modulo_exec:inst8|OpCode_out[6],   ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|OpCode_out[6]                                           ;
+; registro_acoplo_1_fetch:inst3|Instr_out[55] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[7],                                           ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[7],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[7], modulo_exec:inst8|OpCode_out[7],   ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|OpCode_out[7]                                           ;
+; registro_acoplo_1_fetch:inst3|Instr_out[56] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[8],                                           ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[8],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[8], modulo_exec:inst8|OpCode_out[8],   ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|OpCode_out[8]                                           ;
+; registro_acoplo_1_fetch:inst3|Instr_out[57] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[9],                                           ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[9],                                      ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[9], modulo_exec:inst8|OpCode_out[9],   ;
+;                                             ;                           ; registro_acoplo_3_exec:inst9|OpCode_out[9]                                           ;
+; registro_acoplo_1_fetch:inst3|Instr_out[58] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[10],                                          ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[10],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[10],                                   ;
+;                                             ;                           ; modulo_exec:inst8|OpCode_out[10], registro_acoplo_3_exec:inst9|OpCode_out[10]        ;
+; registro_acoplo_1_fetch:inst3|Instr_out[59] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[11],                                          ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[11],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[11],                                   ;
+;                                             ;                           ; modulo_exec:inst8|OpCode_out[11], registro_acoplo_3_exec:inst9|OpCode_out[11]        ;
+; registro_acoplo_1_fetch:inst3|Instr_out[60] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[12],                                          ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[12],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[12],                                   ;
+;                                             ;                           ; modulo_exec:inst8|OpCode_out[12], registro_acoplo_3_exec:inst9|OpCode_out[12]        ;
+; registro_acoplo_1_fetch:inst3|Instr_out[61] ; Stuck at GND              ; modulo_decodificacion:inst4|OpCode_out[13],                                          ;
+;                                             ; due to stuck port data_in ; registro_intermedio_decode:inst2|OpCode_out[13],                                     ;
+;                                             ;                           ; registro_acoplo_2_decodifica:inst6|OpCode_out[13],                                   ;
+;                                             ;                           ; modulo_exec:inst8|OpCode_out[13], registro_acoplo_3_exec:inst9|OpCode_out[13]        ;
+; registro_acoplo_1_fetch:inst3|Instr_out[7]  ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[7]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[6]  ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[6]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Flags[3]                  ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Flags_out[3]                                            ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[5]  ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[5]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[4]  ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[4]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[3]  ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[3]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_decodificacion:inst4|Op_Sel_out_1[0] ; Stuck at GND              ; registro_intermedio_decode:inst2|Op_sel_1_out[0]                                     ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[15]             ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[15]                                       ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[14]             ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[14]                                       ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[13]             ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[13]                                       ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[12]             ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[12]                                       ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[11]             ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[11]                                       ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[10]             ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[10]                                       ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[9]              ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[9]                                        ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Resultado[8]              ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Resultado_out[8]                                        ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Flags[7]                  ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Flags_out[7]                                            ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Flags[6]                  ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Flags_out[6]                                            ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Flags[5]                  ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Flags_out[5]                                            ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Flags[4]                  ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Flags_out[4]                                            ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; modulo_exec:inst8|Flags[2]                  ; Stuck at GND              ; registro_acoplo_3_exec:inst9|Flags_out[2]                                            ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[21] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[5]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[31] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[15]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[30] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[14]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[29] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[13]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[28] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[12]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[27] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[11]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[26] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[10]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[25] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[9]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[24] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[8]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[23] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[7]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[22] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[6]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[8]  ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[8]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[20] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[4]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[19] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_1[3]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[15] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[15]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[14] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[14]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[13] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[13]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[12] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[12]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[11] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[11]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[10] ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[10]                                         ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
+; registro_acoplo_1_fetch:inst3|Instr_out[9]  ; Stuck at GND              ; modulo_decodificacion:inst4|Dir_Mem_op_2[9]                                          ;
+;                                             ; due to stuck port data_in ;                                                                                      ;
++---------------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -228,26 +462,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 383   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Asynchronous Clear ; 299   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 210   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |ProyectoFinal|memoria_datos:inst1|Data_out_1[6]        ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |ProyectoFinal|memoria_datos:inst1|Data_out_2[3]        ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |ProyectoFinal|modulo_exec:inst8|Flags[1]               ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |ProyectoFinal|modulo_decodificacion:inst4|Dato_op_2[6] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |ProyectoFinal|modulo_exec:inst8|Resultado[4]           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ProyectoFinal|selector_operandos:inst5|Mux14           ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |ProyectoFinal|modulo_decodificacion:inst4|Selector6    ;
+; 18:1               ; 8 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |ProyectoFinal|masterMux:inst11|Mux128                  ;
+; 66:1               ; 3 bits    ; 132 LEs       ; 42 LEs               ; 90 LEs                 ; No         ; |ProyectoFinal|masterMux:inst11|Mux136                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 7                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 29                          ;
+; cycloneiii_ff         ; 383                         ;
+;     CLR               ; 155                         ;
+;     CLR SLD           ; 16                          ;
+;     ENA               ; 82                          ;
+;     ENA CLR           ; 128                         ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 678                         ;
+;     arith             ; 29                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 14                          ;
+;     normal            ; 649                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 97                          ;
+;         3 data inputs ; 74                          ;
+;         4 data inputs ; 476                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 4.44                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -255,7 +522,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -265,7 +532,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Dec  6 11:47:53 2019
+    Info: Processing started: Fri Dec  6 14:32:19 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -307,11 +574,57 @@ Info (12021): Found 2 design units, including 1 entities, in source file modulo_
 Info (12021): Found 2 design units, including 1 entities, in source file registro_acoplo_3_exec.vhd
     Info (12022): Found design unit 1: registro_acoplo_3_exec-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd Line: 26
     Info (12023): Found entity 1: registro_acoplo_3_exec File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file masterMux.vhd
+    Info (12022): Found design unit 1: masterMux-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 63
+    Info (12023): Found entity 1: masterMux File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 6
 Info (12127): Elaborating entity "ProyectoFinal" for the top level hierarchy
-Warning (275009): Pin "IN" not connected
-Info (12128): Elaborating entity "contador_programa" for hierarchy "contador_programa:contador_de_programa"
-Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst"
+Info (12128): Elaborating entity "masterMux" for hierarchy "masterMux:inst11"
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(77): signal "PC_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(80): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(83): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(86): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(89): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(100): signal "PC_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(103): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(106): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(109): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(112): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(123): signal "OpCode_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(126): signal "DirW_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(129): signal "Dato_op_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(132): signal "Dato_op_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(135): signal "Op_sel_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(138): signal "Op_sel_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(141): signal "Dir_mem_op_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 141
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(144): signal "Dir_mem_op_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 144
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(147): signal "Reg_0004_MinX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(150): signal "Reg_0005_MinY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(153): signal "Reg_0006_MaxX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(156): signal "Reg_0007_MaxY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(167): signal "OpCode_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(170): signal "DirW_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(173): signal "Dato_op_1_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(176): signal "Dato_op_2_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(187): signal "OpCode_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 187
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(190): signal "DirW_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(193): signal "Dato_op_1_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 193
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(196): signal "Dato_op_2_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 196
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(207): signal "OpCode_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 207
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(210): signal "DirW_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 210
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(213): signal "Resultado_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 213
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(216): signal "Flags_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 216
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(227): signal "OpCode_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 227
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(230): signal "DirW_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 230
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(233): signal "Resultado_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 233
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(236): signal "Flags_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 236
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(247): signal "PC_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 247
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(250): signal "Reg_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 250
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(253): signal "Mem_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 253
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(256): signal "DatoW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 256
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(259): signal "DirW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 259
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(262): signal "EnaDeten_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 262
 Info (12128): Elaborating entity "WB_Logic" for hierarchy "WB_Logic:inst7"
+Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst"
 Info (12128): Elaborating entity "registro_acoplo_3_exec" for hierarchy "registro_acoplo_3_exec:inst9"
 Info (12128): Elaborating entity "modulo_exec" for hierarchy "modulo_exec:inst8"
 Info (12128): Elaborating entity "registro_acoplo_2_decodifica" for hierarchy "registro_acoplo_2_decodifica:inst6"
@@ -375,24 +688,23 @@ Warning (10492): VHDL Process Statement warning at memoria.vhd(122): signal "Dir
 Warning (10492): VHDL Process Statement warning at memoria.vhd(124): signal "Dir_0018" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 124
 Warning (10492): VHDL Process Statement warning at memoria.vhd(126): signal "Dir_0019" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 126
 Warning (10492): VHDL Process Statement warning at memoria.vhd(128): signal "Dir_001A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 128
+Info (12128): Elaborating entity "contador_programa" for hierarchy "contador_programa:contador_de_programa"
 Info (12128): Elaborating entity "registro_intermedio_decode" for hierarchy "registro_intermedio_decode:inst2"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "SALIDA[17]" is stuck at GND
+    Warning (13410): Pin "SALIDA[16]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "boton"
-    Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "reset"
-    Warning (15610): No output dependent on input pin "IN[3]"
-    Warning (15610): No output dependent on input pin "IN[2]"
-    Warning (15610): No output dependent on input pin "IN[1]"
-    Warning (15610): No output dependent on input pin "IN[0]"
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 968 megabytes
-    Info: Processing ended: Fri Dec  6 11:48:05 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+Info (21057): Implemented 928 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 899 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 1012 megabytes
+    Info: Processing ended: Fri Dec  6 14:32:32 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
 
 

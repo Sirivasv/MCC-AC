@@ -38,12 +38,12 @@ signal Dir_000A: unsigned (63 downto 0) := X"0002000100070000";
 signal Dir_000B: unsigned (63 downto 0) := X"0002000200050000";
 -- sw $3, #$0004 -- Y2
 signal Dir_000C: unsigned (63 downto 0) := X"0002000300040000";
--- sw $4, #$0005 -- X3
-signal Dir_000D: unsigned (63 downto 0) := X"0002000400050000";
+-- sw $4, #$0006 -- X3
+signal Dir_000D: unsigned (63 downto 0) := X"0002000400060000";
 -- sw $5, #$0007 -- Y3
 signal Dir_000E: unsigned (63 downto 0) := X"0002000500070000";
--- sw $6, #$0000 -- X4
-signal Dir_000F: unsigned (63 downto 0) := X"0002000600000000";
+-- sw $6, #$0001 -- X4
+signal Dir_000F: unsigned (63 downto 0) := X"0002000600010000";
 -- sw $7, #$0005 -- Y4
 signal Dir_0010: unsigned (63 downto 0) := X"0002000700050000";
 -- checkVals: str_if_neg_sub $4, 0($2), $4 
