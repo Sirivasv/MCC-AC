@@ -1,5 +1,5 @@
 swr $0, #$0000 -- Resultado resta contador
-swr $1, #$0007 -- (2n - 1) -- 15
+swr $1, #$0007 -- (2n - 1) -- 7
 swr $2, #$0000 -- i
 swr $3, #$0001 -- i + 1
 swr $4, #$0003 -- minX
