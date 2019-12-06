@@ -22,7 +22,7 @@ end selector_operandos;
 
 architecture Behavioral of selector_operandos is
 begin
-process(Op_Sel_1, Op_Sel_2)
+process(Data_op_reg_1, Data_op_reg_2, Data_mem_reg_1, Data_mem_reg_2, Op_Sel_1, Op_Sel_2)
     begin
 		
 		-- Operator 1

@@ -16,8 +16,8 @@ entity modulo_exec is
 		
 		OpCode_out : out unsigned (15 downto 0);
 		DirW_out : out unsigned (15 downto 0);
-		Resultado : out unsigned (7 downto 0);
-		Flags : out std_logic_vector (1 downto 0)
+		Resultado : out unsigned (15 downto 0);
+		Flags : out std_logic_vector (7 downto 0)
 
 	);
 end modulo_exec;
@@ -31,13 +31,13 @@ begin
 			OpCode_out <= X"0000";
 			DirW_out <= X"0000";
 			Resultado <= X"0000";
-			Flags <= "00";
+			Flags <= X"00";
 
 		elsif rising_edge (clk) then
 			OpCode_out <= OpCode_in;
 			DirW_out <= DirW_in;
 			Resultado <= Op_1_in&Op_2_in;
-			Flags <= "00";
+			Flags <= X"00";
 		end if;
 	end process;
 end Behavioral;

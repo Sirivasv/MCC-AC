@@ -11,7 +11,7 @@ entity WB_Logic is
       OpCode_in: in unsigned (15 downto 0);
 		DirW_in : in unsigned (15 downto 0);
 		Resultado: in unsigned (15 downto 0);
-		Flags_in: in std_logic_vector (1 downto 0);
+		Flags_in: in std_logic_vector (7 downto 0);
 		
 		
 		PC_EnaW: out std_logic;
@@ -26,10 +26,9 @@ entity WB_Logic is
 end WB_Logic;
 
 architecture Behavioral of WB_Logic is
-    constant s16 : unsigned(15 downto 0) := X"0000";
+   constant s16 : unsigned(15 downto 0) := X"0000";
 	constant s8 : unsigned(7 downto 0) := X"00";
-	-- signal estados: STD_LOGIC_VECTOR (7 downto 0):= X"00";
-	signal estados: STD_LOGIC_VECTOR (1 downto 0):= "00";
+	signal estados: STD_LOGIC_VECTOR (7 downto 0):= X"00";
 begin
 	process (clk,reset)
 	begin
@@ -38,7 +37,7 @@ begin
 			PC_EnaW <= '0';
 			Reg_EnaW <= '0';
 			Mem_EnaW <= '0';
-			estados <= "00";
+			estados <= X"00";
 			DatoW <= s8;
 			DirW_out <= s16;
 		elsif rising_edge (clk) then
@@ -151,7 +150,7 @@ begin
 					Mem_EnaW <= '0';
 					DatoW <= Resultado(7 downto 0);
 					DirW_out <= DirW_in;
-					if (Flags_in(0) = '1') then
+					if (estados(0) = '1') then
 						EnaDeten <= '1';
 						PC_EnaW <= '1';
 					else
@@ -175,6 +174,14 @@ begin
 					EnaDeten <= '1';
 					PC_EnaW <= '1';
 					 
+				when others =>
+					EnaDeten <= '0';
+					PC_EnaW <= '0';
+					Reg_EnaW <= '0';
+					Mem_EnaW <= '0';
+					estados <= X"00";
+					DatoW <= s8;
+					DirW_out <= s16;
 			end case;
 			estados <= Flags_in;
 		end if;

@@ -13,7 +13,7 @@ end sensa_boton;
 
 architecture Behavioral of sensa_boton is signal esiguiente: STD_LOGIC;
 begin
-	process (esiguiente,boton)
+	process (clk,esiguiente,boton)
 	begin
 	if rising_edge (clk) then
 		case esiguiente is

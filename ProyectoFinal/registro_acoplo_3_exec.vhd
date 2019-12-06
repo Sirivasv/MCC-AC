@@ -11,14 +11,14 @@ entity registro_acoplo_3_exec is
 		
       OpCode_in : in unsigned (15 downto 0);
 		DirW_in : in unsigned (15 downto 0);
-		Resultado_in : in unsigned (7 downto 0);
-		Flags_in : in std_logic_vector (1 downto 0);
+		Resultado_in : in unsigned (15 downto 0);
+		Flags_in : in std_logic_vector (7 downto 0);
 		EnaDeten : in STD_LOGIC;
 		
 		OpCode_out : out unsigned (15 downto 0);
 		DirW_out : out unsigned (15 downto 0);
-		Resultado_out : out unsigned (7 downto 0);
-		Flags_out : out std_logic_vector (1 downto 0)
+		Resultado_out : out unsigned (15 downto 0);
+		Flags_out : out std_logic_vector (7 downto 0)
 
 	);
 end registro_acoplo_3_exec;
@@ -32,7 +32,7 @@ begin
 			OpCode_out <= X"0000";
 			DirW_out <= X"0000";
 			Resultado_out <= X"0000";
-			Flags_out <= "00";
+			Flags_out <= X"00";
 
 		elsif rising_edge (clk) then
 
@@ -40,7 +40,7 @@ begin
 				OpCode_out <= X"0000";
 				DirW_out <= X"0000";
 				Resultado_out <= X"0000";
-				Flags_out <= "00";
+				Flags_out <= X"00";
 			else
 				OpCode_out <= OpCode_in;
 				DirW_out <= DirW_in;

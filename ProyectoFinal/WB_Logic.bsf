@@ -61,8 +61,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "Flags_in[1..0]" (rect 0 0 51 12)(font "Arial" ))
-		(text "Flags_in[1..0]" (rect 21 107 72 119)(font "Arial" ))
+		(text "Flags_in[7..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "Flags_in[7..0]" (rect 21 107 74 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port

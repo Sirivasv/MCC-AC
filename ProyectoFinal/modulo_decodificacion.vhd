@@ -85,6 +85,8 @@ begin
                          Reg_0006 <= DatoW;
                     when X"0007" =>
                          Reg_0007 <= DatoW;
+						  when others =>
+								 Reg_0000 <= Reg_0000;
                 end case;
 			end if;
 		
@@ -117,6 +119,8 @@ begin
 							 RegDatoOp1 := Reg_0006;
 						when X"0007" =>
 							 RegDatoOp1 := Reg_0007;
+						when others =>
+							 RegDatoOp1 := X"00";
 				  end case;
 				  -- Dato de registro 2
 				  case RegOp2 is
@@ -136,6 +140,8 @@ begin
 							 RegDatoOp2 := Reg_0006;
 						when X"0007" =>
 							 RegDatoOp2 := Reg_0007;
+						when others =>
+							 RegDatoOp2 := X"00";
 				  end case;
 				  
 				  case OpCode is
@@ -159,7 +165,7 @@ begin
 						when X"0001" =>
 
 							 OpCode_out <= OpCode;
-							 Dato_op_1 <= DatoOp1;
+							 Dato_op_1 <= DatoOp1(7 downto 0);
 							 Dato_op_2 <= X"00";
 							 Dir_Mem_op_1 <= X"0000";
 							 Dir_Mem_op_2 <= X"0000";
@@ -174,7 +180,7 @@ begin
 						when X"0002" =>
 
 							 OpCode_out <= OpCode;
-							 Dato_op_1 <= DatoOp1;
+							 Dato_op_1 <= DatoOp1(7 downto 0);
 							 Dato_op_2 <= X"00";
 							 Dir_Mem_op_1 <= X"0000";
 							 Dir_Mem_op_2 <= X"0000";
@@ -189,7 +195,7 @@ begin
 						when X"0003" =>
 
 							 OpCode_out <= OpCode;
-							 Dato_op_1 <= DatoOp1;
+							 Dato_op_1 <= DatoOp1(7 downto 0);
 							 Dato_op_2 <= RegDatoOp2;
 							 Dir_Mem_op_1 <= X"0000";
 							 Dir_Mem_op_2 <= X"0000";
@@ -204,7 +210,7 @@ begin
 						when X"0004" =>
 
 							 OpCode_out <= OpCode;
-							 Dato_op_1 <= X"0000";
+							 Dato_op_1 <= X"00";
 							 Dato_op_2 <= RegDatoOp2;
 							 Dir_Mem_op_1 <= MemOp1;
 							 Dir_Mem_op_2 <= X"0000";
@@ -220,7 +226,7 @@ begin
 
 							 OpCode_out <= OpCode;
 							 Dato_op_1 <= RegDatoOp1;
-							 Dato_op_2 <= X"0000";
+							 Dato_op_2 <= X"00";
 							 Dir_Mem_op_1 <= X"0000";
 							 Dir_Mem_op_2 <= MemOp2;
 							 Op_Sel_out_1 <= "00";
@@ -250,8 +256,8 @@ begin
 						when X"0007" =>
 
 							 OpCode_out <= OpCode;
-							 Dato_op_1 <= X"0000";
-							 Dato_op_2 <= X"0000";
+							 Dato_op_1 <= X"00";
+							 Dato_op_2 <= X"00";
 							 Dir_Mem_op_1 <= X"0000";
 							 Dir_Mem_op_2 <= X"0000";
 							 Op_Sel_out_1 <= "00";
@@ -266,13 +272,22 @@ begin
 						when X"0008" =>
 
 							 OpCode_out <= OpCode;
-							 Dato_op_1 <= X"0000";
-							 Dato_op_2 <= X"0000";
+							 Dato_op_1 <= X"00";
+							 Dato_op_2 <= X"00";
 							 Dir_Mem_op_1 <= X"0000";
 							 Dir_Mem_op_2 <= X"0000";
 							 Op_Sel_out_1 <= "00";
 							 Op_Sel_out_2 <= "00";
 							 DirW_out <= DirW;
+						when others =>
+							OpCode_out <= OpCode;
+							 Dato_op_1 <= X"00";
+							 Dato_op_2 <= X"00";
+							 Dir_Mem_op_1 <= X"0000";
+							 Dir_Mem_op_2 <= X"0000";
+							 Op_Sel_out_1 <= "00";
+							 Op_Sel_out_2 <= "00"; 
+							 DirW_out <= X"0000";
 							 
 				end case;
 				Debug_Reg_0004 <= Reg_0004;

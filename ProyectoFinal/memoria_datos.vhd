@@ -73,6 +73,8 @@ else
 				Dir_0007 <= Data_in;
 			when X"0008" =>
 				Dir_0008 <= Data_in;
+			when others =>
+				Dir_0008 <= Data_in;
 			end case;
 		end if;
 

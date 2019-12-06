@@ -82,15 +82,15 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 248 64)
 		(output)
-		(text "Resultado[7..0]" (rect 0 0 60 12)(font "Arial" ))
-		(text "Resultado[7..0]" (rect 167 59 227 71)(font "Arial" ))
+		(text "Resultado[15..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "Resultado[15..0]" (rect 164 59 227 71)(font "Arial" ))
 		(line (pt 248 64)(pt 232 64)(line_width 3))
 	)
 	(port
 		(pt 248 80)
 		(output)
-		(text "Flags[1..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "Flags[1..0]" (rect 187 75 227 87)(font "Arial" ))
+		(text "Flags[7..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "Flags[7..0]" (rect 186 75 227 87)(font "Arial" ))
 		(line (pt 248 80)(pt 232 80)(line_width 3))
 	)
 	(drawing
