@@ -1,5 +1,5 @@
 Flow report for ProyectoFinal
-Fri Dec  6 14:32:54 2019
+Fri Dec  6 19:14:34 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec  6 14:32:54 2019       ;
+; Flow Status                        ; Successful - Fri Dec  6 19:14:34 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProyectoFinal                               ;
 ; Top-level Entity Name              ; ProyectoFinal                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 716 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 678 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 383 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 383                                         ;
+; Total logic elements               ; 743 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 704 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 401 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 401                                         ;
 ; Total pins                         ; 29 / 529 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/06/2019 14:32:19 ;
+; Start date & time ; 12/06/2019 19:13:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProyectoFinal       ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 167300354960189.157566433917814        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 66619481377087.157568122504048         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -94,26 +94,26 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 972 MB              ; 00:00:31                           ;
-; Fitter               ; 00:00:15     ; 1.0                     ; 1722 MB             ; 00:00:26                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 831 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 931 MB              ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1078 MB             ; 00:00:01                           ;
-; Total                ; 00:00:34     ; --                      ; --                  ; 00:01:03                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 965 MB              ; 00:00:39                           ;
+; Fitter               ; 00:00:21     ; 1.0                     ; 1449 MB             ; 00:00:28                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 826 MB              ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 896 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1068 MB             ; 00:00:02                           ;
+; Total                ; 00:00:45     ; --                      ; --                  ; 00:01:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                               ;
-+----------------------+-------------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname        ; OS Name        ; OS Version ; Processor type ;
-+----------------------+-------------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Fitter               ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Assembler            ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; Timing Analyzer      ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; sirivasv-Aspire-A515-52 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
-+----------------------+-------------------------+----------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Fitter               ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Assembler            ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Timing Analyzer      ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; sirivasv         ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------

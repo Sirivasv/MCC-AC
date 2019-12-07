@@ -21,10 +21,10 @@ entity modulo_decodificacion is
 		Dir_Mem_op_1: out unsigned(15 downto 0);
 		Dir_Mem_op_2: out unsigned(15 downto 0);
 		-- DEBUG OUTPUTS
-		Debug_Reg_0004: out unsigned(7 downto 0);
 		Debug_Reg_0005: out unsigned(7 downto 0);
 		Debug_Reg_0006: out unsigned(7 downto 0);
-		Debug_Reg_0007: out unsigned(7 downto 0)
+		Debug_Reg_0007: out unsigned(7 downto 0);
+		Debug_Reg_0008: out unsigned(7 downto 0)
         -- Op_Sel_out1 and Op_Sel_out2 TABLE
         -- 00 Dato_op_1
         -- 01 Dato_op_2
@@ -43,6 +43,7 @@ architecture Behavioral of modulo_decodificacion is
 	signal Reg_0005: unsigned (7 downto 0) := X"00";
 	signal Reg_0006: unsigned (7 downto 0) := X"00";
 	signal Reg_0007: unsigned (7 downto 0) := X"00";
+	signal Reg_0008: unsigned (7 downto 0) := X"00";
 
 begin
 	process (clk,reset,EnaW, RegWSel, Instr)
@@ -66,6 +67,7 @@ begin
             Reg_0005 <= X"00";
             Reg_0006 <= X"00";
             Reg_0007 <= X"00";
+				Reg_0008 <= X"00";
 		elsif rising_edge (clk) then
 			if EnaW='1' then
 				case RegWSel is
@@ -85,6 +87,8 @@ begin
                          Reg_0006 <= DatoW;
                     when X"0007" =>
                          Reg_0007 <= DatoW;
+						  when X"0008" =>
+                         Reg_0008 <= DatoW;
 						  when others =>
 								 Reg_0000 <= Reg_0000;
                 end case;
@@ -119,6 +123,8 @@ begin
 							 RegDatoOp1 := Reg_0006;
 						when X"0007" =>
 							 RegDatoOp1 := Reg_0007;
+						when X"0008" =>
+							 RegDatoOp1 := Reg_0008;
 						when others =>
 							 RegDatoOp1 := X"00";
 				  end case;
@@ -140,6 +146,8 @@ begin
 							 RegDatoOp2 := Reg_0006;
 						when X"0007" =>
 							 RegDatoOp2 := Reg_0007;
+						when X"0008" =>
+							 RegDatoOp2 := Reg_0008;
 						when others =>
 							 RegDatoOp2 := X"00";
 				  end case;
@@ -212,7 +220,7 @@ begin
 							 OpCode_out <= OpCode;
 							 Dato_op_1 <= X"00";
 							 Dato_op_2 <= RegDatoOp2;
-							 Dir_Mem_op_1 <= MemOp1;
+							 Dir_Mem_op_1 <= X"00"&RegDatoOp1;
 							 Dir_Mem_op_2 <= X"0000";
 							 Op_Sel_out_1 <= "10";
 							 Op_Sel_out_2 <= "01";
@@ -228,7 +236,7 @@ begin
 							 Dato_op_1 <= RegDatoOp1;
 							 Dato_op_2 <= X"00";
 							 Dir_Mem_op_1 <= X"0000";
-							 Dir_Mem_op_2 <= MemOp2;
+							 Dir_Mem_op_2 <= X"00"&RegDatoOp2;
 							 Op_Sel_out_1 <= "00";
 							 Op_Sel_out_2 <= "11";
 							 DirW_out <= DirW;
@@ -290,10 +298,10 @@ begin
 							 DirW_out <= X"0000";
 							 
 				end case;
-				Debug_Reg_0004 <= Reg_0004;
 				Debug_Reg_0005 <= Reg_0005;
 				Debug_Reg_0006 <= Reg_0006;
 				Debug_Reg_0007 <= Reg_0007;
+				Debug_Reg_0008 <= Reg_0008;
 		end if;
 	end process;
 end Behavioral;

@@ -50,15 +50,15 @@ signal Dir_0010: unsigned (63 downto 0) := X"0002000700050000";
 signal Dir_0011: unsigned (63 downto 0) := X"0004000400020004";
 -- str_if_neg_sub $6, $6, 0($2) 
 signal Dir_0012: unsigned (63 downto 0) := X"0005000600060002";
--- add $2, #1, $2
-signal Dir_0013: unsigned (63 downto 0) := X"0003000200010002";
+-- add $2, #2, $2
+signal Dir_0013: unsigned (63 downto 0) := X"0003000200020002";
 -- str_if_neg_sub $5, 0($3), $5
 signal Dir_0014: unsigned (63 downto 0) := X"0004000500030005";
 -- str_if_neg_sub $7, $7, 0($3)
 signal Dir_0015: unsigned (63 downto 0) := X"0005000700070003";
--- add $3, #1, $3
-signal Dir_0016: unsigned (63 downto 0) := X"0003000300010003";
--- sub $0, $1, $3
+-- add $3, #2, $3
+signal Dir_0016: unsigned (63 downto 0) := X"0003000300020003";
+-- sub $0, $1, $2
 signal Dir_0017: unsigned (63 downto 0) := X"0006000000010003";
 -- BEQ FIN
 signal Dir_0018: unsigned (63 downto 0) := X"0007001A00000000";

@@ -3,8 +3,8 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'sensa_boton:inst|reloj'
-Slack : -3.535
-TNS   : -659.493
+Slack : -3.508
+TNS   : -692.511
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
 Slack : 0.127
@@ -15,7 +15,7 @@ Slack : 0.430
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'sensa_boton:inst|reloj'
-Slack : 0.431
+Slack : 0.433
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -24,22 +24,22 @@ TNS   : -5.570
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sensa_boton:inst|reloj'
 Slack : -1.285
-TNS   : -489.585
+TNS   : -512.715
 
 Type  : Slow 1200mV 0C Model Setup 'sensa_boton:inst|reloj'
-Slack : -3.120
-TNS   : -572.338
+Slack : -3.081
+TNS   : -601.424
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
-Slack : 0.397
-TNS   : 0.000
-
 Type  : Slow 1200mV 0C Model Hold 'clk'
 Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
+Slack : 0.400
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -48,22 +48,22 @@ TNS   : -5.570
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sensa_boton:inst|reloj'
 Slack : -1.285
-TNS   : -489.585
+TNS   : -512.715
 
 Type  : Fast 1200mV 0C Model Setup 'sensa_boton:inst|reloj'
-Slack : -1.171
-TNS   : -155.423
+Slack : -1.148
+TNS   : -160.248
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
 Slack : 0.572
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
-Slack : 0.189
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : 0.190
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
+Slack : 0.192
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -72,6 +72,6 @@ TNS   : -5.124
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sensa_boton:inst|reloj'
 Slack : -1.000
-TNS   : -381.000
+TNS   : -399.000
 
 ------------------------------------------------------------

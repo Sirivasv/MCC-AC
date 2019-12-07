@@ -23,10 +23,10 @@ entity masterMux is
 		Op_sel_2_S2 : in std_logic_vector (1 downto 0);
 		Dir_mem_op_1_S2 : in std_logic_vector (15 downto 0);
 		Dir_mem_op_2_S2 : in std_logic_vector (15 downto 0);
-		Reg_0004_MinX_S2 : in std_logic_vector (7 downto 0);
-		Reg_0005_MinY_S2 : in std_logic_vector (7 downto 0);
-		Reg_0006_MaxX_S2 : in std_logic_vector (7 downto 0);
-		Reg_0007_MaxY_S2 : in std_logic_vector (7 downto 0);
+		Reg_0005_MinX_S2 : in std_logic_vector (7 downto 0);
+		Reg_0006_MinY_S2 : in std_logic_vector (7 downto 0);
+		Reg_0007_MaxX_S2 : in std_logic_vector (7 downto 0);
+		Reg_0008_MaxY_S2 : in std_logic_vector (7 downto 0);
 
 		OpCode_S3 : in std_logic_vector (15 downto 0);
 		DirW_S3 : in std_logic_vector (15 downto 0);
@@ -144,16 +144,16 @@ begin
 						SALIDA <= "00"&Dir_mem_op_2_S2;
 					-- Reg_0004_MinX_S2
 					when "1000" =>
-						SALIDA <= "00"&X"00"&Reg_0004_MinX_S2;
+						SALIDA <= "00"&X"00"&Reg_0005_MinX_S2;
 					-- Reg_0005_MinY_S2
 					when "1001" =>
-						SALIDA <= "00"&X"00"&Reg_0005_MinY_S2;
+						SALIDA <= "00"&X"00"&Reg_0006_MinY_S2;
 					-- Reg_0006_MaxX_S2
 					when "1010" =>
-						SALIDA <= "00"&X"00"&Reg_0006_MaxX_S2;
+						SALIDA <= "00"&X"00"&Reg_0007_MaxX_S2;
 					-- Reg_0007_MaxY_S2
 					when "1011" =>
-						SALIDA <= "00"&X"00"&Reg_0007_MaxY_S2;
+						SALIDA <= "00"&X"00"&Reg_0008_MaxY_S2;
 					when others =>
 						SALIDA <= "00"&X"0000";
 				end case;
