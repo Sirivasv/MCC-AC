@@ -12,24 +12,24 @@ end memoria;
 architecture Behavioral of memoria is
 -- Program Instructions
 
--- STARTING NOP
-signal Dir_0000: unsigned (63 downto 0) := X"0000000000000000";
 -- swr $0, #$0000 -- Resultado resta contador
-signal Dir_0001: unsigned (63 downto 0) := X"0001000000000000";
--- swr $1, #$0010 -- (2n - 1) -- 7
-signal Dir_0002: unsigned (63 downto 0) := X"0001000100070000";
--- swr $2, #$0000 -- i
-signal Dir_0003: unsigned (63 downto 0) := X"0001000200000000";
--- swr $3, #$0001 -- i + 1
-signal Dir_0004: unsigned (63 downto 0) := X"0001000300010000";
--- swr $4, #$0003 -- minX
-signal Dir_0005: unsigned (63 downto 0) := X"0001000400030000";
--- swr $5, #$0007 -- minY
-signal Dir_0006: unsigned (63 downto 0) := X"0001000500070000";
--- swr $6, #$0003 -- maxX
-signal Dir_0007: unsigned (63 downto 0) := X"0001000600030000";
--- swr $7, #$0007 -- maxY
-signal Dir_0008: unsigned (63 downto 0) := X"0001000700070000";
+signal Dir_0000: unsigned (63 downto 0) := X"0001000000000000";
+-- swr $1, #$0007 -- (2n - 1) -- 7
+signal Dir_0001: unsigned (63 downto 0) := X"0001000100070000";
+-- swr $2, #$0000 -- 2i
+signal Dir_0002: unsigned (63 downto 0) := X"0001000200000000";
+-- swr $3, #$0001 -- 2i + 1
+signal Dir_0003: unsigned (63 downto 0) := X"0001000300010000";
+-- swr $4, #$0001 -- 2i + 1
+signal Dir_0004: unsigned (63 downto 0) := X"0001000400010000";
+-- swr $5, #$0003 -- minX
+signal Dir_0005: unsigned (63 downto 0) := X"0001000500030000";
+-- swr $6, #$0007 -- minY
+signal Dir_0006: unsigned (63 downto 0) := X"0001000600070000";
+-- swr $7, #$0003 -- maxX
+signal Dir_0007: unsigned (63 downto 0) := X"0001000700030000";
+-- swr $8, #$0007 -- maxY
+signal Dir_0008: unsigned (63 downto 0) := X"0001000800070000";
 -- sw $0, #$0003 -- X1
 signal Dir_0009: unsigned (63 downto 0) := X"0002000000030000";
 -- sw $1, #$0007 -- Y1
@@ -46,26 +46,28 @@ signal Dir_000E: unsigned (63 downto 0) := X"0002000500070000";
 signal Dir_000F: unsigned (63 downto 0) := X"0002000600010000";
 -- sw $7, #$0005 -- Y4
 signal Dir_0010: unsigned (63 downto 0) := X"0002000700050000";
--- checkVals: str_if_neg_sub $4, 0($2), $4 
-signal Dir_0011: unsigned (63 downto 0) := X"0004000400020004";
--- str_if_neg_sub $6, $6, 0($2) 
-signal Dir_0012: unsigned (63 downto 0) := X"0005000600060002";
+-- checkVals:add $4, #0, $3 
+signal Dir_0011: unsigned (63 downto 0) := X"0003000400000003";
+-- str_if_neg_sub $5, 0($2), $5 
+signal Dir_0012: unsigned (63 downto 0) := X"0004000500020005";
+-- str_if_neg_sub $7, $7, 0($2)
+signal Dir_0013: unsigned (63 downto 0) := X"0005000700070002";
 -- add $2, #2, $2
-signal Dir_0013: unsigned (63 downto 0) := X"0003000200020002";
--- str_if_neg_sub $5, 0($3), $5
-signal Dir_0014: unsigned (63 downto 0) := X"0004000500030005";
--- str_if_neg_sub $7, $7, 0($3)
-signal Dir_0015: unsigned (63 downto 0) := X"0005000700070003";
+signal Dir_0014: unsigned (63 downto 0) := X"0003000200020002";
+-- str_if_neg_sub $6, 0($3), $6
+signal Dir_0015: unsigned (63 downto 0) := X"0004000600030006";
+-- str_if_neg_sub $8, $8, 0($3)
+signal Dir_0016: unsigned (63 downto 0) := X"0005000800080003";
 -- add $3, #2, $3
-signal Dir_0016: unsigned (63 downto 0) := X"0003000300020003";
--- sub $0, $1, $2
-signal Dir_0017: unsigned (63 downto 0) := X"0006000000010003";
+signal Dir_0017: unsigned (63 downto 0) := X"0003000300020003";
+-- sub $0, $1, $4
+signal Dir_0018: unsigned (63 downto 0) := X"0006000000010004";
 -- BEQ FIN
-signal Dir_0018: unsigned (63 downto 0) := X"0007001A00000000";
+signal Dir_0019: unsigned (63 downto 0) := X"0007001B00000000";
 -- BRA checkVals
-signal Dir_0019: unsigned (63 downto 0) := X"0008001100000000";
+signal Dir_001A: unsigned (63 downto 0) := X"0008001100000000";
 -- FIN: BRA FIN
-signal Dir_001A: unsigned (63 downto 0) := X"0008001A00000000";
+signal Dir_001B: unsigned (63 downto 0) := X"0008001B00000000";
 
 begin
 process(Dir_in)
@@ -126,6 +128,8 @@ process(Dir_in)
                 Data_out <= Dir_0019;
             when X"001A" => 
                 Data_out <= Dir_001A;
+				when X"001B" => 
+                Data_out <= Dir_001B;
 				when others =>
 					Data_out <= X"0000000000000000";
 

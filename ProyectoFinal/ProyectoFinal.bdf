@@ -747,28 +747,6 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 432 984 640 1064)
-	(text "memoria" (rect 5 0 51 11)(font "Arial" ))
-	(text "MEMORIA_PROGRAMA" (rect 8 64 134 75)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "Dir_in[15..0]" (rect 0 0 60 11)(font "Arial" ))
-		(text "Dir_in[15..0]" (rect 21 27 81 38)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 208 32)
-		(output)
-		(text "Data_out[63..0]" (rect 0 0 75 11)(font "Arial" ))
-		(text "Data_out[63..0]" (rect 124 27 199 38)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 192 64))
-	)
-)
-(symbol
 	(rect 1104 728 1360 968)
 	(text "modulo_decodificacion" (rect 5 0 118 11)(font "Arial" ))
 	(text "inst4" (rect 8 224 32 235)(font "Arial" ))
@@ -1294,6 +1272,28 @@ refer to the applicable agreement for further details.
 	)
 	(drawing
 		(rectangle (rect 16 16 216 128))
+	)
+)
+(symbol
+	(rect 432 984 640 1064)
+	(text "memoria" (rect 5 0 51 11)(font "Arial" ))
+	(text "MEMORIA_PROGRAMA" (rect 8 64 134 75)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Dir_in[15..0]" (rect 0 0 60 11)(font "Arial" ))
+		(text "Dir_in[15..0]" (rect 21 27 81 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "Data_out[63..0]" (rect 0 0 75 11)(font "Arial" ))
+		(text "Data_out[63..0]" (rect 124 27 187 38)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 64))
 	)
 )
 (connector

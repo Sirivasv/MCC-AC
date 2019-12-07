@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProyectoFinal
-Fri Dec  6 19:14:02 2019
+Fri Dec  6 20:40:25 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -45,15 +45,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec  6 19:14:02 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec  6 20:40:25 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProyectoFinal                               ;
 ; Top-level Entity Name              ; ProyectoFinal                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 931                                         ;
-;     Total combinational functions  ; 704                                         ;
-;     Dedicated logic registers      ; 401                                         ;
-; Total registers                    ; 401                                         ;
+; Total logic elements               ; 963                                         ;
+;     Total combinational functions  ; 729                                         ;
+;     Dedicated logic registers      ; 410                                         ;
+; Total registers                    ; 410                                         ;
 ; Total pins                         ; 29                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -192,20 +192,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 931                    ;
+; Estimated Total logic elements              ; 963                    ;
 ;                                             ;                        ;
-; Total combinational functions               ; 704                    ;
+; Total combinational functions               ; 729                    ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 506                    ;
-;     -- 3 input functions                    ; 93                     ;
-;     -- <=2 input functions                  ; 105                    ;
+;     -- 4 input functions                    ; 533                    ;
+;     -- 3 input functions                    ; 85                     ;
+;     -- <=2 input functions                  ; 111                    ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 675                    ;
+;     -- normal mode                          ; 700                    ;
 ;     -- arithmetic mode                      ; 29                     ;
 ;                                             ;                        ;
-; Total registers                             ; 401                    ;
-;     -- Dedicated logic registers            ; 401                    ;
+; Total registers                             ; 410                    ;
+;     -- Dedicated logic registers            ; 410                    ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 29                     ;
@@ -213,9 +213,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                      ;
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; sensa_boton:inst|reloj ;
-; Maximum fan-out                             ; 399                    ;
-; Total fan-out                               ; 3972                   ;
-; Average fan-out                             ; 3.42                   ;
+; Maximum fan-out                             ; 408                    ;
+; Total fan-out                               ; 4104                   ;
+; Average fan-out                             ; 3.43                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -224,15 +224,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name                  ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
-; |ProyectoFinal                              ; 704 (1)             ; 401 (0)                   ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |ProyectoFinal                                        ; ProyectoFinal                ; work         ;
-;    |WB_Logic:inst7|                         ; 19 (19)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|WB_Logic:inst7                         ; WB_Logic                     ; work         ;
+; |ProyectoFinal                              ; 729 (1)             ; 410 (0)                   ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |ProyectoFinal                                        ; ProyectoFinal                ; work         ;
+;    |WB_Logic:inst7|                         ; 21 (21)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|WB_Logic:inst7                         ; WB_Logic                     ; work         ;
 ;    |contador_programa:contador_de_programa| ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|contador_programa:contador_de_programa ; contador_programa            ; work         ;
-;    |masterMux:inst11|                       ; 226 (226)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|masterMux:inst11                       ; masterMux                    ; work         ;
-;    |memoria:MEMORIA_PROGRAMA|               ; 67 (67)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria:MEMORIA_PROGRAMA               ; memoria                      ; work         ;
+;    |masterMux:inst11|                       ; 227 (227)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|masterMux:inst11                       ; masterMux                    ; work         ;
+;    |memoria:MEMORIA_PROGRAMA|               ; 75 (75)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria:MEMORIA_PROGRAMA               ; memoria                      ; work         ;
 ;    |memoria_datos:inst1|                    ; 96 (96)             ; 88 (88)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria_datos:inst1                    ; memoria_datos                ; work         ;
-;    |modulo_decodificacion:inst4|            ; 121 (121)           ; 140 (140)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_decodificacion:inst4            ; modulo_decodificacion        ; work         ;
-;    |modulo_exec:inst8|                      ; 57 (57)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_exec:inst8                      ; modulo_exec                  ; work         ;
-;    |registro_acoplo_1_fetch:inst3|          ; 32 (32)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_1_fetch:inst3          ; registro_acoplo_1_fetch      ; work         ;
+;    |modulo_decodificacion:inst4|            ; 132 (132)           ; 148 (148)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_decodificacion:inst4            ; modulo_decodificacion        ; work         ;
+;    |modulo_exec:inst8|                      ; 58 (58)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_exec:inst8                      ; modulo_exec                  ; work         ;
+;    |registro_acoplo_1_fetch:inst3|          ; 34 (34)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_1_fetch:inst3          ; registro_acoplo_1_fetch      ; work         ;
 ;    |registro_acoplo_2_decodifica:inst6|     ; 25 (25)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_2_decodifica:inst6     ; registro_acoplo_2_decodifica ; work         ;
 ;    |registro_acoplo_3_exec:inst9|           ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_3_exec:inst9           ; registro_acoplo_3_exec       ; work         ;
 ;    |registro_intermedio_decode:inst2|       ; 0 (0)               ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_intermedio_decode:inst2       ; registro_intermedio_decode   ; work         ;
@@ -247,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------+----------------------------------------+
 ; Register name                                                       ; Reason for Removal                     ;
 +---------------------------------------------------------------------+----------------------------------------+
-; registro_acoplo_1_fetch:inst3|Instr_out[3..15,19..31,37..47,52..63] ; Stuck at GND due to stuck port data_in ;
+; registro_acoplo_1_fetch:inst3|Instr_out[3..15,20..31,37..47,52..63] ; Stuck at GND due to stuck port data_in ;
 ; modulo_decodificacion:inst4|OpCode_out[4..15]                       ; Stuck at GND due to stuck port data_in ;
 ; modulo_decodificacion:inst4|Dir_Mem_op_1[8..15]                     ; Stuck at GND due to stuck port data_in ;
 ; modulo_decodificacion:inst4|Dir_Mem_op_2[8..15]                     ; Stuck at GND due to stuck port data_in ;
@@ -268,6 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; registro_acoplo_3_exec:inst9|DirW_out[5..15]                        ; Stuck at GND due to stuck port data_in ;
 ; WB_Logic:inst7|DirW_out[5..15]                                      ; Stuck at GND due to stuck port data_in ;
 ; WB_Logic:inst7|PC_EnaW                                              ; Merged with WB_Logic:inst7|EnaDeten    ;
+; WB_Logic:inst7|wasBranch                                            ; Merged with WB_Logic:inst7|EnaDeten    ;
 ; Total Number of Removed Registers = 222                             ;                                        ;
 +---------------------------------------------------------------------+----------------------------------------+
 
@@ -409,31 +410,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 401   ;
-; Number of registers using Synchronous Clear  ; 16    ;
+; Total registers                              ; 410   ;
+; Number of registers using Synchronous Clear  ; 17    ;
 ; Number of registers using Synchronous Load   ; 32    ;
-; Number of registers using Asynchronous Clear ; 307   ;
+; Number of registers using Asynchronous Clear ; 316   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 228   ;
+; Number of registers using Clock Enable       ; 236   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |ProyectoFinal|modulo_exec:inst8|Flags[1]             ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |ProyectoFinal|modulo_exec:inst8|Resultado[5]         ;
-; 20:1               ; 8 bits    ; 104 LEs       ; 48 LEs               ; 56 LEs                 ; Yes        ; |ProyectoFinal|memoria_datos:inst1|Data_out_1[2]      ;
-; 20:1               ; 8 bits    ; 104 LEs       ; 48 LEs               ; 56 LEs                 ; Yes        ; |ProyectoFinal|memoria_datos:inst1|Data_out_2[1]      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ProyectoFinal|selector_operandos:inst5|Mux8          ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |ProyectoFinal|modulo_decodificacion:inst4|Selector0  ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |ProyectoFinal|modulo_decodificacion:inst4|Selector15 ;
-; 18:1               ; 8 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |ProyectoFinal|masterMux:inst11|Mux133                ;
-; 66:1               ; 3 bits    ; 132 LEs       ; 45 LEs               ; 87 LEs                 ; No         ; |ProyectoFinal|masterMux:inst11|Mux136                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |ProyectoFinal|WB_Logic:inst7|DirW_out[1]            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |ProyectoFinal|modulo_exec:inst8|Flags[1]            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |ProyectoFinal|modulo_exec:inst8|Resultado[6]        ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 48 LEs               ; 56 LEs                 ; Yes        ; |ProyectoFinal|memoria_datos:inst1|Data_out_1[1]     ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 48 LEs               ; 56 LEs                 ; Yes        ; |ProyectoFinal|memoria_datos:inst1|Data_out_2[5]     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |ProyectoFinal|selector_operandos:inst5|Mux14        ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |ProyectoFinal|modulo_decodificacion:inst4|Selector8 ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |ProyectoFinal|modulo_decodificacion:inst4|Selector0 ;
+; 18:1               ; 8 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; No         ; |ProyectoFinal|masterMux:inst11|Mux135               ;
+; 66:1               ; 3 bits    ; 132 LEs       ; 45 LEs               ; 87 LEs                 ; No         ; |ProyectoFinal|masterMux:inst11|Mux138               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -442,26 +444,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 29                          ;
-; cycloneiii_ff         ; 401                         ;
+; cycloneiii_ff         ; 410                         ;
 ;     CLR               ; 139                         ;
+;     CLR SCLR          ; 1                           ;
 ;     CLR SCLR SLD      ; 16                          ;
 ;     CLR SLD           ; 16                          ;
 ;     ENA               ; 92                          ;
-;     ENA CLR           ; 136                         ;
+;     ENA CLR           ; 144                         ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 704                         ;
+; cycloneiii_lcell_comb ; 729                         ;
 ;     arith             ; 29                          ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 14                          ;
-;     normal            ; 675                         ;
+;     normal            ; 700                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 88                          ;
-;         3 data inputs ; 79                          ;
-;         4 data inputs ; 506                         ;
+;         2 data inputs ; 94                          ;
+;         3 data inputs ; 71                          ;
+;         4 data inputs ; 533                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 4.71                        ;
+; Average LUT depth     ; 4.81                        ;
 +-----------------------+-----------------------------+
 
 
@@ -480,7 +483,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Dec  6 19:13:44 2019
+    Info: Processing started: Fri Dec  6 20:40:08 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -545,10 +548,10 @@ Warning (10492): VHDL Process Statement warning at masterMux.vhd(135): signal "O
 Warning (10492): VHDL Process Statement warning at masterMux.vhd(138): signal "Op_sel_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 138
 Warning (10492): VHDL Process Statement warning at masterMux.vhd(141): signal "Dir_mem_op_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 141
 Warning (10492): VHDL Process Statement warning at masterMux.vhd(144): signal "Dir_mem_op_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 144
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(147): signal "Reg_0004_MinX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(150): signal "Reg_0005_MinY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(153): signal "Reg_0006_MaxX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(156): signal "Reg_0007_MaxY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(147): signal "Reg_0005_MinX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(150): signal "Reg_0006_MinY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(153): signal "Reg_0007_MaxX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(156): signal "Reg_0008_MaxY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at masterMux.vhd(167): signal "OpCode_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 167
 Warning (10492): VHDL Process Statement warning at masterMux.vhd(170): signal "DirW_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 170
 Warning (10492): VHDL Process Statement warning at masterMux.vhd(173): signal "Dato_op_1_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 173
@@ -579,9 +582,9 @@ Info (12128): Elaborating entity "registro_acoplo_2_decodifica" for hierarchy "r
 Info (12128): Elaborating entity "selector_operandos" for hierarchy "selector_operandos:inst5"
 Info (12128): Elaborating entity "memoria_datos" for hierarchy "memoria_datos:inst1"
 Info (12128): Elaborating entity "modulo_decodificacion" for hierarchy "modulo_decodificacion:inst4"
-Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(55): object "MemOp1" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 55
-Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(56): object "MemOp2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(58): object "DatoOp2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 58
+Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(56): object "MemOp1" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(57): object "MemOp2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(59): object "DatoOp2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 59
 Info (12128): Elaborating entity "registro_acoplo_1_fetch" for hierarchy "registro_acoplo_1_fetch:inst3"
 Info (12128): Elaborating entity "memoria" for hierarchy "memoria:MEMORIA_PROGRAMA"
 Warning (10540): VHDL Signal Declaration warning at memoria.vhd(16): used explicit default value for signal "Dir_0000" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 16
@@ -611,33 +614,35 @@ Warning (10540): VHDL Signal Declaration warning at memoria.vhd(62): used explic
 Warning (10540): VHDL Signal Declaration warning at memoria.vhd(64): used explicit default value for signal "Dir_0018" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 64
 Warning (10540): VHDL Signal Declaration warning at memoria.vhd(66): used explicit default value for signal "Dir_0019" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 66
 Warning (10540): VHDL Signal Declaration warning at memoria.vhd(68): used explicit default value for signal "Dir_001A" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at memoria.vhd(76): signal "Dir_0000" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at memoria.vhd(78): signal "Dir_0001" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at memoria.vhd(80): signal "Dir_0002" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 80
-Warning (10492): VHDL Process Statement warning at memoria.vhd(82): signal "Dir_0003" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 82
-Warning (10492): VHDL Process Statement warning at memoria.vhd(84): signal "Dir_0004" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at memoria.vhd(86): signal "Dir_0005" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at memoria.vhd(88): signal "Dir_0006" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at memoria.vhd(90): signal "Dir_0007" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at memoria.vhd(92): signal "Dir_0008" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at memoria.vhd(94): signal "Dir_0009" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at memoria.vhd(96): signal "Dir_000A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at memoria.vhd(98): signal "Dir_000B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 98
-Warning (10492): VHDL Process Statement warning at memoria.vhd(100): signal "Dir_000C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at memoria.vhd(102): signal "Dir_000D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at memoria.vhd(104): signal "Dir_000E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at memoria.vhd(106): signal "Dir_000F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at memoria.vhd(108): signal "Dir_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at memoria.vhd(110): signal "Dir_0011" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at memoria.vhd(112): signal "Dir_0012" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at memoria.vhd(114): signal "Dir_0013" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at memoria.vhd(116): signal "Dir_0014" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 116
-Warning (10492): VHDL Process Statement warning at memoria.vhd(118): signal "Dir_0015" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at memoria.vhd(120): signal "Dir_0016" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 120
-Warning (10492): VHDL Process Statement warning at memoria.vhd(122): signal "Dir_0017" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 122
-Warning (10492): VHDL Process Statement warning at memoria.vhd(124): signal "Dir_0018" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at memoria.vhd(126): signal "Dir_0019" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at memoria.vhd(128): signal "Dir_001A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 128
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(70): used explicit default value for signal "Dir_001B" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 70
+Warning (10492): VHDL Process Statement warning at memoria.vhd(78): signal "Dir_0000" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at memoria.vhd(80): signal "Dir_0001" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at memoria.vhd(82): signal "Dir_0002" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at memoria.vhd(84): signal "Dir_0003" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at memoria.vhd(86): signal "Dir_0004" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at memoria.vhd(88): signal "Dir_0005" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at memoria.vhd(90): signal "Dir_0006" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at memoria.vhd(92): signal "Dir_0007" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at memoria.vhd(94): signal "Dir_0008" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at memoria.vhd(96): signal "Dir_0009" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at memoria.vhd(98): signal "Dir_000A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at memoria.vhd(100): signal "Dir_000B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at memoria.vhd(102): signal "Dir_000C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at memoria.vhd(104): signal "Dir_000D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at memoria.vhd(106): signal "Dir_000E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at memoria.vhd(108): signal "Dir_000F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at memoria.vhd(110): signal "Dir_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at memoria.vhd(112): signal "Dir_0011" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at memoria.vhd(114): signal "Dir_0012" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at memoria.vhd(116): signal "Dir_0013" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at memoria.vhd(118): signal "Dir_0014" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at memoria.vhd(120): signal "Dir_0015" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at memoria.vhd(122): signal "Dir_0016" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 122
+Warning (10492): VHDL Process Statement warning at memoria.vhd(124): signal "Dir_0017" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at memoria.vhd(126): signal "Dir_0018" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at memoria.vhd(128): signal "Dir_0019" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at memoria.vhd(130): signal "Dir_001A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at memoria.vhd(132): signal "Dir_001B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 132
 Info (12128): Elaborating entity "contador_programa" for hierarchy "contador_programa:contador_de_programa"
 Info (12128): Elaborating entity "registro_intermedio_decode" for hierarchy "registro_intermedio_decode:inst2"
 Warning (13024): Output pins are stuck at VCC or GND
@@ -646,14 +651,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 962 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 994 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 933 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 977 megabytes
-    Info: Processing ended: Fri Dec  6 19:14:02 2019
-    Info: Elapsed time: 00:00:18
+    Info (21061): Implemented 965 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Peak virtual memory: 971 megabytes
+    Info: Processing ended: Fri Dec  6 20:40:25 2019
+    Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:39
 
 
