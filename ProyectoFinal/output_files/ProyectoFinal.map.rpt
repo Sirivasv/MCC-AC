@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProyectoFinal
-Fri Dec  6 20:40:25 2019
+Mon Dec  9 07:46:24 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec  6 20:40:25 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  9 07:46:24 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProyectoFinal                               ;
 ; Top-level Entity Name              ; ProyectoFinal                               ;
@@ -153,38 +153,40 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
-; ProyectoFinal.bdf                ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/ProyectoFinal.bdf                ;         ;
-; memoria.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd                      ;         ;
-; memoria_datos.vhd                ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria_datos.vhd                ;         ;
-; contador_programa.vhd            ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/contador_programa.vhd            ;         ;
-; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/sensa_boton.vhd                  ;         ;
-; registro_acoplo_1_fetch.vhd      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_1_fetch.vhd      ;         ;
-; modulo_decodificacion.vhd        ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd        ;         ;
-; registro_intermedio_decode.vhd   ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_intermedio_decode.vhd   ;         ;
-; selector_operandos.vhd           ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/selector_operandos.vhd           ;         ;
-; registro_acoplo_2_decodifica.vhd ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_2_decodifica.vhd ;         ;
-; WB_Logic.vhd                     ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/WB_Logic.vhd                     ;         ;
-; modulo_exec.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_exec.vhd                  ;         ;
-; registro_acoplo_3_exec.vhd       ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd       ;         ;
-; masterMux.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd                    ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
+; ProyectoFinal.bdf                ; yes             ; User Block Diagram/Schematic File  ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/ProyectoFinal.bdf                ;         ;
+; memoria.vhd                      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd                      ;         ;
+; memoria_datos.vhd                ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria_datos.vhd                ;         ;
+; contador_programa.vhd            ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/contador_programa.vhd            ;         ;
+; sensa_boton.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/sensa_boton.vhd                  ;         ;
+; registro_acoplo_1_fetch.vhd      ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_1_fetch.vhd      ;         ;
+; modulo_decodificacion.vhd        ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd        ;         ;
+; registro_intermedio_decode.vhd   ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_intermedio_decode.vhd   ;         ;
+; selector_operandos.vhd           ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/selector_operandos.vhd           ;         ;
+; registro_acoplo_2_decodifica.vhd ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_2_decodifica.vhd ;         ;
+; WB_Logic.vhd                     ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/WB_Logic.vhd                     ;         ;
+; modulo_exec.vhd                  ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_exec.vhd                  ;         ;
+; registro_acoplo_3_exec.vhd       ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd       ;         ;
+; masterMux.vhd                    ; yes             ; User VHDL File                     ; /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd                    ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------------------+
@@ -196,9 +198,9 @@ refer to the applicable agreement for further details.
 ;                                             ;                        ;
 ; Total combinational functions               ; 729                    ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 533                    ;
-;     -- 3 input functions                    ; 85                     ;
-;     -- <=2 input functions                  ; 111                    ;
+;     -- 4 input functions                    ; 531                    ;
+;     -- 3 input functions                    ; 91                     ;
+;     -- <=2 input functions                  ; 107                    ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
 ;     -- normal mode                          ; 700                    ;
@@ -214,7 +216,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; sensa_boton:inst|reloj ;
 ; Maximum fan-out                             ; 408                    ;
-; Total fan-out                               ; 4104                   ;
+; Total fan-out                               ; 4106                   ;
 ; Average fan-out                             ; 3.43                   ;
 +---------------------------------------------+------------------------+
 
@@ -227,12 +229,12 @@ refer to the applicable agreement for further details.
 ; |ProyectoFinal                              ; 729 (1)             ; 410 (0)                   ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |ProyectoFinal                                        ; ProyectoFinal                ; work         ;
 ;    |WB_Logic:inst7|                         ; 21 (21)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|WB_Logic:inst7                         ; WB_Logic                     ; work         ;
 ;    |contador_programa:contador_de_programa| ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|contador_programa:contador_de_programa ; contador_programa            ; work         ;
-;    |masterMux:inst11|                       ; 227 (227)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|masterMux:inst11                       ; masterMux                    ; work         ;
-;    |memoria:MEMORIA_PROGRAMA|               ; 75 (75)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria:MEMORIA_PROGRAMA               ; memoria                      ; work         ;
+;    |masterMux:inst11|                       ; 228 (228)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|masterMux:inst11                       ; masterMux                    ; work         ;
+;    |memoria:MEMORIA_PROGRAMA|               ; 76 (76)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria:MEMORIA_PROGRAMA               ; memoria                      ; work         ;
 ;    |memoria_datos:inst1|                    ; 96 (96)             ; 88 (88)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria_datos:inst1                    ; memoria_datos                ; work         ;
 ;    |modulo_decodificacion:inst4|            ; 132 (132)           ; 148 (148)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_decodificacion:inst4            ; modulo_decodificacion        ; work         ;
-;    |modulo_exec:inst8|                      ; 58 (58)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_exec:inst8                      ; modulo_exec                  ; work         ;
-;    |registro_acoplo_1_fetch:inst3|          ; 34 (34)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_1_fetch:inst3          ; registro_acoplo_1_fetch      ; work         ;
+;    |modulo_exec:inst8|                      ; 57 (57)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_exec:inst8                      ; modulo_exec                  ; work         ;
+;    |registro_acoplo_1_fetch:inst3|          ; 33 (33)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_1_fetch:inst3          ; registro_acoplo_1_fetch      ; work         ;
 ;    |registro_acoplo_2_decodifica:inst6|     ; 25 (25)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_2_decodifica:inst6     ; registro_acoplo_2_decodifica ; work         ;
 ;    |registro_acoplo_3_exec:inst9|           ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_3_exec:inst9           ; registro_acoplo_3_exec       ; work         ;
 ;    |registro_intermedio_decode:inst2|       ; 0 (0)               ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_intermedio_decode:inst2       ; registro_intermedio_decode   ; work         ;
@@ -459,12 +461,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     normal            ; 700                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 94                          ;
-;         3 data inputs ; 71                          ;
-;         4 data inputs ; 533                         ;
+;         2 data inputs ; 90                          ;
+;         3 data inputs ; 77                          ;
+;         4 data inputs ; 531                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 4.81                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 4.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -473,7 +475,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -483,97 +485,97 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Dec  6 20:40:08 2019
+    Info: Processing started: Mon Dec  9 07:46:14 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ProyectoFinal.bdf
     Info (12023): Found entity 1: ProyectoFinal
 Info (12021): Found 2 design units, including 1 entities, in source file memoria.vhd
-    Info (12022): Found design unit 1: memoria-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 12
-    Info (12023): Found entity 1: memoria File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 5
+    Info (12022): Found design unit 1: memoria-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 12
+    Info (12023): Found entity 1: memoria File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_datos.vhd
-    Info (12022): Found design unit 1: memoria_datos-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria_datos.vhd Line: 20
-    Info (12023): Found entity 1: memoria_datos File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria_datos.vhd Line: 6
+    Info (12022): Found design unit 1: memoria_datos-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria_datos.vhd Line: 20
+    Info (12023): Found entity 1: memoria_datos File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria_datos.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file contador_programa.vhd
-    Info (12022): Found design unit 1: contador_programa-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/contador_programa.vhd Line: 16
-    Info (12023): Found entity 1: contador_programa File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/contador_programa.vhd Line: 6
+    Info (12022): Found design unit 1: contador_programa-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/contador_programa.vhd Line: 16
+    Info (12023): Found entity 1: contador_programa File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/contador_programa.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file sensa_boton.vhd
-    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/sensa_boton.vhd Line: 14
-    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/sensa_boton.vhd Line: 7
+    Info (12022): Found design unit 1: sensa_boton-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/sensa_boton.vhd Line: 14
+    Info (12023): Found entity 1: sensa_boton File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/sensa_boton.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file registro_acoplo_1_fetch.vhd
-    Info (12022): Found design unit 1: registro_acoplo_1_fetch-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_1_fetch.vhd Line: 20
-    Info (12023): Found entity 1: registro_acoplo_1_fetch File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_1_fetch.vhd Line: 6
+    Info (12022): Found design unit 1: registro_acoplo_1_fetch-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_1_fetch.vhd Line: 20
+    Info (12023): Found entity 1: registro_acoplo_1_fetch File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_1_fetch.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file modulo_decodificacion.vhd
-    Info (12022): Found design unit 1: modulo_decodificacion-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 36
-    Info (12023): Found entity 1: modulo_decodificacion File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 6
+    Info (12022): Found design unit 1: modulo_decodificacion-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 36
+    Info (12023): Found entity 1: modulo_decodificacion File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registro_intermedio_decode.vhd
-    Info (12022): Found design unit 1: registro_intermedio_decode-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_intermedio_decode.vhd Line: 26
-    Info (12023): Found entity 1: registro_intermedio_decode File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_intermedio_decode.vhd Line: 6
+    Info (12022): Found design unit 1: registro_intermedio_decode-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_intermedio_decode.vhd Line: 26
+    Info (12023): Found entity 1: registro_intermedio_decode File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_intermedio_decode.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file selector_operandos.vhd
-    Info (12022): Found design unit 1: selector_operandos-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/selector_operandos.vhd Line: 23
-    Info (12023): Found entity 1: selector_operandos File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/selector_operandos.vhd Line: 6
+    Info (12022): Found design unit 1: selector_operandos-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/selector_operandos.vhd Line: 23
+    Info (12023): Found entity 1: selector_operandos File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/selector_operandos.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registro_acoplo_2_decodifica.vhd
-    Info (12022): Found design unit 1: registro_acoplo_2_decodifica-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_2_decodifica.vhd Line: 26
-    Info (12023): Found entity 1: registro_acoplo_2_decodifica File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_2_decodifica.vhd Line: 6
+    Info (12022): Found design unit 1: registro_acoplo_2_decodifica-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_2_decodifica.vhd Line: 26
+    Info (12023): Found entity 1: registro_acoplo_2_decodifica File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_2_decodifica.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file WB_Logic.vhd
-    Info (12022): Found design unit 1: WB_Logic-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/WB_Logic.vhd Line: 28
-    Info (12023): Found entity 1: WB_Logic File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/WB_Logic.vhd Line: 6
+    Info (12022): Found design unit 1: WB_Logic-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/WB_Logic.vhd Line: 28
+    Info (12023): Found entity 1: WB_Logic File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/WB_Logic.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file modulo_exec.vhd
-    Info (12022): Found design unit 1: modulo_exec-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_exec.vhd Line: 25
-    Info (12023): Found entity 1: modulo_exec File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_exec.vhd Line: 6
+    Info (12022): Found design unit 1: modulo_exec-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_exec.vhd Line: 25
+    Info (12023): Found entity 1: modulo_exec File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_exec.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file registro_acoplo_3_exec.vhd
-    Info (12022): Found design unit 1: registro_acoplo_3_exec-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd Line: 26
-    Info (12023): Found entity 1: registro_acoplo_3_exec File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd Line: 6
+    Info (12022): Found design unit 1: registro_acoplo_3_exec-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd Line: 26
+    Info (12023): Found entity 1: registro_acoplo_3_exec File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/registro_acoplo_3_exec.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file masterMux.vhd
-    Info (12022): Found design unit 1: masterMux-Behavioral File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 63
-    Info (12023): Found entity 1: masterMux File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 6
+    Info (12022): Found design unit 1: masterMux-Behavioral File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 63
+    Info (12023): Found entity 1: masterMux File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 6
 Info (12127): Elaborating entity "ProyectoFinal" for the top level hierarchy
 Info (12128): Elaborating entity "masterMux" for hierarchy "masterMux:inst11"
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(77): signal "PC_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 77
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(80): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 80
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(83): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 83
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(86): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(89): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 89
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(100): signal "PC_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(103): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 103
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(106): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(109): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(112): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(123): signal "OpCode_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 123
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(126): signal "DirW_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(129): signal "Dato_op_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 129
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(132): signal "Dato_op_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 132
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(135): signal "Op_sel_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(138): signal "Op_sel_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 138
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(141): signal "Dir_mem_op_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 141
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(144): signal "Dir_mem_op_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 144
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(147): signal "Reg_0005_MinX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 147
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(150): signal "Reg_0006_MinY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 150
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(153): signal "Reg_0007_MaxX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 153
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(156): signal "Reg_0008_MaxY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(167): signal "OpCode_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 167
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(170): signal "DirW_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 170
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(173): signal "Dato_op_1_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 173
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(176): signal "Dato_op_2_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 176
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(187): signal "OpCode_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 187
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(190): signal "DirW_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 190
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(193): signal "Dato_op_1_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 193
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(196): signal "Dato_op_2_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 196
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(207): signal "OpCode_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 207
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(210): signal "DirW_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 210
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(213): signal "Resultado_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 213
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(216): signal "Flags_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 216
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(227): signal "OpCode_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 227
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(230): signal "DirW_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 230
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(233): signal "Resultado_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 233
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(236): signal "Flags_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 236
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(247): signal "PC_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 247
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(250): signal "Reg_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 250
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(253): signal "Mem_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 253
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(256): signal "DatoW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 256
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(259): signal "DirW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 259
-Warning (10492): VHDL Process Statement warning at masterMux.vhd(262): signal "EnaDeten_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/masterMux.vhd Line: 262
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(77): signal "PC_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(80): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(83): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 83
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(86): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(89): signal "Instr_S0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(100): signal "PC_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(103): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(106): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(109): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(112): signal "Instr_S1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(123): signal "OpCode_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(126): signal "DirW_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(129): signal "Dato_op_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(132): signal "Dato_op_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(135): signal "Op_sel_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(138): signal "Op_sel_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 138
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(141): signal "Dir_mem_op_1_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 141
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(144): signal "Dir_mem_op_2_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 144
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(147): signal "Reg_0005_MinX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(150): signal "Reg_0006_MinY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(153): signal "Reg_0007_MaxX_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 153
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(156): signal "Reg_0008_MaxY_S2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(167): signal "OpCode_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(170): signal "DirW_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(173): signal "Dato_op_1_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 173
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(176): signal "Dato_op_2_S3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 176
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(187): signal "OpCode_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 187
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(190): signal "DirW_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(193): signal "Dato_op_1_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 193
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(196): signal "Dato_op_2_S4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 196
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(207): signal "OpCode_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 207
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(210): signal "DirW_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 210
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(213): signal "Resultado_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 213
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(216): signal "Flags_S5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 216
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(227): signal "OpCode_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 227
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(230): signal "DirW_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 230
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(233): signal "Resultado_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 233
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(236): signal "Flags_S6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 236
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(247): signal "PC_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 247
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(250): signal "Reg_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 250
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(253): signal "Mem_EnaW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 253
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(256): signal "DatoW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 256
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(259): signal "DirW_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 259
+Warning (10492): VHDL Process Statement warning at masterMux.vhd(262): signal "EnaDeten_S7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/masterMux.vhd Line: 262
 Info (12128): Elaborating entity "WB_Logic" for hierarchy "WB_Logic:inst7"
 Info (12128): Elaborating entity "sensa_boton" for hierarchy "sensa_boton:inst"
 Info (12128): Elaborating entity "registro_acoplo_3_exec" for hierarchy "registro_acoplo_3_exec:inst9"
@@ -582,67 +584,67 @@ Info (12128): Elaborating entity "registro_acoplo_2_decodifica" for hierarchy "r
 Info (12128): Elaborating entity "selector_operandos" for hierarchy "selector_operandos:inst5"
 Info (12128): Elaborating entity "memoria_datos" for hierarchy "memoria_datos:inst1"
 Info (12128): Elaborating entity "modulo_decodificacion" for hierarchy "modulo_decodificacion:inst4"
-Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(56): object "MemOp1" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(57): object "MemOp2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 57
-Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(59): object "DatoOp2" assigned a value but never read File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 59
+Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(56): object "MemOp1" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(57): object "MemOp2" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at modulo_decodificacion.vhd(59): object "DatoOp2" assigned a value but never read File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/modulo_decodificacion.vhd Line: 59
 Info (12128): Elaborating entity "registro_acoplo_1_fetch" for hierarchy "registro_acoplo_1_fetch:inst3"
 Info (12128): Elaborating entity "memoria" for hierarchy "memoria:MEMORIA_PROGRAMA"
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(16): used explicit default value for signal "Dir_0000" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 16
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(18): used explicit default value for signal "Dir_0001" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 18
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(20): used explicit default value for signal "Dir_0002" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 20
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(22): used explicit default value for signal "Dir_0003" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 22
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(24): used explicit default value for signal "Dir_0004" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 24
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(26): used explicit default value for signal "Dir_0005" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 26
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(28): used explicit default value for signal "Dir_0006" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 28
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(30): used explicit default value for signal "Dir_0007" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 30
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(32): used explicit default value for signal "Dir_0008" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 32
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(34): used explicit default value for signal "Dir_0009" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 34
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(36): used explicit default value for signal "Dir_000A" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(38): used explicit default value for signal "Dir_000B" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 38
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(40): used explicit default value for signal "Dir_000C" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 40
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(42): used explicit default value for signal "Dir_000D" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 42
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(44): used explicit default value for signal "Dir_000E" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 44
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(46): used explicit default value for signal "Dir_000F" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 46
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(48): used explicit default value for signal "Dir_0010" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(50): used explicit default value for signal "Dir_0011" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 50
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(52): used explicit default value for signal "Dir_0012" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 52
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(54): used explicit default value for signal "Dir_0013" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 54
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(56): used explicit default value for signal "Dir_0014" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 56
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(58): used explicit default value for signal "Dir_0015" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 58
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(60): used explicit default value for signal "Dir_0016" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 60
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(62): used explicit default value for signal "Dir_0017" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 62
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(64): used explicit default value for signal "Dir_0018" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 64
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(66): used explicit default value for signal "Dir_0019" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 66
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(68): used explicit default value for signal "Dir_001A" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 68
-Warning (10540): VHDL Signal Declaration warning at memoria.vhd(70): used explicit default value for signal "Dir_001B" because signal was never assigned a value File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 70
-Warning (10492): VHDL Process Statement warning at memoria.vhd(78): signal "Dir_0000" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 78
-Warning (10492): VHDL Process Statement warning at memoria.vhd(80): signal "Dir_0001" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 80
-Warning (10492): VHDL Process Statement warning at memoria.vhd(82): signal "Dir_0002" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 82
-Warning (10492): VHDL Process Statement warning at memoria.vhd(84): signal "Dir_0003" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at memoria.vhd(86): signal "Dir_0004" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 86
-Warning (10492): VHDL Process Statement warning at memoria.vhd(88): signal "Dir_0005" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at memoria.vhd(90): signal "Dir_0006" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 90
-Warning (10492): VHDL Process Statement warning at memoria.vhd(92): signal "Dir_0007" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 92
-Warning (10492): VHDL Process Statement warning at memoria.vhd(94): signal "Dir_0008" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at memoria.vhd(96): signal "Dir_0009" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 96
-Warning (10492): VHDL Process Statement warning at memoria.vhd(98): signal "Dir_000A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 98
-Warning (10492): VHDL Process Statement warning at memoria.vhd(100): signal "Dir_000B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 100
-Warning (10492): VHDL Process Statement warning at memoria.vhd(102): signal "Dir_000C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 102
-Warning (10492): VHDL Process Statement warning at memoria.vhd(104): signal "Dir_000D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at memoria.vhd(106): signal "Dir_000E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 106
-Warning (10492): VHDL Process Statement warning at memoria.vhd(108): signal "Dir_000F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 108
-Warning (10492): VHDL Process Statement warning at memoria.vhd(110): signal "Dir_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 110
-Warning (10492): VHDL Process Statement warning at memoria.vhd(112): signal "Dir_0011" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 112
-Warning (10492): VHDL Process Statement warning at memoria.vhd(114): signal "Dir_0012" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 114
-Warning (10492): VHDL Process Statement warning at memoria.vhd(116): signal "Dir_0013" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 116
-Warning (10492): VHDL Process Statement warning at memoria.vhd(118): signal "Dir_0014" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 118
-Warning (10492): VHDL Process Statement warning at memoria.vhd(120): signal "Dir_0015" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 120
-Warning (10492): VHDL Process Statement warning at memoria.vhd(122): signal "Dir_0016" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 122
-Warning (10492): VHDL Process Statement warning at memoria.vhd(124): signal "Dir_0017" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 124
-Warning (10492): VHDL Process Statement warning at memoria.vhd(126): signal "Dir_0018" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 126
-Warning (10492): VHDL Process Statement warning at memoria.vhd(128): signal "Dir_0019" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at memoria.vhd(130): signal "Dir_001A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 130
-Warning (10492): VHDL Process Statement warning at memoria.vhd(132): signal "Dir_001B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/BACKUP/MCC-AC/ProyectoFinal/memoria.vhd Line: 132
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(16): used explicit default value for signal "Dir_0000" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 16
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(20): used explicit default value for signal "Dir_0001" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 20
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(22): used explicit default value for signal "Dir_0002" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(24): used explicit default value for signal "Dir_0003" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(26): used explicit default value for signal "Dir_0004" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 26
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(28): used explicit default value for signal "Dir_0005" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 28
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(30): used explicit default value for signal "Dir_0006" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 30
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(32): used explicit default value for signal "Dir_0007" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 32
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(34): used explicit default value for signal "Dir_0008" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 34
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(36): used explicit default value for signal "Dir_0009" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 36
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(38): used explicit default value for signal "Dir_000A" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 38
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(40): used explicit default value for signal "Dir_000B" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 40
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(42): used explicit default value for signal "Dir_000C" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 42
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(44): used explicit default value for signal "Dir_000D" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 44
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(46): used explicit default value for signal "Dir_000E" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 46
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(48): used explicit default value for signal "Dir_000F" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 48
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(50): used explicit default value for signal "Dir_0010" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 50
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(52): used explicit default value for signal "Dir_0011" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 52
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(54): used explicit default value for signal "Dir_0012" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 54
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(56): used explicit default value for signal "Dir_0013" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 56
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(58): used explicit default value for signal "Dir_0014" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 58
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(60): used explicit default value for signal "Dir_0015" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 60
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(62): used explicit default value for signal "Dir_0016" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 62
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(64): used explicit default value for signal "Dir_0017" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 64
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(66): used explicit default value for signal "Dir_0018" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 66
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(68): used explicit default value for signal "Dir_0019" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 68
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(70): used explicit default value for signal "Dir_001A" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 70
+Warning (10540): VHDL Signal Declaration warning at memoria.vhd(72): used explicit default value for signal "Dir_001B" because signal was never assigned a value File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at memoria.vhd(80): signal "Dir_0000" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 80
+Warning (10492): VHDL Process Statement warning at memoria.vhd(82): signal "Dir_0001" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at memoria.vhd(84): signal "Dir_0002" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at memoria.vhd(86): signal "Dir_0003" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at memoria.vhd(88): signal "Dir_0004" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at memoria.vhd(90): signal "Dir_0005" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at memoria.vhd(92): signal "Dir_0006" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at memoria.vhd(94): signal "Dir_0007" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at memoria.vhd(96): signal "Dir_0008" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at memoria.vhd(98): signal "Dir_0009" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at memoria.vhd(100): signal "Dir_000A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at memoria.vhd(102): signal "Dir_000B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 102
+Warning (10492): VHDL Process Statement warning at memoria.vhd(104): signal "Dir_000C" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at memoria.vhd(106): signal "Dir_000D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 106
+Warning (10492): VHDL Process Statement warning at memoria.vhd(108): signal "Dir_000E" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at memoria.vhd(110): signal "Dir_000F" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at memoria.vhd(112): signal "Dir_0010" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at memoria.vhd(114): signal "Dir_0011" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at memoria.vhd(116): signal "Dir_0012" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at memoria.vhd(118): signal "Dir_0013" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 118
+Warning (10492): VHDL Process Statement warning at memoria.vhd(120): signal "Dir_0014" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 120
+Warning (10492): VHDL Process Statement warning at memoria.vhd(122): signal "Dir_0015" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 122
+Warning (10492): VHDL Process Statement warning at memoria.vhd(124): signal "Dir_0016" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at memoria.vhd(126): signal "Dir_0017" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at memoria.vhd(128): signal "Dir_0018" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 128
+Warning (10492): VHDL Process Statement warning at memoria.vhd(130): signal "Dir_0019" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 130
+Warning (10492): VHDL Process Statement warning at memoria.vhd(132): signal "Dir_001A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at memoria.vhd(134): signal "Dir_001B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/sirivasv/Documents/MCC/MCC-AC/ProyectoFinal/memoria.vhd Line: 134
 Info (12128): Elaborating entity "contador_programa" for hierarchy "contador_programa:contador_de_programa"
 Info (12128): Elaborating entity "registro_intermedio_decode" for hierarchy "registro_intermedio_decode:inst2"
 Warning (13024): Output pins are stuck at VCC or GND
@@ -656,9 +658,9 @@ Info (21057): Implemented 994 device resources after synthesis - the final resou
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 965 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 107 warnings
-    Info: Peak virtual memory: 971 megabytes
-    Info: Processing ended: Fri Dec  6 20:40:25 2019
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:39
+    Info: Peak virtual memory: 1012 megabytes
+    Info: Processing ended: Mon Dec  9 07:46:24 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:24
 
 

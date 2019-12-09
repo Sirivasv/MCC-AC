@@ -12,8 +12,10 @@ end memoria;
 architecture Behavioral of memoria is
 -- Program Instructions
 
--- swr $0, #$0000 -- Resultado resta contador
-signal Dir_0000: unsigned (63 downto 0) := X"0001000000000000";
+-- STARTING NOP 
+signal Dir_0000: unsigned (63 downto 0) := X"0000000000000000";
+
+-- Register $0 -- Resultado resta contador
 -- swr $1, #$0007 -- (2n - 1) -- 7
 signal Dir_0001: unsigned (63 downto 0) := X"0001000100070000";
 -- swr $2, #$0000 -- 2i
