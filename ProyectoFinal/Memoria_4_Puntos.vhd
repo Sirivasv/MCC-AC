@@ -16,7 +16,7 @@ architecture Behavioral of memoria is
 signal Dir_0000: unsigned (63 downto 0) := X"0000000000000000";
 
 -- Register $0 -- Resultado resta contador
--- swr $1, #$000B -- (2n - 1) -- 7
+-- swr $1, #$0007 -- (2n - 1) -- 7
 signal Dir_0001: unsigned (63 downto 0) := X"0001000100070000";
 -- swr $2, #$0000 -- 2i
 signal Dir_0002: unsigned (63 downto 0) := X"0001000200000000";
@@ -24,60 +24,52 @@ signal Dir_0002: unsigned (63 downto 0) := X"0001000200000000";
 signal Dir_0003: unsigned (63 downto 0) := X"0001000300010000";
 -- swr $4, #$0001 -- 2i + 1
 signal Dir_0004: unsigned (63 downto 0) := X"0001000400010000";
--- swr $5, #$000A -- minX
-signal Dir_0005: unsigned (63 downto 0) := X"00010005000A0000";
--- swr $6, #$000C -- minY
-signal Dir_0006: unsigned (63 downto 0) := X"00010006000C0000";
--- swr $7, #$000A -- maxX
-signal Dir_0007: unsigned (63 downto 0) := X"00010007000A0000";
--- swr $8, #$000C -- maxY
-signal Dir_0008: unsigned (63 downto 0) := X"00010008000C0000";
--- sw $0, #$000A -- X1
-signal Dir_0009: unsigned (63 downto 0) := X"00020000000A0000";
--- sw $1, #$000C -- Y1
-signal Dir_000A: unsigned (63 downto 0) := X"00020001000C0000";
--- sw $2, #$0006 -- X2
-signal Dir_000B: unsigned (63 downto 0) := X"0002000200060000";
--- sw $3, #$0003 -- Y2
-signal Dir_000C: unsigned (63 downto 0) := X"0002000300030000";
--- sw $4, #$000F -- X3
-signal Dir_000D: unsigned (63 downto 0) := X"00020004000F0000";
--- sw $5, #$000E -- Y3
-signal Dir_000E: unsigned (63 downto 0) := X"00020005000E0000";
--- sw $6, #$0000 -- X4
-signal Dir_000F: unsigned (63 downto 0) := X"0002000600000000";
--- sw $7, #$0009 -- Y4
-signal Dir_0010: unsigned (63 downto 0) := X"0002000700090000";
--- sw $8, #$0002 -- X5
-signal Dir_0011: unsigned (63 downto 0) := X"0002000800020000";
--- sw $9, #$0003 -- Y5
-signal Dir_0012: unsigned (63 downto 0) := X"0002000900030000";
--- sw $A, #$000B -- X4
-signal Dir_0013: unsigned (63 downto 0) := X"0002000A000B0000";
--- sw $B, #$0005 -- Y4
-signal Dir_0014: unsigned (63 downto 0) := X"0002000B00050000";
+-- swr $5, #$0003 -- minX
+signal Dir_0005: unsigned (63 downto 0) := X"0001000500030000";
+-- swr $6, #$0007 -- minY
+signal Dir_0006: unsigned (63 downto 0) := X"0001000600070000";
+-- swr $7, #$0003 -- maxX
+signal Dir_0007: unsigned (63 downto 0) := X"0001000700030000";
+-- swr $8, #$0007 -- maxY
+signal Dir_0008: unsigned (63 downto 0) := X"0001000800070000";
+-- sw $0, #$0003 -- X1
+signal Dir_0009: unsigned (63 downto 0) := X"0002000000030000";
+-- sw $1, #$0007 -- Y1
+signal Dir_000A: unsigned (63 downto 0) := X"0002000100070000";
+-- sw $2, #$0005 -- X2
+signal Dir_000B: unsigned (63 downto 0) := X"0002000200050000";
+-- sw $3, #$0004 -- Y2
+signal Dir_000C: unsigned (63 downto 0) := X"0002000300040000";
+-- sw $4, #$0006 -- X3
+signal Dir_000D: unsigned (63 downto 0) := X"0002000400060000";
+-- sw $5, #$0007 -- Y3
+signal Dir_000E: unsigned (63 downto 0) := X"0002000500070000";
+-- sw $6, #$0001 -- X4
+signal Dir_000F: unsigned (63 downto 0) := X"0002000600010000";
+-- sw $7, #$0005 -- Y4
+signal Dir_0010: unsigned (63 downto 0) := X"0002000700050000";
 -- checkVals:add $4, #0, $3 
-signal Dir_0015: unsigned (63 downto 0) := X"0003000400000003";
+signal Dir_0011: unsigned (63 downto 0) := X"0003000400000003";
 -- str_if_neg_sub $5, 0($2), $5 
-signal Dir_0016: unsigned (63 downto 0) := X"0004000500020005";
+signal Dir_0012: unsigned (63 downto 0) := X"0004000500020005";
 -- str_if_neg_sub $7, $7, 0($2)
-signal Dir_0017: unsigned (63 downto 0) := X"0005000700070002";
+signal Dir_0013: unsigned (63 downto 0) := X"0005000700070002";
 -- add $2, #2, $2
-signal Dir_0018: unsigned (63 downto 0) := X"0003000200020002";
+signal Dir_0014: unsigned (63 downto 0) := X"0003000200020002";
 -- str_if_neg_sub $6, 0($3), $6
-signal Dir_0019: unsigned (63 downto 0) := X"0004000600030006";
+signal Dir_0015: unsigned (63 downto 0) := X"0004000600030006";
 -- str_if_neg_sub $8, $8, 0($3)
-signal Dir_001A: unsigned (63 downto 0) := X"0005000800080003";
+signal Dir_0016: unsigned (63 downto 0) := X"0005000800080003";
 -- add $3, #2, $3
-signal Dir_001B: unsigned (63 downto 0) := X"0003000300020003";
+signal Dir_0017: unsigned (63 downto 0) := X"0003000300020003";
 -- sub $0, $1, $4
-signal Dir_001C: unsigned (63 downto 0) := X"0006000000010004";
+signal Dir_0018: unsigned (63 downto 0) := X"0006000000010004";
 -- BEQ FIN
-signal Dir_001D: unsigned (63 downto 0) := X"0007001F00000000";
+signal Dir_0019: unsigned (63 downto 0) := X"0007001B00000000";
 -- BRA checkVals
-signal Dir_001E: unsigned (63 downto 0) := X"0008001500000000";
+signal Dir_001A: unsigned (63 downto 0) := X"0008001100000000";
 -- FIN: BRA FIN
-signal Dir_001F: unsigned (63 downto 0) := X"0008001F00000000";
+signal Dir_001B: unsigned (63 downto 0) := X"0008001B00000000";
 
 begin
 process(Dir_in)
@@ -138,18 +130,10 @@ process(Dir_in)
                 Data_out <= Dir_0019;
             when X"001A" => 
                 Data_out <= Dir_001A;
-			when X"001B" => 
+				when X"001B" => 
                 Data_out <= Dir_001B;
-            when X"001C" => 
-                Data_out <= Dir_001C;
-            when X"001D" => 
-                Data_out <= Dir_001D;
-            when X"001E" => 
-                Data_out <= Dir_001E;
-            when X"001F" => 
-                Data_out <= Dir_001F;
-            when others =>
-				Data_out <= X"0000000000000000";
+				when others =>
+					Data_out <= X"0000000000000000";
 
         end case;
     end process;

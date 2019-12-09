@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'sensa_boton:inst|reloj'
-Slack : -3.538
-TNS   : -715.496
+Slack : -3.439
+TNS   : -905.600
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
 Slack : 0.127
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.430
+Type  : Slow 1200mV 85C Model Hold 'sensa_boton:inst|reloj'
+Slack : 0.428
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'sensa_boton:inst|reloj'
-Slack : 0.436
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.430
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -24,22 +24,22 @@ TNS   : -5.570
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sensa_boton:inst|reloj'
 Slack : -1.285
-TNS   : -524.280
+TNS   : -606.520
 
 Type  : Slow 1200mV 0C Model Setup 'sensa_boton:inst|reloj'
-Slack : -3.175
-TNS   : -621.134
+Slack : -3.042
+TNS   : -792.504
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
 Slack : 0.215
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.398
+Type  : Slow 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
+Slack : 0.396
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
-Slack : 0.403
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.398
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -48,22 +48,22 @@ TNS   : -5.570
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sensa_boton:inst|reloj'
 Slack : -1.285
-TNS   : -524.280
+TNS   : -606.520
 
 Type  : Fast 1200mV 0C Model Setup 'sensa_boton:inst|reloj'
-Slack : -1.275
-TNS   : -170.917
+Slack : -1.179
+TNS   : -233.105
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
 Slack : 0.572
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.190
+Type  : Fast 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
+Slack : 0.187
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
-Slack : 0.193
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.190
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -72,6 +72,6 @@ TNS   : -5.124
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sensa_boton:inst|reloj'
 Slack : -1.000
-TNS   : -408.000
+TNS   : -472.000
 
 ------------------------------------------------------------
