@@ -1260,14 +1260,14 @@ refer to the applicable agreement for further details.
 		(pt 224 32)
 		(output)
 		(text "Data_out_1[7..0]" (rect 0 0 81 11)(font "Arial" ))
-		(text "Data_out_1[7..0]" (rect 135 27 203 38)(font "Arial" ))
+		(text "Data_out_1[7..0]" (rect 135 27 216 38)(font "Arial" ))
 		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(port
 		(pt 224 48)
 		(output)
 		(text "Data_out_2[7..0]" (rect 0 0 81 11)(font "Arial" ))
-		(text "Data_out_2[7..0]" (rect 135 43 203 54)(font "Arial" ))
+		(text "Data_out_2[7..0]" (rect 135 43 216 54)(font "Arial" ))
 		(line (pt 224 48)(pt 208 48)(line_width 3))
 	)
 	(drawing

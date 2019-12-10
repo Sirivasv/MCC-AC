@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon Dec  9 09:12:55 2019
+Fitter Status : Successful - Mon Dec  9 11:43:13 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ProyectoFinal
 Top-level Entity Name : ProyectoFinal
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 935 / 114,480 ( < 1 % )
-    Total combinational functions : 853 / 114,480 ( < 1 % )
+Total logic elements : 938 / 114,480 ( < 1 % )
+    Total combinational functions : 856 / 114,480 ( < 1 % )
     Dedicated logic registers : 474 / 114,480 ( < 1 % )
 Total registers : 474
 Total pins : 29 / 529 ( 5 % )

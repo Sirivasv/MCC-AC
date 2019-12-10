@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProyectoFinal
-Mon Dec  9 09:12:40 2019
+Mon Dec  9 11:42:58 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec  9 09:12:40 2019       ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec  9 11:42:58 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProyectoFinal                               ;
 ; Top-level Entity Name              ; ProyectoFinal                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,151                                       ;
-;     Total combinational functions  ; 853                                         ;
+; Total logic elements               ; 1,154                                       ;
+;     Total combinational functions  ; 856                                         ;
 ;     Dedicated logic registers      ; 474                                         ;
 ; Total registers                    ; 474                                         ;
 ; Total pins                         ; 29                                          ;
@@ -194,16 +194,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 1,151                  ;
+; Estimated Total logic elements              ; 1,154                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 853                    ;
+; Total combinational functions               ; 856                    ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 660                    ;
-;     -- 3 input functions                    ; 88                     ;
-;     -- <=2 input functions                  ; 105                    ;
+;     -- 4 input functions                    ; 664                    ;
+;     -- 3 input functions                    ; 85                     ;
+;     -- <=2 input functions                  ; 107                    ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 824                    ;
+;     -- normal mode                          ; 827                    ;
 ;     -- arithmetic mode                      ; 29                     ;
 ;                                             ;                        ;
 ; Total registers                             ; 474                    ;
@@ -216,7 +216,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; sensa_boton:inst|reloj ;
 ; Maximum fan-out                             ; 472                    ;
-; Total fan-out                               ; 4817                   ;
+; Total fan-out                               ; 4828                   ;
 ; Average fan-out                             ; 3.48                   ;
 +---------------------------------------------+------------------------+
 
@@ -226,15 +226,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name                  ; Library Name ;
 +---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
-; |ProyectoFinal                              ; 853 (1)             ; 474 (0)                   ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |ProyectoFinal                                        ; ProyectoFinal                ; work         ;
+; |ProyectoFinal                              ; 856 (1)             ; 474 (0)                   ; 0           ; 0            ; 0       ; 0         ; 29   ; 0            ; |ProyectoFinal                                        ; ProyectoFinal                ; work         ;
 ;    |WB_Logic:inst7|                         ; 21 (21)             ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|WB_Logic:inst7                         ; WB_Logic                     ; work         ;
 ;    |contador_programa:contador_de_programa| ; 16 (16)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|contador_programa:contador_de_programa ; contador_programa            ; work         ;
-;    |masterMux:inst11|                       ; 229 (229)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|masterMux:inst11                       ; masterMux                    ; work         ;
-;    |memoria:MEMORIA_PROGRAMA|               ; 92 (92)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria:MEMORIA_PROGRAMA               ; memoria                      ; work         ;
+;    |masterMux:inst11|                       ; 228 (228)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|masterMux:inst11                       ; masterMux                    ; work         ;
+;    |memoria:MEMORIA_PROGRAMA|               ; 95 (95)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria:MEMORIA_PROGRAMA               ; memoria                      ; work         ;
 ;    |memoria_datos:inst1|                    ; 201 (201)           ; 152 (152)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|memoria_datos:inst1                    ; memoria_datos                ; work         ;
 ;    |modulo_decodificacion:inst4|            ; 132 (132)           ; 148 (148)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_decodificacion:inst4            ; modulo_decodificacion        ; work         ;
-;    |modulo_exec:inst8|                      ; 59 (59)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_exec:inst8                      ; modulo_exec                  ; work         ;
-;    |registro_acoplo_1_fetch:inst3|          ; 34 (34)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_1_fetch:inst3          ; registro_acoplo_1_fetch      ; work         ;
+;    |modulo_exec:inst8|                      ; 57 (57)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|modulo_exec:inst8                      ; modulo_exec                  ; work         ;
+;    |registro_acoplo_1_fetch:inst3|          ; 37 (37)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_1_fetch:inst3          ; registro_acoplo_1_fetch      ; work         ;
 ;    |registro_acoplo_2_decodifica:inst6|     ; 25 (25)             ; 25 (25)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_2_decodifica:inst6     ; registro_acoplo_2_decodifica ; work         ;
 ;    |registro_acoplo_3_exec:inst9|           ; 19 (19)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_acoplo_3_exec:inst9           ; registro_acoplo_3_exec       ; work         ;
 ;    |registro_intermedio_decode:inst2|       ; 0 (0)               ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ProyectoFinal|registro_intermedio_decode:inst2       ; registro_intermedio_decode   ; work         ;
@@ -453,19 +453,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     ENA               ; 92                          ;
 ;     ENA CLR           ; 208                         ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 853                         ;
+; cycloneiii_lcell_comb ; 856                         ;
 ;     arith             ; 29                          ;
 ;         2 data inputs ; 15                          ;
 ;         3 data inputs ; 14                          ;
-;     normal            ; 824                         ;
+;     normal            ; 827                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 88                          ;
-;         3 data inputs ; 74                          ;
-;         4 data inputs ; 660                         ;
+;         2 data inputs ; 90                          ;
+;         3 data inputs ; 71                          ;
+;         4 data inputs ; 664                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 5.01                        ;
+; Max LUT depth         ; 11.00                       ;
+; Average LUT depth     ; 5.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -484,7 +484,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Dec  9 09:12:30 2019
+    Info: Processing started: Mon Dec  9 11:42:48 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -660,14 +660,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1182 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1185 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 1153 logic cells
+    Info (21061): Implemented 1156 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
-    Info: Peak virtual memory: 1032 megabytes
-    Info: Processing ended: Mon Dec  9 09:12:40 2019
+    Info: Peak virtual memory: 1004 megabytes
+    Info: Processing ended: Mon Dec  9 11:42:58 2019
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:22
 
 

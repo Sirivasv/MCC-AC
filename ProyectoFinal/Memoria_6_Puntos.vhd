@@ -16,8 +16,8 @@ architecture Behavioral of memoria is
 signal Dir_0000: unsigned (63 downto 0) := X"0000000000000000";
 
 -- Register $0 -- Resultado resta contador
--- swr $1, #$000B -- (2n - 1) -- 7
-signal Dir_0001: unsigned (63 downto 0) := X"0001000100070000";
+-- swr $1, #$000B -- (2n - 1)
+signal Dir_0001: unsigned (63 downto 0) := X"00010001000B0000";
 -- swr $2, #$0000 -- 2i
 signal Dir_0002: unsigned (63 downto 0) := X"0001000200000000";
 -- swr $3, #$0001 -- 2i + 1
@@ -52,9 +52,9 @@ signal Dir_0010: unsigned (63 downto 0) := X"0002000700090000";
 signal Dir_0011: unsigned (63 downto 0) := X"0002000800020000";
 -- sw $9, #$0003 -- Y5
 signal Dir_0012: unsigned (63 downto 0) := X"0002000900030000";
--- sw $A, #$000B -- X4
+-- sw $A, #$000B -- X6
 signal Dir_0013: unsigned (63 downto 0) := X"0002000A000B0000";
--- sw $B, #$0005 -- Y4
+-- sw $B, #$0005 -- Y6
 signal Dir_0014: unsigned (63 downto 0) := X"0002000B00050000";
 -- checkVals:add $4, #0, $3 
 signal Dir_0015: unsigned (63 downto 0) := X"0003000400000003";

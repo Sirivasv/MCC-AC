@@ -3,8 +3,8 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'sensa_boton:inst|reloj'
-Slack : -3.439
-TNS   : -905.600
+Slack : -3.906
+TNS   : -928.614
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
 Slack : 0.127
@@ -27,8 +27,8 @@ Slack : -1.285
 TNS   : -606.520
 
 Type  : Slow 1200mV 0C Model Setup 'sensa_boton:inst|reloj'
-Slack : -3.042
-TNS   : -792.504
+Slack : -3.453
+TNS   : -812.181
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
 Slack : 0.215
@@ -51,15 +51,15 @@ Slack : -1.285
 TNS   : -606.520
 
 Type  : Fast 1200mV 0C Model Setup 'sensa_boton:inst|reloj'
-Slack : -1.179
-TNS   : -233.105
+Slack : -1.393
+TNS   : -250.960
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
 Slack : 0.572
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'sensa_boton:inst|reloj'
-Slack : 0.187
+Slack : 0.188
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
